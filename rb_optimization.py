@@ -79,7 +79,7 @@ with Executor.open(
     
     #per ora in questo step faccio tutto manualmente ma meglio sistemare diversamente
     init_guess = [4.1570229140026074, 4.958263653, beta_best] 
-    bounds = [(None,None),(None,None), (beta_best-0.5, beta_best+0.5)]
+    bounds = [(None,None),(None,None), (beta_best-0.25, beta_best+0.25)]
     scale = np.array([100, 1e-9, 1])
     
 
