@@ -20,6 +20,7 @@ from scipy.optimize import minimize
 
 #objective function to minimize
 def objective(params, platform, target):
+
     with Executor.open(
         "myexec",
         path="test_rb",
@@ -32,7 +33,6 @@ def objective(params, platform, target):
         e.platform.settings.nshots = 2000 
         amplitude, frequency = params
 
-        # Update RX amplitude and frequency
         e.platform.qubits[target].native_gates.RX.amplitude = amplitude
         e.platform.qubits[target].native_gates.RX.frequency = frequency
 
@@ -41,7 +41,7 @@ def objective(params, platform, target):
             beta_end=4, 
                 beta_step=0.5
             )
-        #è corretto che l'output di drag non mi serva davvero? In teoria sì, è una procedura di calibrazione
+
         rb_output = e.rb_ondevice(
             num_of_sequences=1000,
             max_circuit_depth=500,
@@ -51,7 +51,6 @@ def objective(params, platform, target):
             apply_inverse=True
         )
 
-        #per ora ho messo il report qui ma forse conviene spostarlo dopo la minimizzazione
         report(e.path, e.history)
 
     # Calculate infidelity
@@ -73,16 +72,36 @@ def test_rb_optimization(
         init_guess
     ):
     
-    res = minimize(objective, init_guess, args=(platform, target), method=method, options={'xatol': 1e-8, 'disp': True}, maxiter = 100)
-    #numero massimo di iterazioni
+    res = minimize(objective, init_guess, args=(platform, target), method=method, options={'xatol': 1e-2, 'disp': True}, maxiter = 100)
     
     return res
 
 
 target = "D1"
 platform = "qw11q"
-method = 'nelder-mead'
-init_guess = #get RX amplitude and RX frequency
+method = 'nelder-mead' #forse non la migliore? Non ho idea del landscape
+init_guess = [0.041570229140026074, 4958263653]
+
+
+"""TO DO: 
+    * vedere quali di questi parametri potrebbe essere interessante variare
+    * maxiter
+    * xatol (considerato anche con quali ordini di grandezza sto lavorando)
+    * leggere l'initial guess direttamente dalla migliore calibrazione su qibolab
+    * nshot
+    * ha senso provare a variare la duration
+    * provare a variare beta in un piccolo intervallo intorno a quello suggerito da drag
+    * spostare report ?
+
+"RX": (D1) {
+                    "duration": 40,
+                    "amplitude": 0.05,
+                    "shape": "Gaussian(5)",
+                    "frequency": 4900000000,
+                    "relative_start": 0,
+                    "phase": 0,
+                    "type": "qd"
+"""
 
 
 
