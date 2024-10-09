@@ -1,0 +1,12 @@
+Traceback (most recent call last):
+  File "/nfs/users/elisa.stabilini/optimization/rb_optimization.py", line 13, in <module>
+    from qibocal import update
+  File "/nfs/users/elisa.stabilini/qibocal/src/qibocal/__init__.py", line 3, in <module>
+    from . import protocols
+  File "/nfs/users/elisa.stabilini/qibocal/src/qibocal/protocols/__init__.py", line 30, in <module>
+    from .qua import rb_ondevice
+  File "/nfs/users/elisa.stabilini/qibocal/src/qibocal/protocols/qua/__init__.py", line 1, in <module>
+    from .rb_ondevice import rb_ondevice
+  File "/nfs/users/elisa.stabilini/qibocal/src/qibocal/protocols/qua/rb_ondevice.py", line 6, in <module>
+    import mpld3
+ModuleNotFoundError: No module named 'mpld3'

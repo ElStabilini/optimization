@@ -77,8 +77,8 @@ def test_rb_optimization(
     return res
 
 
-target = "D1"
-platform = "qw11q"
+target = "0"
+platform = "dummy"
 method = 'nelder-mead' #forse non la migliore? Non ho idea del landscape
 init_guess = [0.041570229140026074, 4958263653]
 
