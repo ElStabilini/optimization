@@ -1,57 +1,24 @@
-'''IDEA: costruire un ciclo di ottimizzazione della RB al variare dei
-parametri dell'impulso di DRAG'''
-
-from dataclasses import dataclass, field
-from typing import Optional
-from pathlib import Path
-
 import numpy as np
-import numpy.typing as npt
 from qibolab.qubits import QubitId
 from scipy.optimize import minimize
-
-from qibocal import update
 from qibocal.auto.execute import Executor
-from qibocal.cli.report import report
-
-import numpy as np
-from scipy.optimize import minimize
-
 
 #objective function to minimize
-def objective(params, platform, target):
+def objective(params, e, target):
+         
+    amplitude, frequency = params
 
-    with Executor.open(
-        "myexec",
-        path="test_rb",
-        platform=platform,
-        targets=[target],
-        update=True,
-        force=True,
-    ) as e:
+    e.platform.qubits[target].native_gates.RX.amplitude = amplitude
+    e.platform.qubits[target].native_gates.RX.frequency = frequency
 
-        e.platform.settings.nshots = 2000 
-        amplitude, frequency = params
-
-        e.platform.qubits[target].native_gates.RX.amplitude = amplitude
-        e.platform.qubits[target].native_gates.RX.frequency = frequency
-
-        drag_output = e.drag_tuning(
-            beta_start=-4, 
-            beta_end=4, 
-                beta_step=0.5
-            )
-
-        rb_output = e.rb_ondevice(
-            num_of_sequences=1000,
-            max_circuit_depth=500,
-            delta_clifford=10,
-            n_avg=1,
-            save_sequences=True,
-            apply_inverse=True
-        )
-
-        report(e.path, e.history)
+    rb_output = e.rb_ondevice(
+        num_of_sequences=1000,
+        max_circuit_depth=1000,
+        delta_clifford=10,
+        n_avg=1,
+        save_sequences=True,
+        apply_inverse=True
+    )
 
     # Calculate infidelity
     cov = rb_output.results.cov
@@ -65,26 +32,47 @@ def objective(params, platform, target):
 
     return r_g, r_g_std
 
+
 def test_rb_optimization(
-        platform,
-        target,
-        method,
-        init_guess
+        executor : Executor,
+        target : str,
+        method : str,
+        init_guess : list[float]
     ):
     
-    res = minimize(objective, init_guess, args=(platform, target), method=method, options={'xatol': 1e-2, 'disp': True}, maxiter = 100)
+    res = minimize(objective, init_guess, args=(executor, target), method=method, options={'xatol': 1e-2, 'disp': True}, maxiter = 100)
     
     return res
 
 
+
+#Esecuzione della rountine, magari spostare in un altro script
+
 target = "0"
 platform = "dummy"
 method = 'nelder-mead' #forse non la migliore? Non ho idea del landscape
-init_guess = [0.041570229140026074, 4958263653]
+init_guess = [0.041570229140026074, 4958263653] #aggiungere parametro per beta
+
+with Executor.open(
+    "myexec",
+    path="test_rb",
+    platform=platform,
+    targets=[target],
+    update=True,
+    force=True,
+) as e:
+ 
+    e.platform.settings.nshots = 2000
+    drag_output = e.drag_tuning(
+         beta_start = -4,
+         beta_end = 4,
+         beta_step = 0.5
+    )
+     
+    test_rb_optimization(e, target, method, init_guess)
 
 
 """TO DO: 
-    * vedere quali di questi parametri potrebbe essere interessante variare
     * maxiter
     * xatol (considerato anche con quali ordini di grandezza sto lavorando)
     * leggere l'initial guess direttamente dalla migliore calibrazione su qibolab
@@ -92,6 +80,7 @@ init_guess = [0.041570229140026074, 4958263653]
     * ha senso provare a variare la duration
     * provare a variare beta in un piccolo intervallo intorno a quello suggerito da drag
     * spostare report ?
+    * vedere quali di questi parametri potrebbe essere interessante variare    
 
 "RX": (D1) {
                     "duration": 40,
