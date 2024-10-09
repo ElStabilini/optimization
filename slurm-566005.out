@@ -1,0 +1,246 @@
+2024-10-09 15:54:08,704 - qm - INFO     - Starting session: aa993943-7a9d-4d80-8cb8-ac1ba12cfc48
+2024-10-09 15:54:11,664 - qm - INFO     - Octave "octave2" Health check passed, current temperature 60
+2024-10-09 15:54:12,806 - qm - INFO     - Octave "octave3" Health check passed, current temperature 57
+2024-10-09 15:54:13,626 - qm - INFO     - Octave "octave4" Health check passed, current temperature 58
+2024-10-09 15:54:14,364 - qm - INFO     - Octave "octave5" Health check passed, current temperature 59
+2024-10-09 15:54:15,099 - qm - INFO     - Octave "octave6" Health check passed, current temperature 58
+2024-10-09 15:54:15,099 - qm - INFO     - Performing health check
+2024-10-09 15:54:15,118 - qm - WARNING  - Health check warning: Inter-OPX connectivity issues in OPX: con1. Missing ports are: 12, 11, 10, 9. See QM-App for more info.
+2024-10-09 15:54:15,118 - qm - WARNING  - Health check warning: Inter-OPX connectivity issues in OPX: con2. Missing ports are: 12, 11, 10, 9. See QM-App for more info.
+2024-10-09 15:54:15,118 - qm - WARNING  - Health check warning: Inter-OPX connectivity issues in OPX: con3. Missing ports are: 12, 11, 10, 9. See QM-App for more info.
+2024-10-09 15:54:15,118 - qm - WARNING  - Health check warning: Inter-OPX connectivity issues in OPX: con4. Missing ports are: 12, 11, 10, 9. See QM-App for more info.
+2024-10-09 15:54:15,118 - qm - WARNING  - Health check warning: Inter-OPX connectivity issues in OPX: con5. Missing ports are: 12, 11, 10, 9. See QM-App for more info.
+2024-10-09 15:54:15,118 - qm - WARNING  - Health check warning: Inter-OPX connectivity issues in OPX: con6. Missing ports are: 12, 11, 10, 9. See QM-App for more info.
+2024-10-09 15:54:15,118 - qm - WARNING  - Health check warning: Inter-OPX connectivity issues in OPX: con7. Missing ports are: 12, 11, 10, 9. See QM-App for more info.
+2024-10-09 15:54:15,118 - qm - WARNING  - Health check warning: Inter-OPX connectivity issues in OPX: con8. Missing ports are: 12, 11, 10, 9. See QM-App for more info.
+2024-10-09 15:54:15,118 - qm - WARNING  - Health check warning: Inter-OPX connectivity issues in OPX: con9. Missing ports are: 12, 11, 10, 9. See QM-App for more info.
+2024-10-09 15:54:15,118 - qm - INFO     - Health check passed
+Connected to: Rohde&Schwarz SGS100A (serial:1416.0505k02/114167, firmware:4.2.76.0-4.30.046.295) in 0.18s
+Connected to: Rohde&Schwarz SGS100A (serial:1416.0505k02/114164, firmware:4.2.76.0-4.30.046.295) in 0.14s
+2024-10-09 15:54:17,814 - qm - INFO     - Sending program to QOP for compilation
+2024-10-09 15:54:18,021 - qm - INFO     - Executing program
+2024-10-09 15:54:21,353 - qm - INFO     - Sending program to QOP for compilation
+2024-10-09 15:54:21,563 - qm - INFO     - Executing program
+2024-10-09 15:54:24,743 - qm - INFO     - Sending program to QOP for compilation
+2024-10-09 15:54:24,967 - qm - INFO     - Executing program
+2024-10-09 15:54:28,191 - qm - INFO     - Sending program to QOP for compilation
+2024-10-09 15:54:28,392 - qm - INFO     - Executing program
+2024-10-09 15:54:31,626 - qm - INFO     - Sending program to QOP for compilation
+2024-10-09 15:54:31,828 - qm - INFO     - Executing program
+2024-10-09 15:54:33,959 - qm - INFO     - Sending program to QOP for compilation
+2024-10-09 15:54:34,110 - qm - INFO     - Executing program
+2024-10-09 15:54:37,405 - qm - INFO     - Sending program to QOP for compilation
+2024-10-09 15:54:37,556 - qm - INFO     - Executing program
+2024-10-09 15:54:40,835 - qm - INFO     - Sending program to QOP for compilation
+2024-10-09 15:54:41,045 - qm - INFO     - Executing program
+2024-10-09 15:54:43,979 - qm - INFO     - Sending program to QOP for compilation
+2024-10-09 15:54:44,127 - qm - INFO     - Executing program
+2024-10-09 15:54:46,466 - qm - INFO     - Sending program to QOP for compilation
+2024-10-09 15:54:46,667 - qm - INFO     - Executing program
+2024-10-09 15:54:49,335 - qm - INFO     - Sending program to QOP for compilation
+2024-10-09 15:54:49,546 - qm - INFO     - Executing program
+2024-10-09 15:54:51,762 - qm - INFO     - Sending program to QOP for compilation
+2024-10-09 15:54:51,964 - qm - INFO     - Executing program
+2024-10-09 15:54:54,246 - qm - INFO     - Sending program to QOP for compilation
+2024-10-09 15:54:54,476 - qm - INFO     - Executing program
+2024-10-09 15:54:56,933 - qm - INFO     - Sending program to QOP for compilation
+2024-10-09 15:54:57,159 - qm - INFO     - Executing program
+2024-10-09 15:54:59,424 - qm - INFO     - Sending program to QOP for compilation
+2024-10-09 15:54:59,581 - qm - INFO     - Executing program
+2024-10-09 15:55:02,119 - qm - INFO     - Sending program to QOP for compilation
+2024-10-09 15:55:02,345 - qm - INFO     - Executing program
+
+Total relaxation time: 10.10 sec
+
+2024-10-09 15:55:08,065 - qm - ERROR    - CONFIG ERROR in key "mixers.driveD1_mixer_4d0" [mixers.corrections.intermediateFrequency.values] : Mixer 'driveD1_mixer_4d0' correction 'FrequencyCorrection(frequency=-5.1E9, loFrequency=5.1E9, correction=CorrectionMatrix(v00=1.0, v01=0.0, v10=0.0, v11=1.0))' has an intermediate frequency less than -5.0E8
+2024-10-09 15:55:08,065 - qm - ERROR    - CONFIG ERROR in key "elements.driveD1" [element.intermediateFrequencyUpperLimit] : Element 'driveD1' has intermediate frequency less than -5.0E8 (-5.1E9)
+2024-10-09 15:55:08,065 - qm - ERROR    - CONFIG ERROR in key "waveforms.plus_i_D1" [waveforms.samplesAreValid] : Arbitrary waveform 'plus_i_D1' sample #0 (21.31191345287329) is outside of the valid range ([-0.5, 0.5]).
+2024-10-09 15:55:08,065 - qm - ERROR    - CONFIG ERROR in key "waveforms.plus_i_D1" [waveforms.samplesAreValid] : Arbitrary waveform 'plus_i_D1' sample #1 (28.678314172060436) is outside of the valid range ([-0.5, 0.5]).
+2024-10-09 15:55:08,065 - qm - ERROR    - CONFIG ERROR in key "waveforms.plus_i_D1" [waveforms.samplesAreValid] : Arbitrary waveform 'plus_i_D1' sample #2 (37.992593521183686) is outside of the valid range ([-0.5, 0.5]).
+2024-10-09 15:55:08,065 - qm - ERROR    - CONFIG ERROR in key "waveforms.plus_i_D1" [waveforms.samplesAreValid] : Arbitrary waveform 'plus_i_D1' sample #3 (49.551683371727506) is outside of the valid range ([-0.5, 0.5]).
+2024-10-09 15:55:08,065 - qm - ERROR    - CONFIG ERROR in key "waveforms.plus_i_D1" [waveforms.samplesAreValid] : Arbitrary waveform 'plus_i_D1' sample #4 (63.62562088896144) is outside of the valid range ([-0.5, 0.5]).
+2024-10-09 15:55:08,065 - qm - ERROR    - CONFIG ERROR in key "waveforms.plus_i_D1" [waveforms.samplesAreValid] : Arbitrary waveform 'plus_i_D1' sample #5 (80.43032111550447) is outside of the valid range ([-0.5, 0.5]).
+2024-10-09 15:55:08,065 - qm - ERROR    - CONFIG ERROR in key "waveforms.plus_i_D1" [waveforms.samplesAreValid] : Arbitrary waveform 'plus_i_D1' sample #6 (100.09715190232926) is outside of the valid range ([-0.5, 0.5]).
+2024-10-09 15:55:08,065 - qm - ERROR    - CONFIG ERROR in key "waveforms.plus_i_D1" [waveforms.samplesAreValid] : Arbitrary waveform 'plus_i_D1' sample #7 (122.64159418670717) is outside of the valid range ([-0.5, 0.5]).
+2024-10-09 15:55:08,065 - qm - ERROR    - CONFIG ERROR in key "waveforms.plus_i_D1" [waveforms.samplesAreValid] : Arbitrary waveform 'plus_i_D1' sample #8 (147.9340007452185) is outside of the valid range ([-0.5, 0.5]).
+2024-10-09 15:55:08,065 - qm - ERROR    - CONFIG ERROR in key "waveforms.plus_i_D1" [waveforms.samplesAreValid] : Arbitrary waveform 'plus_i_D1' sample #9 (175.67597259464537) is outside of the valid range ([-0.5, 0.5]).
+2024-10-09 15:55:08,065 - qm - ERROR    - CONFIG ERROR in key "waveforms.plus_i_D1" [waveforms.samplesAreValid] : Arbitrary waveform 'plus_i_D1' sample #10 (205.38602010916821) is outside of the valid range ([-0.5, 0.5]).
+2024-10-09 15:55:08,065 - qm - ERROR    - CONFIG ERROR in key "waveforms.plus_i_D1" [waveforms.samplesAreValid] : Arbitrary waveform 'plus_i_D1' sample #11 (236.3978600838527) is outside of the valid range ([-0.5, 0.5]).
+2024-10-09 15:55:08,065 - qm - ERROR    - CONFIG ERROR in key "waveforms.plus_i_D1" [waveforms.samplesAreValid] : Arbitrary waveform 'plus_i_D1' sample #12 (267.87386946232573) is outside of the valid range ([-0.5, 0.5]).
+2024-10-09 15:55:08,065 - qm - ERROR    - CONFIG ERROR in key "waveforms.plus_i_D1" [waveforms.samplesAreValid] : Arbitrary waveform 'plus_i_D1' sample #13 (298.834895941441) is outside of the valid range ([-0.5, 0.5]).
+2024-10-09 15:55:08,065 - qm - ERROR    - CONFIG ERROR in key "waveforms.plus_i_D1" [waveforms.samplesAreValid] : Arbitrary waveform 'plus_i_D1' sample #14 (328.2059256179201) is outside of the valid range ([-0.5, 0.5]).
+2024-10-09 15:55:08,065 - qm - ERROR    - CONFIG ERROR in key "waveforms.plus_i_D1" [waveforms.samplesAreValid] : Arbitrary waveform 'plus_i_D1' sample #15 (354.8752195254148) is outside of the valid range ([-0.5, 0.5]).
+2024-10-09 15:55:08,065 - qm - ERROR    - CONFIG ERROR in key "waveforms.plus_i_D1" [waveforms.samplesAreValid] : Arbitrary waveform 'plus_i_D1' sample #16 (377.7627047920631) is outside of the valid range ([-0.5, 0.5]).
+2024-10-09 15:55:08,065 - qm - ERROR    - CONFIG ERROR in key "waveforms.plus_i_D1" [waveforms.samplesAreValid] : Arbitrary waveform 'plus_i_D1' sample #17 (395.8919155195476) is outside of the valid range ([-0.5, 0.5]).
+2024-10-09 15:55:08,065 - qm - ERROR    - CONFIG ERROR in key "waveforms.plus_i_D1" [waveforms.samplesAreValid] : Arbitrary waveform 'plus_i_D1' sample #18 (408.4588739194849) is outside of the valid range ([-0.5, 0.5]).
+2024-10-09 15:55:08,065 - qm - ERROR    - CONFIG ERROR in key "waveforms.plus_i_D1" [waveforms.samplesAreValid] : Arbitrary waveform 'plus_i_D1' sample #19 (414.89116523561484) is outside of the valid range ([-0.5, 0.5]).
+2024-10-09 15:55:08,065 - qm - ERROR    - CONFIG ERROR in key "waveforms.plus_i_D1" [waveforms.samplesAreValid] : Arbitrary waveform 'plus_i_D1' sample #20 (414.89116523561484) is outside of the valid range ([-0.5, 0.5]).
+2024-10-09 15:55:08,065 - qm - ERROR    - CONFIG ERROR in key "waveforms.plus_i_D1" [waveforms.samplesAreValid] : Arbitrary waveform 'plus_i_D1' sample #21 (408.4588739194849) is outside of the valid range ([-0.5, 0.5]).
+2024-10-09 15:55:08,065 - qm - ERROR    - CONFIG ERROR in key "waveforms.plus_i_D1" [waveforms.samplesAreValid] : Arbitrary waveform 'plus_i_D1' sample #22 (395.8919155195476) is outside of the valid range ([-0.5, 0.5]).
+2024-10-09 15:55:08,065 - qm - ERROR    - CONFIG ERROR in key "waveforms.plus_i_D1" [waveforms.samplesAreValid] : Arbitrary waveform 'plus_i_D1' sample #23 (377.7627047920631) is outside of the valid range ([-0.5, 0.5]).
+2024-10-09 15:55:08,065 - qm - ERROR    - CONFIG ERROR in key "waveforms.plus_i_D1" [waveforms.samplesAreValid] : Arbitrary waveform 'plus_i_D1' sample #24 (354.8752195254148) is outside of the valid range ([-0.5, 0.5]).
+2024-10-09 15:55:08,065 - qm - ERROR    - CONFIG ERROR in key "waveforms.plus_i_D1" [waveforms.samplesAreValid] : Arbitrary waveform 'plus_i_D1' sample #25 (328.2059256179201) is outside of the valid range ([-0.5, 0.5]).
+2024-10-09 15:55:08,065 - qm - ERROR    - CONFIG ERROR in key "waveforms.plus_i_D1" [waveforms.samplesAreValid] : Arbitrary waveform 'plus_i_D1' sample #26 (298.834895941441) is outside of the valid range ([-0.5, 0.5]).
+2024-10-09 15:55:08,065 - qm - ERROR    - CONFIG ERROR in key "waveforms.plus_i_D1" [waveforms.samplesAreValid] : Arbitrary waveform 'plus_i_D1' sample #27 (267.87386946232573) is outside of the valid range ([-0.5, 0.5]).
+2024-10-09 15:55:08,065 - qm - ERROR    - CONFIG ERROR in key "waveforms.plus_i_D1" [waveforms.samplesAreValid] : Arbitrary waveform 'plus_i_D1' sample #28 (236.3978600838527) is outside of the valid range ([-0.5, 0.5]).
+2024-10-09 15:55:08,065 - qm - ERROR    - CONFIG ERROR in key "waveforms.plus_i_D1" [waveforms.samplesAreValid] : Arbitrary waveform 'plus_i_D1' sample #29 (205.38602010916821) is outside of the valid range ([-0.5, 0.5]).
+2024-10-09 15:55:08,065 - qm - ERROR    - CONFIG ERROR in key "waveforms.plus_i_D1" [waveforms.samplesAreValid] : Arbitrary waveform 'plus_i_D1' sample #30 (175.67597259464537) is outside of the valid range ([-0.5, 0.5]).
+2024-10-09 15:55:08,065 - qm - ERROR    - CONFIG ERROR in key "waveforms.plus_i_D1" [waveforms.samplesAreValid] : Arbitrary waveform 'plus_i_D1' sample #31 (147.9340007452185) is outside of the valid range ([-0.5, 0.5]).
+2024-10-09 15:55:08,065 - qm - ERROR    - CONFIG ERROR in key "waveforms.plus_i_D1" [waveforms.samplesAreValid] : Arbitrary waveform 'plus_i_D1' sample #32 (122.64159418670717) is outside of the valid range ([-0.5, 0.5]).
+2024-10-09 15:55:08,065 - qm - ERROR    - CONFIG ERROR in key "waveforms.plus_i_D1" [waveforms.samplesAreValid] : Arbitrary waveform 'plus_i_D1' sample #33 (100.09715190232926) is outside of the valid range ([-0.5, 0.5]).
+2024-10-09 15:55:08,065 - qm - ERROR    - CONFIG ERROR in key "waveforms.plus_i_D1" [waveforms.samplesAreValid] : Arbitrary waveform 'plus_i_D1' sample #34 (80.43032111550447) is outside of the valid range ([-0.5, 0.5]).
+2024-10-09 15:55:08,065 - qm - ERROR    - CONFIG ERROR in key "waveforms.plus_i_D1" [waveforms.samplesAreValid] : Arbitrary waveform 'plus_i_D1' sample #35 (63.62562088896144) is outside of the valid range ([-0.5, 0.5]).
+2024-10-09 15:55:08,065 - qm - ERROR    - CONFIG ERROR in key "waveforms.plus_i_D1" [waveforms.samplesAreValid] : Arbitrary waveform 'plus_i_D1' sample #36 (49.551683371727506) is outside of the valid range ([-0.5, 0.5]).
+2024-10-09 15:55:08,065 - qm - ERROR    - CONFIG ERROR in key "waveforms.plus_i_D1" [waveforms.samplesAreValid] : Arbitrary waveform 'plus_i_D1' sample #37 (37.992593521183686) is outside of the valid range ([-0.5, 0.5]).
+2024-10-09 15:55:08,065 - qm - ERROR    - CONFIG ERROR in key "waveforms.plus_i_D1" [waveforms.samplesAreValid] : Arbitrary waveform 'plus_i_D1' sample #38 (28.678314172060436) is outside of the valid range ([-0.5, 0.5]).
+2024-10-09 15:55:08,065 - qm - ERROR    - CONFIG ERROR in key "waveforms.plus_i_D1" [waveforms.samplesAreValid] : Arbitrary waveform 'plus_i_D1' sample #39 (21.31191345287329) is outside of the valid range ([-0.5, 0.5]).
+2024-10-09 15:55:08,065 - qm - ERROR    - CONFIG ERROR in key "waveforms.minus_i_D1" [waveforms.samplesAreValid] : Arbitrary waveform 'minus_i_D1' sample #0 (-21.31191345287329) is outside of the valid range ([-0.5, 0.5]).
+2024-10-09 15:55:08,065 - qm - ERROR    - CONFIG ERROR in key "waveforms.minus_i_D1" [waveforms.samplesAreValid] : Arbitrary waveform 'minus_i_D1' sample #1 (-28.678314172060436) is outside of the valid range ([-0.5, 0.5]).
+2024-10-09 15:55:08,065 - qm - ERROR    - CONFIG ERROR in key "waveforms.minus_i_D1" [waveforms.samplesAreValid] : Arbitrary waveform 'minus_i_D1' sample #2 (-37.992593521183686) is outside of the valid range ([-0.5, 0.5]).
+2024-10-09 15:55:08,065 - qm - ERROR    - CONFIG ERROR in key "waveforms.minus_i_D1" [waveforms.samplesAreValid] : Arbitrary waveform 'minus_i_D1' sample #3 (-49.551683371727506) is outside of the valid range ([-0.5, 0.5]).
+2024-10-09 15:55:08,065 - qm - ERROR    - CONFIG ERROR in key "waveforms.minus_i_D1" [waveforms.samplesAreValid] : Arbitrary waveform 'minus_i_D1' sample #4 (-63.62562088896144) is outside of the valid range ([-0.5, 0.5]).
+2024-10-09 15:55:08,065 - qm - ERROR    - CONFIG ERROR in key "waveforms.minus_i_D1" [waveforms.samplesAreValid] : Arbitrary waveform 'minus_i_D1' sample #5 (-80.43032111550447) is outside of the valid range ([-0.5, 0.5]).
+2024-10-09 15:55:08,065 - qm - ERROR    - CONFIG ERROR in key "waveforms.minus_i_D1" [waveforms.samplesAreValid] : Arbitrary waveform 'minus_i_D1' sample #6 (-100.09715190232926) is outside of the valid range ([-0.5, 0.5]).
+2024-10-09 15:55:08,065 - qm - ERROR    - CONFIG ERROR in key "waveforms.minus_i_D1" [waveforms.samplesAreValid] : Arbitrary waveform 'minus_i_D1' sample #7 (-122.64159418670717) is outside of the valid range ([-0.5, 0.5]).
+2024-10-09 15:55:08,065 - qm - ERROR    - CONFIG ERROR in key "waveforms.minus_i_D1" [waveforms.samplesAreValid] : Arbitrary waveform 'minus_i_D1' sample #8 (-147.9340007452185) is outside of the valid range ([-0.5, 0.5]).
+2024-10-09 15:55:08,065 - qm - ERROR    - CONFIG ERROR in key "waveforms.minus_i_D1" [waveforms.samplesAreValid] : Arbitrary waveform 'minus_i_D1' sample #9 (-175.67597259464537) is outside of the valid range ([-0.5, 0.5]).
+2024-10-09 15:55:08,065 - qm - ERROR    - CONFIG ERROR in key "waveforms.minus_i_D1" [waveforms.samplesAreValid] : Arbitrary waveform 'minus_i_D1' sample #10 (-205.38602010916821) is outside of the valid range ([-0.5, 0.5]).
+2024-10-09 15:55:08,065 - qm - ERROR    - CONFIG ERROR in key "waveforms.minus_i_D1" [waveforms.samplesAreValid] : Arbitrary waveform 'minus_i_D1' sample #11 (-236.3978600838527) is outside of the valid range ([-0.5, 0.5]).
+2024-10-09 15:55:08,065 - qm - ERROR    - CONFIG ERROR in key "waveforms.minus_i_D1" [waveforms.samplesAreValid] : Arbitrary waveform 'minus_i_D1' sample #12 (-267.87386946232573) is outside of the valid range ([-0.5, 0.5]).
+2024-10-09 15:55:08,065 - qm - ERROR    - CONFIG ERROR in key "waveforms.minus_i_D1" [waveforms.samplesAreValid] : Arbitrary waveform 'minus_i_D1' sample #13 (-298.834895941441) is outside of the valid range ([-0.5, 0.5]).
+2024-10-09 15:55:08,065 - qm - ERROR    - CONFIG ERROR in key "waveforms.minus_i_D1" [waveforms.samplesAreValid] : Arbitrary waveform 'minus_i_D1' sample #14 (-328.2059256179201) is outside of the valid range ([-0.5, 0.5]).
+2024-10-09 15:55:08,065 - qm - ERROR    - CONFIG ERROR in key "waveforms.minus_i_D1" [waveforms.samplesAreValid] : Arbitrary waveform 'minus_i_D1' sample #15 (-354.8752195254148) is outside of the valid range ([-0.5, 0.5]).
+2024-10-09 15:55:08,065 - qm - ERROR    - CONFIG ERROR in key "waveforms.minus_i_D1" [waveforms.samplesAreValid] : Arbitrary waveform 'minus_i_D1' sample #16 (-377.7627047920631) is outside of the valid range ([-0.5, 0.5]).
+2024-10-09 15:55:08,065 - qm - ERROR    - CONFIG ERROR in key "waveforms.minus_i_D1" [waveforms.samplesAreValid] : Arbitrary waveform 'minus_i_D1' sample #17 (-395.8919155195476) is outside of the valid range ([-0.5, 0.5]).
+2024-10-09 15:55:08,065 - qm - ERROR    - CONFIG ERROR in key "waveforms.minus_i_D1" [waveforms.samplesAreValid] : Arbitrary waveform 'minus_i_D1' sample #18 (-408.4588739194849) is outside of the valid range ([-0.5, 0.5]).
+2024-10-09 15:55:08,065 - qm - ERROR    - CONFIG ERROR in key "waveforms.minus_i_D1" [waveforms.samplesAreValid] : Arbitrary waveform 'minus_i_D1' sample #19 (-414.89116523561484) is outside of the valid range ([-0.5, 0.5]).
+2024-10-09 15:55:08,065 - qm - ERROR    - CONFIG ERROR in key "waveforms.minus_i_D1" [waveforms.samplesAreValid] : Arbitrary waveform 'minus_i_D1' sample #20 (-414.89116523561484) is outside of the valid range ([-0.5, 0.5]).
+2024-10-09 15:55:08,065 - qm - ERROR    - CONFIG ERROR in key "waveforms.minus_i_D1" [waveforms.samplesAreValid] : Arbitrary waveform 'minus_i_D1' sample #21 (-408.4588739194849) is outside of the valid range ([-0.5, 0.5]).
+2024-10-09 15:55:08,065 - qm - ERROR    - CONFIG ERROR in key "waveforms.minus_i_D1" [waveforms.samplesAreValid] : Arbitrary waveform 'minus_i_D1' sample #22 (-395.8919155195476) is outside of the valid range ([-0.5, 0.5]).
+2024-10-09 15:55:08,065 - qm - ERROR    - CONFIG ERROR in key "waveforms.minus_i_D1" [waveforms.samplesAreValid] : Arbitrary waveform 'minus_i_D1' sample #23 (-377.7627047920631) is outside of the valid range ([-0.5, 0.5]).
+2024-10-09 15:55:08,065 - qm - ERROR    - CONFIG ERROR in key "waveforms.minus_i_D1" [waveforms.samplesAreValid] : Arbitrary waveform 'minus_i_D1' sample #24 (-354.8752195254148) is outside of the valid range ([-0.5, 0.5]).
+2024-10-09 15:55:08,065 - qm - ERROR    - CONFIG ERROR in key "waveforms.minus_i_D1" [waveforms.samplesAreValid] : Arbitrary waveform 'minus_i_D1' sample #25 (-328.2059256179201) is outside of the valid range ([-0.5, 0.5]).
+2024-10-09 15:55:08,065 - qm - ERROR    - CONFIG ERROR in key "waveforms.minus_i_D1" [waveforms.samplesAreValid] : Arbitrary waveform 'minus_i_D1' sample #26 (-298.834895941441) is outside of the valid range ([-0.5, 0.5]).
+2024-10-09 15:55:08,065 - qm - ERROR    - CONFIG ERROR in key "waveforms.minus_i_D1" [waveforms.samplesAreValid] : Arbitrary waveform 'minus_i_D1' sample #27 (-267.87386946232573) is outside of the valid range ([-0.5, 0.5]).
+2024-10-09 15:55:08,065 - qm - ERROR    - CONFIG ERROR in key "waveforms.minus_i_D1" [waveforms.samplesAreValid] : Arbitrary waveform 'minus_i_D1' sample #28 (-236.3978600838527) is outside of the valid range ([-0.5, 0.5]).
+2024-10-09 15:55:08,065 - qm - ERROR    - CONFIG ERROR in key "waveforms.minus_i_D1" [waveforms.samplesAreValid] : Arbitrary waveform 'minus_i_D1' sample #29 (-205.38602010916821) is outside of the valid range ([-0.5, 0.5]).
+2024-10-09 15:55:08,065 - qm - ERROR    - CONFIG ERROR in key "waveforms.minus_i_D1" [waveforms.samplesAreValid] : Arbitrary waveform 'minus_i_D1' sample #30 (-175.67597259464537) is outside of the valid range ([-0.5, 0.5]).
+2024-10-09 15:55:08,065 - qm - ERROR    - CONFIG ERROR in key "waveforms.minus_i_D1" [waveforms.samplesAreValid] : Arbitrary waveform 'minus_i_D1' sample #31 (-147.9340007452185) is outside of the valid range ([-0.5, 0.5]).
+2024-10-09 15:55:08,065 - qm - ERROR    - CONFIG ERROR in key "waveforms.minus_i_D1" [waveforms.samplesAreValid] : Arbitrary waveform 'minus_i_D1' sample #32 (-122.64159418670717) is outside of the valid range ([-0.5, 0.5]).
+2024-10-09 15:55:08,065 - qm - ERROR    - CONFIG ERROR in key "waveforms.minus_i_D1" [waveforms.samplesAreValid] : Arbitrary waveform 'minus_i_D1' sample #33 (-100.09715190232926) is outside of the valid range ([-0.5, 0.5]).
+2024-10-09 15:55:08,065 - qm - ERROR    - CONFIG ERROR in key "waveforms.minus_i_D1" [waveforms.samplesAreValid] : Arbitrary waveform 'minus_i_D1' sample #34 (-80.43032111550447) is outside of the valid range ([-0.5, 0.5]).
+2024-10-09 15:55:08,065 - qm - ERROR    - CONFIG ERROR in key "waveforms.minus_i_D1" [waveforms.samplesAreValid] : Arbitrary waveform 'minus_i_D1' sample #35 (-63.62562088896144) is outside of the valid range ([-0.5, 0.5]).
+2024-10-09 15:55:08,065 - qm - ERROR    - CONFIG ERROR in key "waveforms.minus_i_D1" [waveforms.samplesAreValid] : Arbitrary waveform 'minus_i_D1' sample #36 (-49.551683371727506) is outside of the valid range ([-0.5, 0.5]).
+2024-10-09 15:55:08,065 - qm - ERROR    - CONFIG ERROR in key "waveforms.minus_i_D1" [waveforms.samplesAreValid] : Arbitrary waveform 'minus_i_D1' sample #37 (-37.992593521183686) is outside of the valid range ([-0.5, 0.5]).
+2024-10-09 15:55:08,065 - qm - ERROR    - CONFIG ERROR in key "waveforms.minus_i_D1" [waveforms.samplesAreValid] : Arbitrary waveform 'minus_i_D1' sample #38 (-28.678314172060436) is outside of the valid range ([-0.5, 0.5]).
+2024-10-09 15:55:08,065 - qm - ERROR    - CONFIG ERROR in key "waveforms.minus_i_D1" [waveforms.samplesAreValid] : Arbitrary waveform 'minus_i_D1' sample #39 (-21.31191345287329) is outside of the valid range ([-0.5, 0.5]).
+2024-10-09 15:55:08,065 - qm - ERROR    - CONFIG ERROR in key "waveforms.plus_i_half_D1" [waveforms.samplesAreValid] : Arbitrary waveform 'plus_i_half_D1' sample #0 (10.655956726436646) is outside of the valid range ([-0.5, 0.5]).
+2024-10-09 15:55:08,065 - qm - ERROR    - CONFIG ERROR in key "waveforms.plus_i_half_D1" [waveforms.samplesAreValid] : Arbitrary waveform 'plus_i_half_D1' sample #1 (14.339157086030218) is outside of the valid range ([-0.5, 0.5]).
+2024-10-09 15:55:08,066 - qm - ERROR    - CONFIG ERROR in key "waveforms.plus_i_half_D1" [waveforms.samplesAreValid] : Arbitrary waveform 'plus_i_half_D1' sample #2 (18.996296760591843) is outside of the valid range ([-0.5, 0.5]).
+2024-10-09 15:55:08,066 - qm - ERROR    - CONFIG ERROR in key "waveforms.plus_i_half_D1" [waveforms.samplesAreValid] : Arbitrary waveform 'plus_i_half_D1' sample #3 (24.775841685863753) is outside of the valid range ([-0.5, 0.5]).
+2024-10-09 15:55:08,066 - qm - ERROR    - CONFIG ERROR in key "waveforms.plus_i_half_D1" [waveforms.samplesAreValid] : Arbitrary waveform 'plus_i_half_D1' sample #4 (31.81281044448072) is outside of the valid range ([-0.5, 0.5]).
+2024-10-09 15:55:08,066 - qm - ERROR    - CONFIG ERROR in key "waveforms.plus_i_half_D1" [waveforms.samplesAreValid] : Arbitrary waveform 'plus_i_half_D1' sample #5 (40.215160557752235) is outside of the valid range ([-0.5, 0.5]).
+2024-10-09 15:55:08,066 - qm - ERROR    - CONFIG ERROR in key "waveforms.plus_i_half_D1" [waveforms.samplesAreValid] : Arbitrary waveform 'plus_i_half_D1' sample #6 (50.04857595116463) is outside of the valid range ([-0.5, 0.5]).
+2024-10-09 15:55:08,066 - qm - ERROR    - CONFIG ERROR in key "waveforms.plus_i_half_D1" [waveforms.samplesAreValid] : Arbitrary waveform 'plus_i_half_D1' sample #7 (61.32079709335358) is outside of the valid range ([-0.5, 0.5]).
+2024-10-09 15:55:08,066 - qm - ERROR    - CONFIG ERROR in key "waveforms.plus_i_half_D1" [waveforms.samplesAreValid] : Arbitrary waveform 'plus_i_half_D1' sample #8 (73.96700037260925) is outside of the valid range ([-0.5, 0.5]).
+2024-10-09 15:55:08,066 - qm - ERROR    - CONFIG ERROR in key "waveforms.plus_i_half_D1" [waveforms.samplesAreValid] : Arbitrary waveform 'plus_i_half_D1' sample #9 (87.83798629732269) is outside of the valid range ([-0.5, 0.5]).
+2024-10-09 15:55:08,066 - qm - ERROR    - CONFIG ERROR in key "waveforms.plus_i_half_D1" [waveforms.samplesAreValid] : Arbitrary waveform 'plus_i_half_D1' sample #10 (102.69301005458411) is outside of the valid range ([-0.5, 0.5]).
+2024-10-09 15:55:08,066 - qm - ERROR    - CONFIG ERROR in key "waveforms.plus_i_half_D1" [waveforms.samplesAreValid] : Arbitrary waveform 'plus_i_half_D1' sample #11 (118.19893004192635) is outside of the valid range ([-0.5, 0.5]).
+2024-10-09 15:55:08,066 - qm - ERROR    - CONFIG ERROR in key "waveforms.plus_i_half_D1" [waveforms.samplesAreValid] : Arbitrary waveform 'plus_i_half_D1' sample #12 (133.93693473116286) is outside of the valid range ([-0.5, 0.5]).
+2024-10-09 15:55:08,066 - qm - ERROR    - CONFIG ERROR in key "waveforms.plus_i_half_D1" [waveforms.samplesAreValid] : Arbitrary waveform 'plus_i_half_D1' sample #13 (149.4174479707205) is outside of the valid range ([-0.5, 0.5]).
+2024-10-09 15:55:08,066 - qm - ERROR    - CONFIG ERROR in key "waveforms.plus_i_half_D1" [waveforms.samplesAreValid] : Arbitrary waveform 'plus_i_half_D1' sample #14 (164.10296280896006) is outside of the valid range ([-0.5, 0.5]).
+2024-10-09 15:55:08,066 - qm - ERROR    - CONFIG ERROR in key "waveforms.plus_i_half_D1" [waveforms.samplesAreValid] : Arbitrary waveform 'plus_i_half_D1' sample #15 (177.4376097627074) is outside of the valid range ([-0.5, 0.5]).
+2024-10-09 15:55:08,066 - qm - ERROR    - CONFIG ERROR in key "waveforms.plus_i_half_D1" [waveforms.samplesAreValid] : Arbitrary waveform 'plus_i_half_D1' sample #16 (188.88135239603156) is outside of the valid range ([-0.5, 0.5]).
+2024-10-09 15:55:08,066 - qm - ERROR    - CONFIG ERROR in key "waveforms.plus_i_half_D1" [waveforms.samplesAreValid] : Arbitrary waveform 'plus_i_half_D1' sample #17 (197.9459577597738) is outside of the valid range ([-0.5, 0.5]).
+2024-10-09 15:55:08,066 - qm - ERROR    - CONFIG ERROR in key "waveforms.plus_i_half_D1" [waveforms.samplesAreValid] : Arbitrary waveform 'plus_i_half_D1' sample #18 (204.22943695974246) is outside of the valid range ([-0.5, 0.5]).
+2024-10-09 15:55:08,066 - qm - ERROR    - CONFIG ERROR in key "waveforms.plus_i_half_D1" [waveforms.samplesAreValid] : Arbitrary waveform 'plus_i_half_D1' sample #19 (207.44558261780742) is outside of the valid range ([-0.5, 0.5]).
+2024-10-09 15:55:08,066 - qm - ERROR    - CONFIG ERROR in key "waveforms.plus_i_half_D1" [waveforms.samplesAreValid] : Arbitrary waveform 'plus_i_half_D1' sample #20 (207.44558261780742) is outside of the valid range ([-0.5, 0.5]).
+2024-10-09 15:55:08,066 - qm - ERROR    - CONFIG ERROR in key "waveforms.plus_i_half_D1" [waveforms.samplesAreValid] : Arbitrary waveform 'plus_i_half_D1' sample #21 (204.22943695974246) is outside of the valid range ([-0.5, 0.5]).
+2024-10-09 15:55:08,066 - qm - ERROR    - CONFIG ERROR in key "waveforms.plus_i_half_D1" [waveforms.samplesAreValid] : Arbitrary waveform 'plus_i_half_D1' sample #22 (197.9459577597738) is outside of the valid range ([-0.5, 0.5]).
+2024-10-09 15:55:08,066 - qm - ERROR    - CONFIG ERROR in key "waveforms.plus_i_half_D1" [waveforms.samplesAreValid] : Arbitrary waveform 'plus_i_half_D1' sample #23 (188.88135239603156) is outside of the valid range ([-0.5, 0.5]).
+2024-10-09 15:55:08,066 - qm - ERROR    - CONFIG ERROR in key "waveforms.plus_i_half_D1" [waveforms.samplesAreValid] : Arbitrary waveform 'plus_i_half_D1' sample #24 (177.4376097627074) is outside of the valid range ([-0.5, 0.5]).
+2024-10-09 15:55:08,066 - qm - ERROR    - CONFIG ERROR in key "waveforms.plus_i_half_D1" [waveforms.samplesAreValid] : Arbitrary waveform 'plus_i_half_D1' sample #25 (164.10296280896006) is outside of the valid range ([-0.5, 0.5]).
+2024-10-09 15:55:08,066 - qm - ERROR    - CONFIG ERROR in key "waveforms.plus_i_half_D1" [waveforms.samplesAreValid] : Arbitrary waveform 'plus_i_half_D1' sample #26 (149.4174479707205) is outside of the valid range ([-0.5, 0.5]).
+2024-10-09 15:55:08,066 - qm - ERROR    - CONFIG ERROR in key "waveforms.plus_i_half_D1" [waveforms.samplesAreValid] : Arbitrary waveform 'plus_i_half_D1' sample #27 (133.93693473116286) is outside of the valid range ([-0.5, 0.5]).
+2024-10-09 15:55:08,066 - qm - ERROR    - CONFIG ERROR in key "waveforms.plus_i_half_D1" [waveforms.samplesAreValid] : Arbitrary waveform 'plus_i_half_D1' sample #28 (118.19893004192635) is outside of the valid range ([-0.5, 0.5]).
+2024-10-09 15:55:08,066 - qm - ERROR    - CONFIG ERROR in key "waveforms.plus_i_half_D1" [waveforms.samplesAreValid] : Arbitrary waveform 'plus_i_half_D1' sample #29 (102.69301005458411) is outside of the valid range ([-0.5, 0.5]).
+2024-10-09 15:55:08,066 - qm - ERROR    - CONFIG ERROR in key "waveforms.plus_i_half_D1" [waveforms.samplesAreValid] : Arbitrary waveform 'plus_i_half_D1' sample #30 (87.83798629732269) is outside of the valid range ([-0.5, 0.5]).
+2024-10-09 15:55:08,066 - qm - ERROR    - CONFIG ERROR in key "waveforms.plus_i_half_D1" [waveforms.samplesAreValid] : Arbitrary waveform 'plus_i_half_D1' sample #31 (73.96700037260925) is outside of the valid range ([-0.5, 0.5]).
+2024-10-09 15:55:08,066 - qm - ERROR    - CONFIG ERROR in key "waveforms.plus_i_half_D1" [waveforms.samplesAreValid] : Arbitrary waveform 'plus_i_half_D1' sample #32 (61.32079709335358) is outside of the valid range ([-0.5, 0.5]).
+2024-10-09 15:55:08,066 - qm - ERROR    - CONFIG ERROR in key "waveforms.plus_i_half_D1" [waveforms.samplesAreValid] : Arbitrary waveform 'plus_i_half_D1' sample #33 (50.04857595116463) is outside of the valid range ([-0.5, 0.5]).
+2024-10-09 15:55:08,066 - qm - ERROR    - CONFIG ERROR in key "waveforms.plus_i_half_D1" [waveforms.samplesAreValid] : Arbitrary waveform 'plus_i_half_D1' sample #34 (40.215160557752235) is outside of the valid range ([-0.5, 0.5]).
+2024-10-09 15:55:08,066 - qm - ERROR    - CONFIG ERROR in key "waveforms.plus_i_half_D1" [waveforms.samplesAreValid] : Arbitrary waveform 'plus_i_half_D1' sample #35 (31.81281044448072) is outside of the valid range ([-0.5, 0.5]).
+2024-10-09 15:55:08,066 - qm - ERROR    - CONFIG ERROR in key "waveforms.plus_i_half_D1" [waveforms.samplesAreValid] : Arbitrary waveform 'plus_i_half_D1' sample #36 (24.775841685863753) is outside of the valid range ([-0.5, 0.5]).
+2024-10-09 15:55:08,066 - qm - ERROR    - CONFIG ERROR in key "waveforms.plus_i_half_D1" [waveforms.samplesAreValid] : Arbitrary waveform 'plus_i_half_D1' sample #37 (18.996296760591843) is outside of the valid range ([-0.5, 0.5]).
+2024-10-09 15:55:08,066 - qm - ERROR    - CONFIG ERROR in key "waveforms.plus_i_half_D1" [waveforms.samplesAreValid] : Arbitrary waveform 'plus_i_half_D1' sample #38 (14.339157086030218) is outside of the valid range ([-0.5, 0.5]).
+2024-10-09 15:55:08,066 - qm - ERROR    - CONFIG ERROR in key "waveforms.plus_i_half_D1" [waveforms.samplesAreValid] : Arbitrary waveform 'plus_i_half_D1' sample #39 (10.655956726436646) is outside of the valid range ([-0.5, 0.5]).
+2024-10-09 15:55:08,066 - qm - ERROR    - CONFIG ERROR in key "waveforms.minus_i_half_D1" [waveforms.samplesAreValid] : Arbitrary waveform 'minus_i_half_D1' sample #0 (-10.655956726436646) is outside of the valid range ([-0.5, 0.5]).
+2024-10-09 15:55:08,066 - qm - ERROR    - CONFIG ERROR in key "waveforms.minus_i_half_D1" [waveforms.samplesAreValid] : Arbitrary waveform 'minus_i_half_D1' sample #1 (-14.339157086030218) is outside of the valid range ([-0.5, 0.5]).
+2024-10-09 15:55:08,066 - qm - ERROR    - CONFIG ERROR in key "waveforms.minus_i_half_D1" [waveforms.samplesAreValid] : Arbitrary waveform 'minus_i_half_D1' sample #2 (-18.996296760591843) is outside of the valid range ([-0.5, 0.5]).
+2024-10-09 15:55:08,066 - qm - ERROR    - CONFIG ERROR in key "waveforms.minus_i_half_D1" [waveforms.samplesAreValid] : Arbitrary waveform 'minus_i_half_D1' sample #3 (-24.775841685863753) is outside of the valid range ([-0.5, 0.5]).
+2024-10-09 15:55:08,066 - qm - ERROR    - CONFIG ERROR in key "waveforms.minus_i_half_D1" [waveforms.samplesAreValid] : Arbitrary waveform 'minus_i_half_D1' sample #4 (-31.81281044448072) is outside of the valid range ([-0.5, 0.5]).
+2024-10-09 15:55:08,066 - qm - ERROR    - CONFIG ERROR in key "waveforms.minus_i_half_D1" [waveforms.samplesAreValid] : Arbitrary waveform 'minus_i_half_D1' sample #5 (-40.215160557752235) is outside of the valid range ([-0.5, 0.5]).
+2024-10-09 15:55:08,066 - qm - ERROR    - CONFIG ERROR in key "waveforms.minus_i_half_D1" [waveforms.samplesAreValid] : Arbitrary waveform 'minus_i_half_D1' sample #6 (-50.04857595116463) is outside of the valid range ([-0.5, 0.5]).
+2024-10-09 15:55:08,066 - qm - ERROR    - CONFIG ERROR in key "waveforms.minus_i_half_D1" [waveforms.samplesAreValid] : Arbitrary waveform 'minus_i_half_D1' sample #7 (-61.32079709335358) is outside of the valid range ([-0.5, 0.5]).
+2024-10-09 15:55:08,066 - qm - ERROR    - CONFIG ERROR in key "waveforms.minus_i_half_D1" [waveforms.samplesAreValid] : Arbitrary waveform 'minus_i_half_D1' sample #8 (-73.96700037260925) is outside of the valid range ([-0.5, 0.5]).
+2024-10-09 15:55:08,066 - qm - ERROR    - CONFIG ERROR in key "waveforms.minus_i_half_D1" [waveforms.samplesAreValid] : Arbitrary waveform 'minus_i_half_D1' sample #9 (-87.83798629732269) is outside of the valid range ([-0.5, 0.5]).
+2024-10-09 15:55:08,066 - qm - ERROR    - CONFIG ERROR in key "waveforms.minus_i_half_D1" [waveforms.samplesAreValid] : Arbitrary waveform 'minus_i_half_D1' sample #10 (-102.69301005458411) is outside of the valid range ([-0.5, 0.5]).
+2024-10-09 15:55:08,066 - qm - ERROR    - CONFIG ERROR in key "waveforms.minus_i_half_D1" [waveforms.samplesAreValid] : Arbitrary waveform 'minus_i_half_D1' sample #11 (-118.19893004192635) is outside of the valid range ([-0.5, 0.5]).
+2024-10-09 15:55:08,066 - qm - ERROR    - CONFIG ERROR in key "waveforms.minus_i_half_D1" [waveforms.samplesAreValid] : Arbitrary waveform 'minus_i_half_D1' sample #12 (-133.93693473116286) is outside of the valid range ([-0.5, 0.5]).
+2024-10-09 15:55:08,066 - qm - ERROR    - CONFIG ERROR in key "waveforms.minus_i_half_D1" [waveforms.samplesAreValid] : Arbitrary waveform 'minus_i_half_D1' sample #13 (-149.4174479707205) is outside of the valid range ([-0.5, 0.5]).
+2024-10-09 15:55:08,066 - qm - ERROR    - CONFIG ERROR in key "waveforms.minus_i_half_D1" [waveforms.samplesAreValid] : Arbitrary waveform 'minus_i_half_D1' sample #14 (-164.10296280896006) is outside of the valid range ([-0.5, 0.5]).
+2024-10-09 15:55:08,066 - qm - ERROR    - CONFIG ERROR in key "waveforms.minus_i_half_D1" [waveforms.samplesAreValid] : Arbitrary waveform 'minus_i_half_D1' sample #15 (-177.4376097627074) is outside of the valid range ([-0.5, 0.5]).
+2024-10-09 15:55:08,066 - qm - ERROR    - CONFIG ERROR in key "waveforms.minus_i_half_D1" [waveforms.samplesAreValid] : Arbitrary waveform 'minus_i_half_D1' sample #16 (-188.88135239603156) is outside of the valid range ([-0.5, 0.5]).
+2024-10-09 15:55:08,066 - qm - ERROR    - CONFIG ERROR in key "waveforms.minus_i_half_D1" [waveforms.samplesAreValid] : Arbitrary waveform 'minus_i_half_D1' sample #17 (-197.9459577597738) is outside of the valid range ([-0.5, 0.5]).
+2024-10-09 15:55:08,066 - qm - ERROR    - CONFIG ERROR in key "waveforms.minus_i_half_D1" [waveforms.samplesAreValid] : Arbitrary waveform 'minus_i_half_D1' sample #18 (-204.22943695974246) is outside of the valid range ([-0.5, 0.5]).
+2024-10-09 15:55:08,066 - qm - ERROR    - CONFIG ERROR in key "waveforms.minus_i_half_D1" [waveforms.samplesAreValid] : Arbitrary waveform 'minus_i_half_D1' sample #19 (-207.44558261780742) is outside of the valid range ([-0.5, 0.5]).
+2024-10-09 15:55:08,066 - qm - ERROR    - CONFIG ERROR in key "waveforms.minus_i_half_D1" [waveforms.samplesAreValid] : Arbitrary waveform 'minus_i_half_D1' sample #20 (-207.44558261780742) is outside of the valid range ([-0.5, 0.5]).
+2024-10-09 15:55:08,066 - qm - ERROR    - CONFIG ERROR in key "waveforms.minus_i_half_D1" [waveforms.samplesAreValid] : Arbitrary waveform 'minus_i_half_D1' sample #21 (-204.22943695974246) is outside of the valid range ([-0.5, 0.5]).
+2024-10-09 15:55:08,066 - qm - ERROR    - CONFIG ERROR in key "waveforms.minus_i_half_D1" [waveforms.samplesAreValid] : Arbitrary waveform 'minus_i_half_D1' sample #22 (-197.9459577597738) is outside of the valid range ([-0.5, 0.5]).
+2024-10-09 15:55:08,066 - qm - ERROR    - CONFIG ERROR in key "waveforms.minus_i_half_D1" [waveforms.samplesAreValid] : Arbitrary waveform 'minus_i_half_D1' sample #23 (-188.88135239603156) is outside of the valid range ([-0.5, 0.5]).
+2024-10-09 15:55:08,066 - qm - ERROR    - CONFIG ERROR in key "waveforms.minus_i_half_D1" [waveforms.samplesAreValid] : Arbitrary waveform 'minus_i_half_D1' sample #24 (-177.4376097627074) is outside of the valid range ([-0.5, 0.5]).
+2024-10-09 15:55:08,066 - qm - ERROR    - CONFIG ERROR in key "waveforms.minus_i_half_D1" [waveforms.samplesAreValid] : Arbitrary waveform 'minus_i_half_D1' sample #25 (-164.10296280896006) is outside of the valid range ([-0.5, 0.5]).
+2024-10-09 15:55:08,066 - qm - ERROR    - CONFIG ERROR in key "waveforms.minus_i_half_D1" [waveforms.samplesAreValid] : Arbitrary waveform 'minus_i_half_D1' sample #26 (-149.4174479707205) is outside of the valid range ([-0.5, 0.5]).
+2024-10-09 15:55:08,066 - qm - ERROR    - CONFIG ERROR in key "waveforms.minus_i_half_D1" [waveforms.samplesAreValid] : Arbitrary waveform 'minus_i_half_D1' sample #27 (-133.93693473116286) is outside of the valid range ([-0.5, 0.5]).
+2024-10-09 15:55:08,066 - qm - ERROR    - CONFIG ERROR in key "waveforms.minus_i_half_D1" [waveforms.samplesAreValid] : Arbitrary waveform 'minus_i_half_D1' sample #28 (-118.19893004192635) is outside of the valid range ([-0.5, 0.5]).
+2024-10-09 15:55:08,066 - qm - ERROR    - CONFIG ERROR in key "waveforms.minus_i_half_D1" [waveforms.samplesAreValid] : Arbitrary waveform 'minus_i_half_D1' sample #29 (-102.69301005458411) is outside of the valid range ([-0.5, 0.5]).
+2024-10-09 15:55:08,066 - qm - ERROR    - CONFIG ERROR in key "waveforms.minus_i_half_D1" [waveforms.samplesAreValid] : Arbitrary waveform 'minus_i_half_D1' sample #30 (-87.83798629732269) is outside of the valid range ([-0.5, 0.5]).
+2024-10-09 15:55:08,066 - qm - ERROR    - CONFIG ERROR in key "waveforms.minus_i_half_D1" [waveforms.samplesAreValid] : Arbitrary waveform 'minus_i_half_D1' sample #31 (-73.96700037260925) is outside of the valid range ([-0.5, 0.5]).
+2024-10-09 15:55:08,066 - qm - ERROR    - CONFIG ERROR in key "waveforms.minus_i_half_D1" [waveforms.samplesAreValid] : Arbitrary waveform 'minus_i_half_D1' sample #32 (-61.32079709335358) is outside of the valid range ([-0.5, 0.5]).
+2024-10-09 15:55:08,066 - qm - ERROR    - CONFIG ERROR in key "waveforms.minus_i_half_D1" [waveforms.samplesAreValid] : Arbitrary waveform 'minus_i_half_D1' sample #33 (-50.04857595116463) is outside of the valid range ([-0.5, 0.5]).
+2024-10-09 15:55:08,066 - qm - ERROR    - CONFIG ERROR in key "waveforms.minus_i_half_D1" [waveforms.samplesAreValid] : Arbitrary waveform 'minus_i_half_D1' sample #34 (-40.215160557752235) is outside of the valid range ([-0.5, 0.5]).
+2024-10-09 15:55:08,066 - qm - ERROR    - CONFIG ERROR in key "waveforms.minus_i_half_D1" [waveforms.samplesAreValid] : Arbitrary waveform 'minus_i_half_D1' sample #35 (-31.81281044448072) is outside of the valid range ([-0.5, 0.5]).
+2024-10-09 15:55:08,066 - qm - ERROR    - CONFIG ERROR in key "waveforms.minus_i_half_D1" [waveforms.samplesAreValid] : Arbitrary waveform 'minus_i_half_D1' sample #36 (-24.775841685863753) is outside of the valid range ([-0.5, 0.5]).
+2024-10-09 15:55:08,066 - qm - ERROR    - CONFIG ERROR in key "waveforms.minus_i_half_D1" [waveforms.samplesAreValid] : Arbitrary waveform 'minus_i_half_D1' sample #37 (-18.996296760591843) is outside of the valid range ([-0.5, 0.5]).
+2024-10-09 15:55:08,066 - qm - ERROR    - CONFIG ERROR in key "waveforms.minus_i_half_D1" [waveforms.samplesAreValid] : Arbitrary waveform 'minus_i_half_D1' sample #38 (-14.339157086030218) is outside of the valid range ([-0.5, 0.5]).
+2024-10-09 15:55:08,066 - qm - ERROR    - CONFIG ERROR in key "waveforms.minus_i_half_D1" [waveforms.samplesAreValid] : Arbitrary waveform 'minus_i_half_D1' sample #39 (-10.655956726436646) is outside of the valid range ([-0.5, 0.5]).
+Traceback (most recent call last):
+  File "/nfs/users/elisa.stabilini/optimization/rb_optimization.py", line 86, in <module>
+    test_rb_optimization(e, target, method, init_guess, scale, bounds)
+  File "/nfs/users/elisa.stabilini/optimization/rb_optimization.py", line 47, in test_rb_optimization
+    res = minimize(objective, init_guess, args=(executor, target, scale), method=method, tol=1e-3, options = {"maxiter" : 1}, bounds = bounds)
+  File "/nfs/users/elisa.stabilini/calibration/lib/python3.10/site-packages/scipy/optimize/_minimize.py", line 719, in minimize
+    res = _minimize_neldermead(fun, x0, args, callback, bounds=bounds,
+  File "/nfs/users/elisa.stabilini/calibration/lib/python3.10/site-packages/scipy/optimize/_optimize.py", line 817, in _minimize_neldermead
+    fsim[k] = func(sim[k])
+  File "/nfs/users/elisa.stabilini/calibration/lib/python3.10/site-packages/scipy/optimize/_optimize.py", line 526, in function_wrapper
+    fx = function(np.copy(x), *(wrapper_args + args))
+  File "/nfs/users/elisa.stabilini/optimization/rb_optimization.py", line 16, in objective
+    rb_output = e.rb_ondevice(
+  File "/nfs/users/elisa.stabilini/qibocal/src/qibocal/auto/execute.py", line 226, in wrapper
+    return self.run_protocol(protocol, parameters=action, mode=mode)
+  File "/nfs/users/elisa.stabilini/qibocal/src/qibocal/auto/execute.py", line 131, in run_protocol
+    completed = task.run(platform=self.platform, targets=self.targets, mode=mode)
+  File "/nfs/users/elisa.stabilini/qibocal/src/qibocal/auto/task.py", line 149, in run
+    completed.data, completed.data_time = operation.acquisition(
+  File "/nfs/users/elisa.stabilini/qibocal/src/qibocal/auto/operation.py", line 42, in wrapper
+    out = func(*args, **kwds)
+  File "/nfs/users/elisa.stabilini/qibocal/src/qibocal/protocols/qua/rb_ondevice.py", line 379, in _acquisition
+    qm = qmm.open_qm(config)
+  File "/nfs/users/elisa.stabilini/calibration/lib/python3.10/site-packages/qm/quantum_machines_manager.py", line 249, in open_qm
+    machine_id = self._frontend.open_qm(loaded_config, close_other_machines)
+  File "/nfs/users/elisa.stabilini/calibration/lib/python3.10/site-packages/qm/api/base_api.py", line 28, in wrapped
+    return func(*args, **kwargs)
+  File "/nfs/users/elisa.stabilini/calibration/lib/python3.10/site-packages/qm/api/frontend_api.py", line 129, in open_qm
+    raise OpenQmException("Can not open QM. Please see previous errors", errors=errors)
+qm.exceptions.OpenQmException: Can not open QM. Please see previous errors

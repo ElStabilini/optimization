@@ -61,7 +61,7 @@ method = 'nelder-mead' #forse non la migliore? Non ho idea del landscape
 
 with Executor.open(
     "myexec",
-    path="test_rb_opt",
+    path="test_rb_opt_1",
     platform=platform,
     targets=[target],
     update=True,
