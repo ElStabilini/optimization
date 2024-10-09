@@ -4,10 +4,10 @@ from scipy.optimize import minimize
 from qibocal.auto.execute import Executor
 
 #objective function to minimize
-def objective(params, e, target, scales):
+def objective(scaled_params, e, target, scales):
 
     #unscales params
-    params = params * scales     
+    params = unscale_params(scaled_params, scale_factors)
     amplitude, frequency, beta = params
 
     e.platform.qubits[target].native_gates.RX.amplitude = amplitude
@@ -48,9 +48,11 @@ def test_rb_optimization(
     
     return res
 
-def scale_params(params : list[float]):
+def scale_params(params, scale_factors):
+    return params / scale_factors
 
-    return params
+def unscale_params(scaled_params, scale_factors):
+    return scaled_params * scale_factors
 
 
 #Esecuzione della rountine, magari spostare in un altro script
@@ -78,14 +80,19 @@ with Executor.open(
     #per ora in questo step faccio tutto manualmente ma meglio sistemare diversamente
 
     beta_best = drag_output.results.betas[target]
-    ampl_RX = 4.1570229140026074 * 1e-2
-    freq_RX = 4.958263653 * 1e9
-    scale = np.array([100, 1e-9, 1])
+    ampl_RX = 4.1570229140026074e-2
+    freq_RX = 4.958263653e9
+    
+    scale_factors = np.array([1e-2, 1e-9, 1])
+    init_guess = np.array([ampl_RX, freq_RX, beta_best])
+    scaled_init_guess = scale_params(init_guess, scale_factors)
 
-    init_guess = [ampl_RX, freq_RX/1e9, beta_best]
-    bounds = [(-0.005, 0.005),((freq_RX-4e6)/1e9, (freq_RX+4e6)/1e9), (beta_best-0.25, beta_best+0.25)]
+    lower_bounds = np.array([-0.5, freq_RX-4e6, beta_best-0.25])
+    upper_bounds = np.array([0.5, freq_RX+4e6, beta_best+0.25])
+    scaled_bounds = list(zip(scale_params(lower_bounds, scale_factors),
+                         scale_params(upper_bounds, scale_factors)))
 
-    test_rb_optimization(e, target, method, init_guess, scale, bounds)
+    test_rb_optimization(e, target, method, scaled_init_guess, scale_factors, scaled_bounds)
 
 
 """TO DO: 
