@@ -75,13 +75,15 @@ with Executor.open(
          beta_step = 0.5
     )
 
-    beta_best = drag_output.results.betas[target]
-    
     #per ora in questo step faccio tutto manualmente ma meglio sistemare diversamente
-    init_guess = [4.1570229140026074, 4.958263653, beta_best] 
-    bounds = [(None,None),(None,None), (beta_best-0.25, beta_best+0.25)]
+
+    beta_best = drag_output.results.betas[target]
+    ampl_RX = 4.1570229140026074 * 1e-2
+    freq_RX = 4.958263653 * 1e9
     scale = np.array([100, 1e-9, 1])
-    
+
+    init_guess = [ampl_RX/1e-2, freq_RX/1e9, beta_best]
+    bounds = [(-0.5/1e-2 , 0.5/1e-2),((freq_RX-4e6)/1e9, (freq_RX+4e6)/1e9), (beta_best-0.25, beta_best+0.25)]
 
     test_rb_optimization(e, target, method, init_guess, scale, bounds)
 
