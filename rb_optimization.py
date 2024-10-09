@@ -83,7 +83,7 @@ with Executor.open(
     scale = np.array([100, 1e-9, 1])
 
     init_guess = [ampl_RX/1e-2, freq_RX/1e9, beta_best]
-    bounds = [(-0.5/1e-2 , 0.5/1e-2),((freq_RX-4e6)/1e9, (freq_RX+4e6)/1e9), (beta_best-0.25, beta_best+0.25)]
+    bounds = [(-0.005, 0.005),((freq_RX-4e6)/1e9, (freq_RX+4e6)/1e9), (beta_best-0.25, beta_best+0.25)]
 
     test_rb_optimization(e, target, method, init_guess, scale, bounds)
 
