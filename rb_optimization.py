@@ -75,7 +75,7 @@ with Executor.open(
          beta_step = 0.5
     )
 
-    beta_best = drag_output.results.betas
+    beta_best = drag_output.results.betas[target]
     
     #per ora in questo step faccio tutto manualmente ma meglio sistemare diversamente
     init_guess = [4.1570229140026074, 4.958263653, beta_best] 
