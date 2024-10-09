@@ -44,7 +44,7 @@ def test_rb_optimization(
         bounds
     ):
     
-    res = minimize(objective, init_guess, args=(executor, target, scale), method=method, tol=1e-3, maxiter = 100, bounds = bounds)
+    res = minimize(objective, init_guess, args=(executor, target, scale), method=method, tol=1e-3, maxiter = 1, bounds = bounds)
     
     return res
 
@@ -55,8 +55,8 @@ def scale_params(params : list[float]):
 
 #Esecuzione della rountine, magari spostare in un altro script
 
-target = "0"
-platform = "dummy"
+target = "D1"
+platform = "qw11q"
 method = 'nelder-mead' #forse non la migliore? Non ho idea del landscape
 
 with Executor.open(
@@ -91,8 +91,8 @@ with Executor.open(
     y xatol: normalizzazione + definizione
     * leggere l'initial guess dalla cartella platform precedente + automatizzare riscalamento
     y nshot
-    * modificare delta_clifford
-    * provare a variare beta in un piccolo intervallo intorno a quello suggerito da drag
+    y modificare delta_clifford
+    y provare a variare beta in un piccolo intervallo intorno a quello suggerito da drag
     y spostare report ?
     * vedere quali di questi parametri potrebbe essere interessante variare    
 
