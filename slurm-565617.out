@@ -1,0 +1,17 @@
+2024-10-09 16:03:15,942 - qm - INFO     - Starting session: 75a37675-48cd-4a14-9e6b-f5844d9b5d56
+Traceback (most recent call last):
+  File "/nfs/users/elisa.stabilini/optimization/rb_optimization.py", line 66, in <module>
+    drag_output = e.drag_tuning(
+  File "/nfs/users/elisa.stabilini/qibocal/src/qibocal/auto/execute.py", line 226, in wrapper
+    return self.run_protocol(protocol, parameters=action, mode=mode)
+  File "/nfs/users/elisa.stabilini/qibocal/src/qibocal/auto/execute.py", line 131, in run_protocol
+    completed = task.run(platform=self.platform, targets=self.targets, mode=mode)
+  File "/nfs/users/elisa.stabilini/qibocal/src/qibocal/auto/task.py", line 149, in run
+    completed.data, completed.data_time = operation.acquisition(
+  File "/nfs/users/elisa.stabilini/qibocal/src/qibocal/auto/operation.py", line 42, in wrapper
+    out = func(*args, **kwds)
+  File "/nfs/users/elisa.stabilini/qibocal/src/qibocal/protocols/drag.py", line 84, in _acquisition
+    anharmonicity={
+  File "/nfs/users/elisa.stabilini/qibocal/src/qibocal/protocols/drag.py", line 85, in <dictcomp>
+    qubit: platform.qubits[qubit].anharmonicity * HZ_TO_GHZ for qubit in targets
+KeyError: '0'
