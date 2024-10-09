@@ -32,7 +32,7 @@ def objective(scaled_params, e, target, scales):
     r_c_std = stdevs[2] * (1 - 1 / 2**1)
     r_g_std = r_c_std / 1.875
 
-    return r_g, r_g_std
+    return r_g#, r_g_std
 
 
 def test_rb_optimization(
