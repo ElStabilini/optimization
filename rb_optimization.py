@@ -44,7 +44,7 @@ def test_rb_optimization(
         bounds
     ):
     
-    res = minimize(objective, init_guess, args=(executor, target, scale), method=method, tol=1e-3, options = {"maxiter" : 1}, bounds = bounds)
+    res = minimize(objective, init_guess, args=(executor, target, scale), method=method, tol=1e-3, options = {"maxiter" : 100}, bounds = bounds)
     
     return res
 
