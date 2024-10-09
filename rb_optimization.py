@@ -4,9 +4,11 @@ from scipy.optimize import minimize
 from qibocal.auto.execute import Executor
 
 #objective function to minimize
-def objective(params, e, target):
-         
-    amplitude, frequency = params
+def objective(params, e, target, scales):
+
+    #unscales params
+    params = params * scales     
+    amplitude, frequency, beta = params
 
     e.platform.qubits[target].native_gates.RX.amplitude = amplitude
     e.platform.qubits[target].native_gates.RX.frequency = frequency
@@ -37,13 +39,18 @@ def test_rb_optimization(
         executor : Executor,
         target : str,
         method : str,
-        init_guess : list[float]
+        init_guess : list[float],
+        scale,
+        bounds
     ):
     
-    res = minimize(objective, init_guess, args=(executor, target), method=method, options={'xatol': 1e-2, 'disp': True}, maxiter = 100)
+    res = minimize(objective, init_guess, args=(executor, target, scale), method=method, tol=1e-3, maxiter = 100, bounds = bounds)
     
     return res
 
+def scale_params(params : list[float]):
+
+    return params
 
 
 #Esecuzione della rountine, magari spostare in un altro script
@@ -51,7 +58,6 @@ def test_rb_optimization(
 target = "0"
 platform = "dummy"
 method = 'nelder-mead' #forse non la migliore? Non ho idea del landscape
-init_guess = [0.041570229140026074, 4958263653] #aggiungere parametro per beta
 
 with Executor.open(
     "myexec",
@@ -68,18 +74,26 @@ with Executor.open(
          beta_end = 4,
          beta_step = 0.5
     )
-     
-    test_rb_optimization(e, target, method, init_guess)
+
+    beta_best = drag_output.results.betas
+    
+    #per ora in questo step faccio tutto manualmente ma meglio sistemare diversamente
+    init_guess = [4.1570229140026074, 4.958263653, beta_best] 
+    bounds = [(None,None),(None,None), (beta_best-0.5, beta_best+0.5)]
+    scale = np.array([100, 1e-9, 1])
+    
+
+    test_rb_optimization(e, target, method, init_guess, scale, bounds)
 
 
 """TO DO: 
-    * maxiter
-    * xatol (considerato anche con quali ordini di grandezza sto lavorando)
-    * leggere l'initial guess direttamente dalla migliore calibrazione su qibolab
-    * nshot
-    * ha senso provare a variare la duration
+    y maxiter
+    y xatol: normalizzazione + definizione
+    * leggere l'initial guess dalla cartella platform precedente + automatizzare riscalamento
+    y nshot
+    * modificare delta_clifford
     * provare a variare beta in un piccolo intervallo intorno a quello suggerito da drag
-    * spostare report ?
+    y spostare report ?
     * vedere quali di questi parametri potrebbe essere interessante variare    
 
 "RX": (D1) {
