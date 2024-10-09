@@ -61,7 +61,7 @@ method = 'nelder-mead' #forse non la migliore? Non ho idea del landscape
 
 with Executor.open(
     "myexec",
-    path="test_rb_opt_1",
+    path="test_rb_opt",
     platform=platform,
     targets=[target],
     update=True,
@@ -82,7 +82,7 @@ with Executor.open(
     freq_RX = 4.958263653 * 1e9
     scale = np.array([100, 1e-9, 1])
 
-    init_guess = [ampl_RX/1e-2, freq_RX/1e9, beta_best]
+    init_guess = [ampl_RX, freq_RX/1e9, beta_best]
     bounds = [(-0.005, 0.005),((freq_RX-4e6)/1e9, (freq_RX+4e6)/1e9), (beta_best-0.25, beta_best+0.25)]
 
     test_rb_optimization(e, target, method, init_guess, scale, bounds)
