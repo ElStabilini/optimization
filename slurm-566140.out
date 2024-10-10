@@ -1,0 +1,1346 @@
+2024-10-09 21:19:56,571 - qm - INFO     - Starting session: eaab139a-50c7-4c09-ba06-f6c653a62768
+2024-10-09 21:19:59,535 - qm - INFO     - Octave "octave2" Health check passed, current temperature 60
+2024-10-09 21:20:00,914 - qm - INFO     - Octave "octave3" Health check passed, current temperature 57
+2024-10-09 21:20:01,651 - qm - INFO     - Octave "octave4" Health check passed, current temperature 58
+2024-10-09 21:20:02,665 - qm - INFO     - Octave "octave5" Health check passed, current temperature 59
+2024-10-09 21:20:04,004 - qm - INFO     - Octave "octave6" Health check passed, current temperature 58
+2024-10-09 21:20:04,005 - qm - INFO     - Performing health check
+2024-10-09 21:20:04,026 - qm - WARNING  - Health check warning: Inter-OPX connectivity issues in OPX: con1. Missing ports are: 12, 11, 10, 9. See QM-App for more info.
+2024-10-09 21:20:04,026 - qm - WARNING  - Health check warning: Inter-OPX connectivity issues in OPX: con2. Missing ports are: 12, 11, 10, 9. See QM-App for more info.
+2024-10-09 21:20:04,027 - qm - WARNING  - Health check warning: Inter-OPX connectivity issues in OPX: con3. Missing ports are: 12, 11, 10, 9. See QM-App for more info.
+2024-10-09 21:20:04,027 - qm - WARNING  - Health check warning: Inter-OPX connectivity issues in OPX: con4. Missing ports are: 12, 11, 10, 9. See QM-App for more info.
+2024-10-09 21:20:04,027 - qm - WARNING  - Health check warning: Inter-OPX connectivity issues in OPX: con5. Missing ports are: 12, 11, 10, 9. See QM-App for more info.
+2024-10-09 21:20:04,027 - qm - WARNING  - Health check warning: Inter-OPX connectivity issues in OPX: con6. Missing ports are: 12, 11, 10, 9. See QM-App for more info.
+2024-10-09 21:20:04,027 - qm - WARNING  - Health check warning: Inter-OPX connectivity issues in OPX: con7. Missing ports are: 12, 11, 10, 9. See QM-App for more info.
+2024-10-09 21:20:04,027 - qm - WARNING  - Health check warning: Inter-OPX connectivity issues in OPX: con8. Missing ports are: 12, 11, 10, 9. See QM-App for more info.
+2024-10-09 21:20:04,027 - qm - WARNING  - Health check warning: Inter-OPX connectivity issues in OPX: con9. Missing ports are: 12, 11, 10, 9. See QM-App for more info.
+2024-10-09 21:20:04,027 - qm - INFO     - Health check passed
+Connected to: Rohde&Schwarz SGS100A (serial:1416.0505k02/114167, firmware:4.2.76.0-4.30.046.295) in 0.18s
+Connected to: Rohde&Schwarz SGS100A (serial:1416.0505k02/114164, firmware:4.2.76.0-4.30.046.295) in 0.14s
+2024-10-09 21:20:06,883 - qm - INFO     - Sending program to QOP for compilation
+2024-10-09 21:20:07,041 - qm - INFO     - Executing program
+2024-10-09 21:20:10,412 - qm - INFO     - Sending program to QOP for compilation
+2024-10-09 21:20:10,558 - qm - INFO     - Executing program
+2024-10-09 21:20:13,803 - qm - INFO     - Sending program to QOP for compilation
+2024-10-09 21:20:14,013 - qm - INFO     - Executing program
+2024-10-09 21:20:17,251 - qm - INFO     - Sending program to QOP for compilation
+2024-10-09 21:20:17,471 - qm - INFO     - Executing program
+2024-10-09 21:20:20,689 - qm - INFO     - Sending program to QOP for compilation
+2024-10-09 21:20:20,887 - qm - INFO     - Executing program
+2024-10-09 21:20:24,140 - qm - INFO     - Sending program to QOP for compilation
+2024-10-09 21:20:24,343 - qm - INFO     - Executing program
+2024-10-09 21:20:27,588 - qm - INFO     - Sending program to QOP for compilation
+2024-10-09 21:20:27,802 - qm - INFO     - Executing program
+2024-10-09 21:20:31,033 - qm - INFO     - Sending program to QOP for compilation
+2024-10-09 21:20:31,184 - qm - INFO     - Executing program
+2024-10-09 21:20:34,471 - qm - INFO     - Sending program to QOP for compilation
+2024-10-09 21:20:34,627 - qm - INFO     - Executing program
+2024-10-09 21:20:37,918 - qm - INFO     - Sending program to QOP for compilation
+2024-10-09 21:20:38,143 - qm - INFO     - Executing program
+2024-10-09 21:20:40,606 - qm - INFO     - Sending program to QOP for compilation
+2024-10-09 21:20:40,764 - qm - INFO     - Executing program
+2024-10-09 21:20:43,975 - qm - INFO     - Sending program to QOP for compilation
+2024-10-09 21:20:44,197 - qm - INFO     - Executing program
+2024-10-09 21:20:47,434 - qm - INFO     - Sending program to QOP for compilation
+2024-10-09 21:20:47,644 - qm - INFO     - Executing program
+2024-10-09 21:20:50,879 - qm - INFO     - Sending program to QOP for compilation
+2024-10-09 21:20:51,038 - qm - INFO     - Executing program
+2024-10-09 21:20:54,331 - qm - INFO     - Sending program to QOP for compilation
+2024-10-09 21:20:54,555 - qm - INFO     - Executing program
+2024-10-09 21:20:57,800 - qm - INFO     - Sending program to QOP for compilation
+2024-10-09 21:20:58,006 - qm - INFO     - Executing program
+
+Total relaxation time: 10.10 sec
+
+2024-10-09 21:21:03,532 - qm - INFO     - Sending program to QOP for compilation
+2024-10-09 21:21:04,965 - qm - INFO     - Executing program
+
+Total relaxation time: 10.10 sec
+
+2024-10-09 21:21:24,076 - qm - INFO     - Sending program to QOP for compilation
+2024-10-09 21:21:25,483 - qm - INFO     - Executing program
+
+Total relaxation time: 10.10 sec
+
+2024-10-09 21:21:44,868 - qm - INFO     - Sending program to QOP for compilation
+2024-10-09 21:21:45,970 - qm - INFO     - Executing program
+
+Total relaxation time: 10.10 sec
+
+2024-10-09 21:22:05,759 - qm - INFO     - Sending program to QOP for compilation
+2024-10-09 21:22:07,150 - qm - INFO     - Executing program
+
+Total relaxation time: 10.10 sec
+
+2024-10-09 21:22:27,398 - qm - INFO     - Sending program to QOP for compilation
+2024-10-09 21:22:28,786 - qm - INFO     - Executing program
+
+Total relaxation time: 10.10 sec
+
+2024-10-09 21:22:47,921 - qm - INFO     - Sending program to QOP for compilation
+2024-10-09 21:22:49,352 - qm - INFO     - Executing program
+
+Total relaxation time: 10.10 sec
+
+2024-10-09 21:23:10,190 - qm - INFO     - Sending program to QOP for compilation
+2024-10-09 21:23:11,646 - qm - INFO     - Executing program
+
+Total relaxation time: 10.10 sec
+
+2024-10-09 21:23:31,071 - qm - INFO     - Sending program to QOP for compilation
+2024-10-09 21:23:32,574 - qm - INFO     - Executing program
+
+Total relaxation time: 10.10 sec
+
+2024-10-09 21:23:51,894 - qm - INFO     - Sending program to QOP for compilation
+2024-10-09 21:23:53,331 - qm - INFO     - Executing program
+
+Total relaxation time: 10.10 sec
+
+2024-10-09 21:24:13,692 - qm - INFO     - Sending program to QOP for compilation
+2024-10-09 21:24:14,815 - qm - INFO     - Executing program
+
+Total relaxation time: 10.10 sec
+
+2024-10-09 21:24:34,368 - qm - INFO     - Sending program to QOP for compilation
+2024-10-09 21:24:35,742 - qm - INFO     - Executing program
+
+Total relaxation time: 10.10 sec
+
+2024-10-09 21:24:55,407 - qm - INFO     - Sending program to QOP for compilation
+2024-10-09 21:24:56,899 - qm - INFO     - Executing program
+
+Total relaxation time: 10.10 sec
+
+2024-10-09 21:25:17,532 - qm - INFO     - Sending program to QOP for compilation
+2024-10-09 21:25:18,941 - qm - INFO     - Executing program
+
+Total relaxation time: 10.10 sec
+
+2024-10-09 21:25:38,844 - qm - INFO     - Sending program to QOP for compilation
+2024-10-09 21:25:40,268 - qm - INFO     - Executing program
+
+Total relaxation time: 10.10 sec
+
+2024-10-09 21:25:59,914 - qm - INFO     - Sending program to QOP for compilation
+2024-10-09 21:26:01,395 - qm - INFO     - Executing program
+
+Total relaxation time: 10.10 sec
+
+2024-10-09 21:26:20,873 - qm - INFO     - Sending program to QOP for compilation
+2024-10-09 21:26:22,267 - qm - INFO     - Executing program
+
+Total relaxation time: 10.10 sec
+
+2024-10-09 21:26:41,882 - qm - INFO     - Sending program to QOP for compilation
+2024-10-09 21:26:43,492 - qm - INFO     - Executing program
+
+Total relaxation time: 10.10 sec
+
+2024-10-09 21:27:02,990 - qm - INFO     - Sending program to QOP for compilation
+2024-10-09 21:27:04,457 - qm - INFO     - Executing program
+
+Total relaxation time: 10.10 sec
+
+2024-10-09 21:27:24,027 - qm - INFO     - Sending program to QOP for compilation
+2024-10-09 21:27:25,424 - qm - INFO     - Executing program
+
+Total relaxation time: 10.10 sec
+
+2024-10-09 21:27:45,073 - qm - INFO     - Sending program to QOP for compilation
+2024-10-09 21:27:46,489 - qm - INFO     - Executing program
+
+Total relaxation time: 10.10 sec
+
+2024-10-09 21:28:06,050 - qm - INFO     - Sending program to QOP for compilation
+2024-10-09 21:28:07,431 - qm - INFO     - Executing program
+
+Total relaxation time: 10.10 sec
+
+2024-10-09 21:28:27,424 - qm - INFO     - Sending program to QOP for compilation
+2024-10-09 21:28:28,875 - qm - INFO     - Executing program
+
+Total relaxation time: 10.10 sec
+
+2024-10-09 21:28:48,275 - qm - INFO     - Sending program to QOP for compilation
+2024-10-09 21:28:49,711 - qm - INFO     - Executing program
+
+Total relaxation time: 10.10 sec
+
+2024-10-09 21:29:09,239 - qm - INFO     - Sending program to QOP for compilation
+2024-10-09 21:29:10,644 - qm - INFO     - Executing program
+
+Total relaxation time: 10.10 sec
+
+2024-10-09 21:29:30,269 - qm - INFO     - Sending program to QOP for compilation
+2024-10-09 21:29:31,729 - qm - INFO     - Executing program
+
+Total relaxation time: 10.10 sec
+
+2024-10-09 21:29:51,689 - qm - INFO     - Sending program to QOP for compilation
+2024-10-09 21:29:52,774 - qm - INFO     - Executing program
+
+Total relaxation time: 10.10 sec
+
+2024-10-09 21:30:12,380 - qm - INFO     - Sending program to QOP for compilation
+2024-10-09 21:30:13,802 - qm - INFO     - Executing program
+
+Total relaxation time: 10.10 sec
+
+2024-10-09 21:30:33,389 - qm - INFO     - Sending program to QOP for compilation
+2024-10-09 21:30:34,448 - qm - INFO     - Executing program
+
+Total relaxation time: 10.10 sec
+
+2024-10-09 21:30:54,481 - qm - INFO     - Sending program to QOP for compilation
+2024-10-09 21:30:55,960 - qm - INFO     - Executing program
+
+Total relaxation time: 10.10 sec
+
+2024-10-09 21:31:15,490 - qm - INFO     - Sending program to QOP for compilation
+2024-10-09 21:31:16,875 - qm - INFO     - Executing program
+
+Total relaxation time: 10.10 sec
+
+2024-10-09 21:31:36,584 - qm - INFO     - Sending program to QOP for compilation
+2024-10-09 21:31:37,977 - qm - INFO     - Executing program
+
+Total relaxation time: 10.10 sec
+
+2024-10-09 21:31:57,582 - qm - INFO     - Sending program to QOP for compilation
+2024-10-09 21:31:58,671 - qm - INFO     - Executing program
+
+Total relaxation time: 10.10 sec
+
+2024-10-09 21:32:18,602 - qm - INFO     - Sending program to QOP for compilation
+2024-10-09 21:32:19,983 - qm - INFO     - Executing program
+
+Total relaxation time: 10.10 sec
+
+2024-10-09 21:32:39,691 - qm - INFO     - Sending program to QOP for compilation
+2024-10-09 21:32:41,150 - qm - INFO     - Executing program
+
+Total relaxation time: 10.10 sec
+
+2024-10-09 21:33:00,987 - qm - INFO     - Sending program to QOP for compilation
+2024-10-09 21:33:02,388 - qm - INFO     - Executing program
+
+Total relaxation time: 10.10 sec
+
+2024-10-09 21:33:22,057 - qm - INFO     - Sending program to QOP for compilation
+2024-10-09 21:33:23,422 - qm - INFO     - Executing program
+
+Total relaxation time: 10.10 sec
+
+2024-10-09 21:33:42,820 - qm - INFO     - Sending program to QOP for compilation
+2024-10-09 21:33:44,276 - qm - INFO     - Executing program
+
+Total relaxation time: 10.10 sec
+
+2024-10-09 21:34:03,913 - qm - INFO     - Sending program to QOP for compilation
+2024-10-09 21:34:05,352 - qm - INFO     - Executing program
+
+Total relaxation time: 10.10 sec
+
+2024-10-09 21:34:24,987 - qm - INFO     - Sending program to QOP for compilation
+2024-10-09 21:34:26,423 - qm - INFO     - Executing program
+
+Total relaxation time: 10.10 sec
+
+2024-10-09 21:34:45,977 - qm - INFO     - Sending program to QOP for compilation
+2024-10-09 21:34:47,376 - qm - INFO     - Executing program
+
+Total relaxation time: 10.10 sec
+
+2024-10-09 21:35:07,002 - qm - INFO     - Sending program to QOP for compilation
+2024-10-09 21:35:08,478 - qm - INFO     - Executing program
+
+Total relaxation time: 10.10 sec
+
+2024-10-09 21:35:28,126 - qm - INFO     - Sending program to QOP for compilation
+2024-10-09 21:35:29,211 - qm - INFO     - Executing program
+
+Total relaxation time: 10.10 sec
+
+2024-10-09 21:35:49,072 - qm - INFO     - Sending program to QOP for compilation
+2024-10-09 21:35:50,568 - qm - INFO     - Executing program
+
+Total relaxation time: 10.10 sec
+
+2024-10-09 21:36:10,105 - qm - INFO     - Sending program to QOP for compilation
+2024-10-09 21:36:11,542 - qm - INFO     - Executing program
+
+Total relaxation time: 10.10 sec
+
+2024-10-09 21:36:31,173 - qm - INFO     - Sending program to QOP for compilation
+2024-10-09 21:36:32,586 - qm - INFO     - Executing program
+
+Total relaxation time: 10.10 sec
+
+2024-10-09 21:36:52,205 - qm - INFO     - Sending program to QOP for compilation
+2024-10-09 21:36:53,707 - qm - INFO     - Executing program
+
+Total relaxation time: 10.10 sec
+
+2024-10-09 21:37:13,304 - qm - INFO     - Sending program to QOP for compilation
+2024-10-09 21:37:14,700 - qm - INFO     - Executing program
+
+Total relaxation time: 10.10 sec
+
+2024-10-09 21:37:34,256 - qm - INFO     - Sending program to QOP for compilation
+2024-10-09 21:37:35,736 - qm - INFO     - Executing program
+
+Total relaxation time: 10.10 sec
+
+2024-10-09 21:37:55,632 - qm - INFO     - Sending program to QOP for compilation
+2024-10-09 21:37:57,085 - qm - INFO     - Executing program
+
+Total relaxation time: 10.10 sec
+
+2024-10-09 21:38:16,766 - qm - INFO     - Sending program to QOP for compilation
+2024-10-09 21:38:18,165 - qm - INFO     - Executing program
+
+Total relaxation time: 10.10 sec
+
+2024-10-09 21:38:37,473 - qm - INFO     - Sending program to QOP for compilation
+2024-10-09 21:38:38,914 - qm - INFO     - Executing program
+
+Total relaxation time: 10.10 sec
+
+2024-10-09 21:38:58,493 - qm - INFO     - Sending program to QOP for compilation
+2024-10-09 21:39:00,032 - qm - INFO     - Executing program
+
+Total relaxation time: 10.10 sec
+
+2024-10-09 21:39:19,544 - qm - INFO     - Sending program to QOP for compilation
+2024-10-09 21:39:20,909 - qm - INFO     - Executing program
+
+Total relaxation time: 10.10 sec
+
+2024-10-09 21:39:40,583 - qm - INFO     - Sending program to QOP for compilation
+2024-10-09 21:39:41,994 - qm - INFO     - Executing program
+
+Total relaxation time: 10.10 sec
+
+2024-10-09 21:40:01,727 - qm - INFO     - Sending program to QOP for compilation
+2024-10-09 21:40:03,170 - qm - INFO     - Executing program
+
+Total relaxation time: 10.10 sec
+
+2024-10-09 21:40:22,719 - qm - INFO     - Sending program to QOP for compilation
+2024-10-09 21:40:24,077 - qm - INFO     - Executing program
+
+Total relaxation time: 10.10 sec
+
+2024-10-09 21:40:43,761 - qm - INFO     - Sending program to QOP for compilation
+2024-10-09 21:40:45,187 - qm - INFO     - Executing program
+
+Total relaxation time: 10.10 sec
+
+2024-10-09 21:41:04,862 - qm - INFO     - Sending program to QOP for compilation
+2024-10-09 21:41:06,289 - qm - INFO     - Executing program
+
+Total relaxation time: 10.10 sec
+
+2024-10-09 21:41:25,830 - qm - INFO     - Sending program to QOP for compilation
+2024-10-09 21:41:27,219 - qm - INFO     - Executing program
+
+Total relaxation time: 10.10 sec
+
+2024-10-09 21:41:46,899 - qm - INFO     - Sending program to QOP for compilation
+2024-10-09 21:41:48,317 - qm - INFO     - Executing program
+
+Total relaxation time: 10.10 sec
+
+2024-10-09 21:42:08,305 - qm - INFO     - Sending program to QOP for compilation
+2024-10-09 21:42:09,664 - qm - INFO     - Executing program
+
+Total relaxation time: 10.10 sec
+
+2024-10-09 21:42:29,082 - qm - INFO     - Sending program to QOP for compilation
+2024-10-09 21:42:30,471 - qm - INFO     - Executing program
+
+Total relaxation time: 10.10 sec
+
+2024-10-09 21:42:50,135 - qm - INFO     - Sending program to QOP for compilation
+2024-10-09 21:42:51,533 - qm - INFO     - Executing program
+
+Total relaxation time: 10.10 sec
+
+2024-10-09 21:43:11,127 - qm - INFO     - Sending program to QOP for compilation
+2024-10-09 21:43:12,499 - qm - INFO     - Executing program
+
+Total relaxation time: 10.10 sec
+
+2024-10-09 21:43:32,185 - qm - INFO     - Sending program to QOP for compilation
+2024-10-09 21:43:33,576 - qm - INFO     - Executing program
+
+Total relaxation time: 10.10 sec
+
+2024-10-09 21:43:53,290 - qm - INFO     - Sending program to QOP for compilation
+2024-10-09 21:43:54,716 - qm - INFO     - Executing program
+
+Total relaxation time: 10.10 sec
+
+2024-10-09 21:44:14,281 - qm - INFO     - Sending program to QOP for compilation
+2024-10-09 21:44:15,664 - qm - INFO     - Executing program
+
+Total relaxation time: 10.10 sec
+
+2024-10-09 21:44:35,333 - qm - INFO     - Sending program to QOP for compilation
+2024-10-09 21:44:36,760 - qm - INFO     - Executing program
+
+Total relaxation time: 10.10 sec
+
+2024-10-09 21:44:56,392 - qm - INFO     - Sending program to QOP for compilation
+2024-10-09 21:44:57,802 - qm - INFO     - Executing program
+
+Total relaxation time: 10.10 sec
+
+2024-10-09 21:45:17,397 - qm - INFO     - Sending program to QOP for compilation
+2024-10-09 21:45:19,019 - qm - INFO     - Executing program
+
+Total relaxation time: 10.10 sec
+
+2024-10-09 21:45:38,536 - qm - INFO     - Sending program to QOP for compilation
+2024-10-09 21:45:39,950 - qm - INFO     - Executing program
+
+Total relaxation time: 10.10 sec
+
+2024-10-09 21:45:59,535 - qm - INFO     - Sending program to QOP for compilation
+2024-10-09 21:46:00,634 - qm - INFO     - Executing program
+
+Total relaxation time: 10.10 sec
+
+2024-10-09 21:46:20,554 - qm - INFO     - Sending program to QOP for compilation
+2024-10-09 21:46:21,910 - qm - INFO     - Executing program
+
+Total relaxation time: 10.10 sec
+
+2024-10-09 21:46:41,661 - qm - INFO     - Sending program to QOP for compilation
+2024-10-09 21:46:43,092 - qm - INFO     - Executing program
+
+Total relaxation time: 10.10 sec
+
+2024-10-09 21:47:02,647 - qm - INFO     - Sending program to QOP for compilation
+2024-10-09 21:47:04,008 - qm - INFO     - Executing program
+
+Total relaxation time: 10.10 sec
+
+2024-10-09 21:47:23,697 - qm - INFO     - Sending program to QOP for compilation
+2024-10-09 21:47:25,093 - qm - INFO     - Executing program
+
+Total relaxation time: 10.10 sec
+
+2024-10-09 21:47:44,755 - qm - INFO     - Sending program to QOP for compilation
+2024-10-09 21:47:46,142 - qm - INFO     - Executing program
+
+Total relaxation time: 10.10 sec
+
+2024-10-09 21:48:05,779 - qm - INFO     - Sending program to QOP for compilation
+2024-10-09 21:48:07,135 - qm - INFO     - Executing program
+
+Total relaxation time: 10.10 sec
+
+2024-10-09 21:48:26,935 - qm - INFO     - Sending program to QOP for compilation
+2024-10-09 21:48:28,329 - qm - INFO     - Executing program
+
+Total relaxation time: 10.10 sec
+
+2024-10-09 21:48:47,921 - qm - INFO     - Sending program to QOP for compilation
+2024-10-09 21:48:49,303 - qm - INFO     - Executing program
+
+Total relaxation time: 10.10 sec
+
+2024-10-09 21:49:08,922 - qm - INFO     - Sending program to QOP for compilation
+2024-10-09 21:49:10,286 - qm - INFO     - Executing program
+
+Total relaxation time: 10.10 sec
+
+2024-10-09 21:49:30,356 - qm - INFO     - Sending program to QOP for compilation
+2024-10-09 21:49:31,804 - qm - INFO     - Executing program
+
+Total relaxation time: 10.10 sec
+
+2024-10-09 21:49:51,027 - qm - INFO     - Sending program to QOP for compilation
+2024-10-09 21:49:52,467 - qm - INFO     - Executing program
+
+Total relaxation time: 10.10 sec
+
+2024-10-09 21:50:12,070 - qm - INFO     - Sending program to QOP for compilation
+2024-10-09 21:50:13,578 - qm - INFO     - Executing program
+
+Total relaxation time: 10.10 sec
+
+2024-10-09 21:50:33,133 - qm - INFO     - Sending program to QOP for compilation
+2024-10-09 21:50:34,547 - qm - INFO     - Executing program
+
+Total relaxation time: 10.10 sec
+
+2024-10-09 21:50:54,193 - qm - INFO     - Sending program to QOP for compilation
+2024-10-09 21:50:55,631 - qm - INFO     - Executing program
+
+Total relaxation time: 10.10 sec
+
+2024-10-09 21:51:15,261 - qm - INFO     - Sending program to QOP for compilation
+2024-10-09 21:51:16,669 - qm - INFO     - Executing program
+
+Total relaxation time: 10.10 sec
+
+2024-10-09 21:51:36,226 - qm - INFO     - Sending program to QOP for compilation
+2024-10-09 21:51:37,651 - qm - INFO     - Executing program
+
+Total relaxation time: 10.10 sec
+
+2024-10-09 21:51:57,233 - qm - INFO     - Sending program to QOP for compilation
+2024-10-09 21:51:58,643 - qm - INFO     - Executing program
+
+Total relaxation time: 10.10 sec
+
+2024-10-09 21:52:18,347 - qm - INFO     - Sending program to QOP for compilation
+2024-10-09 21:52:19,739 - qm - INFO     - Executing program
+
+Total relaxation time: 10.10 sec
+
+2024-10-09 21:52:39,322 - qm - INFO     - Sending program to QOP for compilation
+2024-10-09 21:52:40,698 - qm - INFO     - Executing program
+
+Total relaxation time: 10.10 sec
+
+2024-10-09 21:53:00,451 - qm - INFO     - Sending program to QOP for compilation
+2024-10-09 21:53:01,884 - qm - INFO     - Executing program
+
+Total relaxation time: 10.10 sec
+
+2024-10-09 21:53:21,438 - qm - INFO     - Sending program to QOP for compilation
+2024-10-09 21:53:22,835 - qm - INFO     - Executing program
+
+Total relaxation time: 10.10 sec
+
+2024-10-09 21:53:42,458 - qm - INFO     - Sending program to QOP for compilation
+2024-10-09 21:53:43,890 - qm - INFO     - Executing program
+
+Total relaxation time: 10.10 sec
+
+2024-10-09 21:54:03,583 - qm - INFO     - Sending program to QOP for compilation
+2024-10-09 21:54:05,032 - qm - INFO     - Executing program
+
+Total relaxation time: 10.10 sec
+
+2024-10-09 21:54:24,566 - qm - INFO     - Sending program to QOP for compilation
+2024-10-09 21:54:26,012 - qm - INFO     - Executing program
+
+Total relaxation time: 10.10 sec
+
+2024-10-09 21:54:45,601 - qm - INFO     - Sending program to QOP for compilation
+2024-10-09 21:54:47,081 - qm - INFO     - Executing program
+
+Total relaxation time: 10.10 sec
+
+2024-10-09 21:55:06,746 - qm - INFO     - Sending program to QOP for compilation
+2024-10-09 21:55:08,135 - qm - INFO     - Executing program
+
+Total relaxation time: 10.10 sec
+
+2024-10-09 21:55:27,679 - qm - INFO     - Sending program to QOP for compilation
+2024-10-09 21:55:29,078 - qm - INFO     - Executing program
+
+Total relaxation time: 10.10 sec
+
+2024-10-09 21:55:48,740 - qm - INFO     - Sending program to QOP for compilation
+2024-10-09 21:55:50,111 - qm - INFO     - Executing program
+
+Total relaxation time: 10.10 sec
+
+2024-10-09 21:56:09,759 - qm - INFO     - Sending program to QOP for compilation
+2024-10-09 21:56:10,826 - qm - INFO     - Executing program
+
+Total relaxation time: 10.10 sec
+
+2024-10-09 21:56:30,772 - qm - INFO     - Sending program to QOP for compilation
+2024-10-09 21:56:31,859 - qm - INFO     - Executing program
+
+Total relaxation time: 10.10 sec
+
+2024-10-09 21:56:52,231 - qm - INFO     - Sending program to QOP for compilation
+2024-10-09 21:56:53,659 - qm - INFO     - Executing program
+
+Total relaxation time: 10.10 sec
+
+2024-10-09 21:57:12,914 - qm - INFO     - Sending program to QOP for compilation
+2024-10-09 21:57:14,365 - qm - INFO     - Executing program
+
+Total relaxation time: 10.10 sec
+
+2024-10-09 21:57:33,961 - qm - INFO     - Sending program to QOP for compilation
+2024-10-09 21:57:35,404 - qm - INFO     - Executing program
+
+Total relaxation time: 10.10 sec
+
+2024-10-09 21:57:55,094 - qm - INFO     - Sending program to QOP for compilation
+2024-10-09 21:57:56,556 - qm - INFO     - Executing program
+
+Total relaxation time: 10.10 sec
+
+2024-10-09 21:58:16,085 - qm - INFO     - Sending program to QOP for compilation
+2024-10-09 21:58:17,548 - qm - INFO     - Executing program
+
+Total relaxation time: 10.10 sec
+
+2024-10-09 21:58:37,122 - qm - INFO     - Sending program to QOP for compilation
+2024-10-09 21:58:38,570 - qm - INFO     - Executing program
+
+Total relaxation time: 10.10 sec
+
+2024-10-09 21:58:58,133 - qm - INFO     - Sending program to QOP for compilation
+2024-10-09 21:58:59,552 - qm - INFO     - Executing program
+
+Total relaxation time: 10.10 sec
+
+2024-10-09 21:59:19,197 - qm - INFO     - Sending program to QOP for compilation
+2024-10-09 21:59:20,619 - qm - INFO     - Executing program
+
+Total relaxation time: 10.10 sec
+
+2024-10-09 21:59:40,270 - qm - INFO     - Sending program to QOP for compilation
+2024-10-09 21:59:41,687 - qm - INFO     - Executing program
+
+Total relaxation time: 10.10 sec
+
+2024-10-09 22:00:01,235 - qm - INFO     - Sending program to QOP for compilation
+2024-10-09 22:00:02,669 - qm - INFO     - Executing program
+
+Total relaxation time: 10.10 sec
+
+2024-10-09 22:00:22,334 - qm - INFO     - Sending program to QOP for compilation
+2024-10-09 22:00:23,792 - qm - INFO     - Executing program
+
+Total relaxation time: 10.10 sec
+
+2024-10-09 22:00:43,366 - qm - INFO     - Sending program to QOP for compilation
+2024-10-09 22:00:44,802 - qm - INFO     - Executing program
+
+Total relaxation time: 10.10 sec
+
+2024-10-09 22:01:04,362 - qm - INFO     - Sending program to QOP for compilation
+2024-10-09 22:01:05,781 - qm - INFO     - Executing program
+
+Total relaxation time: 10.10 sec
+
+2024-10-09 22:01:25,423 - qm - INFO     - Sending program to QOP for compilation
+2024-10-09 22:01:26,864 - qm - INFO     - Executing program
+
+Total relaxation time: 10.10 sec
+
+2024-10-09 22:01:46,444 - qm - INFO     - Sending program to QOP for compilation
+2024-10-09 22:01:47,854 - qm - INFO     - Executing program
+
+Total relaxation time: 10.10 sec
+
+2024-10-09 22:02:07,479 - qm - INFO     - Sending program to QOP for compilation
+2024-10-09 22:02:09,031 - qm - INFO     - Executing program
+
+Total relaxation time: 10.10 sec
+
+2024-10-09 22:02:28,638 - qm - INFO     - Sending program to QOP for compilation
+2024-10-09 22:02:30,091 - qm - INFO     - Executing program
+
+Total relaxation time: 10.10 sec
+
+2024-10-09 22:02:49,588 - qm - INFO     - Sending program to QOP for compilation
+2024-10-09 22:02:50,708 - qm - INFO     - Executing program
+
+Total relaxation time: 10.10 sec
+
+2024-10-09 22:03:10,647 - qm - INFO     - Sending program to QOP for compilation
+2024-10-09 22:03:12,028 - qm - INFO     - Executing program
+
+Total relaxation time: 10.10 sec
+
+2024-10-09 22:03:32,097 - qm - INFO     - Sending program to QOP for compilation
+2024-10-09 22:03:33,530 - qm - INFO     - Executing program
+
+Total relaxation time: 10.10 sec
+
+2024-10-09 22:03:52,783 - qm - INFO     - Sending program to QOP for compilation
+2024-10-09 22:03:54,240 - qm - INFO     - Executing program
+
+Total relaxation time: 10.10 sec
+
+2024-10-09 22:04:13,796 - qm - INFO     - Sending program to QOP for compilation
+2024-10-09 22:04:15,198 - qm - INFO     - Executing program
+
+Total relaxation time: 10.10 sec
+
+2024-10-09 22:04:34,823 - qm - INFO     - Sending program to QOP for compilation
+2024-10-09 22:04:35,947 - qm - INFO     - Executing program
+
+Total relaxation time: 10.10 sec
+
+2024-10-09 22:04:55,880 - qm - INFO     - Sending program to QOP for compilation
+2024-10-09 22:04:57,321 - qm - INFO     - Executing program
+
+Total relaxation time: 10.10 sec
+
+2024-10-09 22:05:16,982 - qm - INFO     - Sending program to QOP for compilation
+2024-10-09 22:05:18,448 - qm - INFO     - Executing program
+
+Total relaxation time: 10.10 sec
+
+2024-10-09 22:05:38,273 - qm - INFO     - Sending program to QOP for compilation
+2024-10-09 22:05:39,729 - qm - INFO     - Executing program
+
+Total relaxation time: 10.10 sec
+
+2024-10-09 22:05:59,026 - qm - INFO     - Sending program to QOP for compilation
+2024-10-09 22:06:00,477 - qm - INFO     - Executing program
+
+Total relaxation time: 10.10 sec
+
+2024-10-09 22:06:20,136 - qm - INFO     - Sending program to QOP for compilation
+2024-10-09 22:06:21,590 - qm - INFO     - Executing program
+
+Total relaxation time: 10.10 sec
+
+2024-10-09 22:06:41,086 - qm - INFO     - Sending program to QOP for compilation
+2024-10-09 22:06:42,488 - qm - INFO     - Executing program
+
+Total relaxation time: 10.10 sec
+
+2024-10-09 22:07:02,136 - qm - INFO     - Sending program to QOP for compilation
+2024-10-09 22:07:03,494 - qm - INFO     - Executing program
+
+Total relaxation time: 10.10 sec
+
+2024-10-09 22:07:23,152 - qm - INFO     - Sending program to QOP for compilation
+2024-10-09 22:07:24,564 - qm - INFO     - Executing program
+
+Total relaxation time: 10.10 sec
+
+2024-10-09 22:07:44,205 - qm - INFO     - Sending program to QOP for compilation
+2024-10-09 22:07:45,647 - qm - INFO     - Executing program
+
+Total relaxation time: 10.10 sec
+
+2024-10-09 22:08:05,289 - qm - INFO     - Sending program to QOP for compilation
+2024-10-09 22:08:06,677 - qm - INFO     - Executing program
+
+Total relaxation time: 10.10 sec
+
+2024-10-09 22:08:26,268 - qm - INFO     - Sending program to QOP for compilation
+2024-10-09 22:08:27,618 - qm - INFO     - Executing program
+
+Total relaxation time: 10.10 sec
+
+2024-10-09 22:08:47,361 - qm - INFO     - Sending program to QOP for compilation
+2024-10-09 22:08:48,797 - qm - INFO     - Executing program
+
+Total relaxation time: 10.10 sec
+
+2024-10-09 22:09:08,440 - qm - INFO     - Sending program to QOP for compilation
+2024-10-09 22:09:09,911 - qm - INFO     - Executing program
+
+Total relaxation time: 10.10 sec
+
+2024-10-09 22:09:29,416 - qm - INFO     - Sending program to QOP for compilation
+2024-10-09 22:09:30,859 - qm - INFO     - Executing program
+
+Total relaxation time: 10.10 sec
+
+2024-10-09 22:09:50,441 - qm - INFO     - Sending program to QOP for compilation
+2024-10-09 22:09:51,820 - qm - INFO     - Executing program
+
+Total relaxation time: 10.10 sec
+
+2024-10-09 22:10:11,542 - qm - INFO     - Sending program to QOP for compilation
+2024-10-09 22:10:12,993 - qm - INFO     - Executing program
+
+Total relaxation time: 10.10 sec
+
+2024-10-09 22:10:32,565 - qm - INFO     - Sending program to QOP for compilation
+2024-10-09 22:10:33,639 - qm - INFO     - Executing program
+
+Total relaxation time: 10.10 sec
+
+2024-10-09 22:10:53,683 - qm - INFO     - Sending program to QOP for compilation
+2024-10-09 22:10:55,060 - qm - INFO     - Executing program
+
+Total relaxation time: 10.10 sec
+
+2024-10-09 22:11:14,654 - qm - INFO     - Sending program to QOP for compilation
+2024-10-09 22:11:16,043 - qm - INFO     - Executing program
+
+Total relaxation time: 10.10 sec
+
+2024-10-09 22:11:35,687 - qm - INFO     - Sending program to QOP for compilation
+2024-10-09 22:11:36,792 - qm - INFO     - Executing program
+
+Total relaxation time: 10.10 sec
+
+2024-10-09 22:11:56,742 - qm - INFO     - Sending program to QOP for compilation
+2024-10-09 22:11:58,190 - qm - INFO     - Executing program
+
+Total relaxation time: 10.10 sec
+
+2024-10-09 22:12:17,722 - qm - INFO     - Sending program to QOP for compilation
+2024-10-09 22:12:19,147 - qm - INFO     - Executing program
+
+Total relaxation time: 10.10 sec
+
+2024-10-09 22:12:38,754 - qm - INFO     - Sending program to QOP for compilation
+2024-10-09 22:12:40,238 - qm - INFO     - Executing program
+
+Total relaxation time: 10.10 sec
+
+2024-10-09 22:12:59,774 - qm - INFO     - Sending program to QOP for compilation
+2024-10-09 22:13:01,226 - qm - INFO     - Executing program
+
+Total relaxation time: 10.10 sec
+
+2024-10-09 22:13:20,808 - qm - INFO     - Sending program to QOP for compilation
+2024-10-09 22:13:22,207 - qm - INFO     - Executing program
+
+Total relaxation time: 10.10 sec
+
+2024-10-09 22:13:41,936 - qm - INFO     - Sending program to QOP for compilation
+2024-10-09 22:13:43,399 - qm - INFO     - Executing program
+
+Total relaxation time: 10.10 sec
+
+2024-10-09 22:14:02,926 - qm - INFO     - Sending program to QOP for compilation
+2024-10-09 22:14:04,358 - qm - INFO     - Executing program
+
+Total relaxation time: 10.10 sec
+
+2024-10-09 22:14:23,961 - qm - INFO     - Sending program to QOP for compilation
+2024-10-09 22:14:25,361 - qm - INFO     - Executing program
+
+Total relaxation time: 10.10 sec
+
+2024-10-09 22:14:45,089 - qm - INFO     - Sending program to QOP for compilation
+2024-10-09 22:14:46,234 - qm - INFO     - Executing program
+
+Total relaxation time: 10.10 sec
+
+2024-10-09 22:15:06,023 - qm - INFO     - Sending program to QOP for compilation
+2024-10-09 22:15:07,434 - qm - INFO     - Executing program
+
+Total relaxation time: 10.10 sec
+
+2024-10-09 22:15:27,069 - qm - INFO     - Sending program to QOP for compilation
+2024-10-09 22:15:28,444 - qm - INFO     - Executing program
+
+Total relaxation time: 10.10 sec
+
+2024-10-09 22:15:48,120 - qm - INFO     - Sending program to QOP for compilation
+2024-10-09 22:15:49,506 - qm - INFO     - Executing program
+
+Total relaxation time: 10.10 sec
+
+2024-10-09 22:16:09,142 - qm - INFO     - Sending program to QOP for compilation
+2024-10-09 22:16:10,584 - qm - INFO     - Executing program
+
+Total relaxation time: 10.10 sec
+
+2024-10-09 22:16:30,236 - qm - INFO     - Sending program to QOP for compilation
+2024-10-09 22:16:31,669 - qm - INFO     - Executing program
+
+Total relaxation time: 10.10 sec
+
+2024-10-09 22:16:51,224 - qm - INFO     - Sending program to QOP for compilation
+2024-10-09 22:16:52,571 - qm - INFO     - Executing program
+
+Total relaxation time: 10.10 sec
+
+2024-10-09 22:17:12,275 - qm - INFO     - Sending program to QOP for compilation
+2024-10-09 22:17:13,689 - qm - INFO     - Executing program
+
+Total relaxation time: 10.10 sec
+
+2024-10-09 22:17:33,381 - qm - INFO     - Sending program to QOP for compilation
+2024-10-09 22:17:34,869 - qm - INFO     - Executing program
+
+Total relaxation time: 10.10 sec
+
+2024-10-09 22:17:54,332 - qm - INFO     - Sending program to QOP for compilation
+2024-10-09 22:17:55,726 - qm - INFO     - Executing program
+
+Total relaxation time: 10.10 sec
+
+2024-10-09 22:18:15,698 - qm - INFO     - Sending program to QOP for compilation
+2024-10-09 22:18:17,111 - qm - INFO     - Executing program
+
+Total relaxation time: 10.10 sec
+
+2024-10-09 22:18:36,455 - qm - INFO     - Sending program to QOP for compilation
+2024-10-09 22:18:37,986 - qm - INFO     - Executing program
+
+Total relaxation time: 10.10 sec
+
+2024-10-09 22:18:57,815 - qm - INFO     - Sending program to QOP for compilation
+2024-10-09 22:18:59,206 - qm - INFO     - Executing program
+
+Total relaxation time: 10.10 sec
+
+2024-10-09 22:19:18,647 - qm - INFO     - Sending program to QOP for compilation
+2024-10-09 22:19:20,014 - qm - INFO     - Executing program
+
+Total relaxation time: 10.10 sec
+
+2024-10-09 22:19:39,602 - qm - INFO     - Sending program to QOP for compilation
+2024-10-09 22:19:41,029 - qm - INFO     - Executing program
+
+Total relaxation time: 10.10 sec
+
+2024-10-09 22:20:00,977 - qm - INFO     - Sending program to QOP for compilation
+2024-10-09 22:20:02,411 - qm - INFO     - Executing program
+
+Total relaxation time: 10.10 sec
+
+2024-10-09 22:20:21,735 - qm - INFO     - Sending program to QOP for compilation
+2024-10-09 22:20:23,213 - qm - INFO     - Executing program
+
+Total relaxation time: 10.10 sec
+
+2024-10-09 22:20:43,058 - qm - INFO     - Sending program to QOP for compilation
+2024-10-09 22:20:44,145 - qm - INFO     - Executing program
+
+Total relaxation time: 10.10 sec
+
+2024-10-09 22:21:03,803 - qm - INFO     - Sending program to QOP for compilation
+2024-10-09 22:21:05,181 - qm - INFO     - Executing program
+
+Total relaxation time: 10.10 sec
+
+2024-10-09 22:21:24,854 - qm - INFO     - Sending program to QOP for compilation
+2024-10-09 22:21:26,262 - qm - INFO     - Executing program
+
+Total relaxation time: 10.10 sec
+
+2024-10-09 22:21:45,862 - qm - INFO     - Sending program to QOP for compilation
+2024-10-09 22:21:46,945 - qm - INFO     - Executing program
+
+Total relaxation time: 10.10 sec
+
+2024-10-09 22:22:07,321 - qm - INFO     - Sending program to QOP for compilation
+2024-10-09 22:22:08,737 - qm - INFO     - Executing program
+
+Total relaxation time: 10.10 sec
+
+2024-10-09 22:22:28,015 - qm - INFO     - Sending program to QOP for compilation
+2024-10-09 22:22:29,487 - qm - INFO     - Executing program
+
+Total relaxation time: 10.10 sec
+
+2024-10-09 22:22:49,076 - qm - INFO     - Sending program to QOP for compilation
+2024-10-09 22:22:50,192 - qm - INFO     - Executing program
+
+Total relaxation time: 10.10 sec
+
+2024-10-09 22:23:10,214 - qm - INFO     - Sending program to QOP for compilation
+2024-10-09 22:23:11,686 - qm - INFO     - Executing program
+
+Total relaxation time: 10.10 sec
+
+2024-10-09 22:23:31,136 - qm - INFO     - Sending program to QOP for compilation
+2024-10-09 22:23:32,583 - qm - INFO     - Executing program
+
+Total relaxation time: 10.10 sec
+
+2024-10-09 22:23:52,205 - qm - INFO     - Sending program to QOP for compilation
+2024-10-09 22:23:53,609 - qm - INFO     - Executing program
+
+Total relaxation time: 10.10 sec
+
+2024-10-09 22:24:13,258 - qm - INFO     - Sending program to QOP for compilation
+2024-10-09 22:24:14,738 - qm - INFO     - Executing program
+
+Total relaxation time: 10.10 sec
+
+2024-10-09 22:24:34,609 - qm - INFO     - Sending program to QOP for compilation
+2024-10-09 22:24:36,000 - qm - INFO     - Executing program
+
+Total relaxation time: 10.10 sec
+
+2024-10-09 22:24:55,414 - qm - INFO     - Sending program to QOP for compilation
+2024-10-09 22:24:56,809 - qm - INFO     - Executing program
+
+Total relaxation time: 10.10 sec
+
+2024-10-09 22:25:16,387 - qm - INFO     - Sending program to QOP for compilation
+2024-10-09 22:25:17,803 - qm - INFO     - Executing program
+
+Total relaxation time: 10.10 sec
+
+2024-10-09 22:25:37,442 - qm - INFO     - Sending program to QOP for compilation
+2024-10-09 22:25:38,840 - qm - INFO     - Executing program
+
+Total relaxation time: 10.10 sec
+
+2024-10-09 22:25:58,545 - qm - INFO     - Sending program to QOP for compilation
+2024-10-09 22:25:59,894 - qm - INFO     - Executing program
+
+Total relaxation time: 10.10 sec
+
+2024-10-09 22:26:19,525 - qm - INFO     - Sending program to QOP for compilation
+2024-10-09 22:26:20,946 - qm - INFO     - Executing program
+
+Total relaxation time: 10.10 sec
+
+2024-10-09 22:26:40,537 - qm - INFO     - Sending program to QOP for compilation
+2024-10-09 22:26:41,978 - qm - INFO     - Executing program
+
+Total relaxation time: 10.10 sec
+
+2024-10-09 22:27:01,534 - qm - INFO     - Sending program to QOP for compilation
+2024-10-09 22:27:02,939 - qm - INFO     - Executing program
+
+Total relaxation time: 10.10 sec
+
+2024-10-09 22:27:22,919 - qm - INFO     - Sending program to QOP for compilation
+2024-10-09 22:27:24,345 - qm - INFO     - Executing program
+
+Total relaxation time: 10.10 sec
+
+2024-10-09 22:27:43,730 - qm - INFO     - Sending program to QOP for compilation
+2024-10-09 22:27:45,155 - qm - INFO     - Executing program
+
+Total relaxation time: 10.10 sec
+
+2024-10-09 22:28:05,033 - qm - INFO     - Sending program to QOP for compilation
+2024-10-09 22:28:06,398 - qm - INFO     - Executing program
+
+Total relaxation time: 10.10 sec
+
+2024-10-09 22:28:26,115 - qm - INFO     - Sending program to QOP for compilation
+2024-10-09 22:28:27,547 - qm - INFO     - Executing program
+
+Total relaxation time: 10.10 sec
+
+2024-10-09 22:28:46,902 - qm - INFO     - Sending program to QOP for compilation
+2024-10-09 22:28:48,246 - qm - INFO     - Executing program
+
+Total relaxation time: 10.10 sec
+
+2024-10-09 22:29:08,210 - qm - INFO     - Sending program to QOP for compilation
+2024-10-09 22:29:09,584 - qm - INFO     - Executing program
+
+Total relaxation time: 10.10 sec
+
+2024-10-09 22:29:29,703 - qm - INFO     - Sending program to QOP for compilation
+2024-10-09 22:29:31,151 - qm - INFO     - Executing program
+
+Total relaxation time: 10.10 sec
+
+2024-10-09 22:29:50,630 - qm - INFO     - Sending program to QOP for compilation
+2024-10-09 22:29:52,057 - qm - INFO     - Executing program
+
+Total relaxation time: 10.10 sec
+
+2024-10-09 22:30:11,534 - qm - INFO     - Sending program to QOP for compilation
+2024-10-09 22:30:13,014 - qm - INFO     - Executing program
+
+Total relaxation time: 10.10 sec
+
+2024-10-09 22:30:32,746 - qm - INFO     - Sending program to QOP for compilation
+2024-10-09 22:30:34,214 - qm - INFO     - Executing program
+
+Total relaxation time: 10.10 sec
+
+2024-10-09 22:30:53,529 - qm - INFO     - Sending program to QOP for compilation
+2024-10-09 22:30:54,992 - qm - INFO     - Executing program
+
+Total relaxation time: 10.10 sec
+
+2024-10-09 22:31:15,539 - qm - INFO     - Sending program to QOP for compilation
+2024-10-09 22:31:16,986 - qm - INFO     - Executing program
+
+Total relaxation time: 10.10 sec
+
+2024-10-09 22:31:36,871 - qm - INFO     - Sending program to QOP for compilation
+2024-10-09 22:31:38,358 - qm - INFO     - Executing program
+
+Total relaxation time: 10.10 sec
+
+2024-10-09 22:31:58,234 - qm - INFO     - Sending program to QOP for compilation
+2024-10-09 22:31:59,663 - qm - INFO     - Executing program
+
+Total relaxation time: 10.10 sec
+
+2024-10-09 22:32:19,305 - qm - INFO     - Sending program to QOP for compilation
+2024-10-09 22:32:20,710 - qm - INFO     - Executing program
+
+Total relaxation time: 10.10 sec
+
+2024-10-09 22:32:40,445 - qm - INFO     - Sending program to QOP for compilation
+2024-10-09 22:32:41,858 - qm - INFO     - Executing program
+
+Total relaxation time: 10.10 sec
+
+2024-10-09 22:33:01,438 - qm - INFO     - Sending program to QOP for compilation
+2024-10-09 22:33:02,837 - qm - INFO     - Executing program
+
+Total relaxation time: 10.10 sec
+
+2024-10-09 22:33:22,515 - qm - INFO     - Sending program to QOP for compilation
+2024-10-09 22:33:23,954 - qm - INFO     - Executing program
+
+Total relaxation time: 10.10 sec
+
+2024-10-09 22:33:43,678 - qm - INFO     - Sending program to QOP for compilation
+2024-10-09 22:33:45,090 - qm - INFO     - Executing program
+
+Total relaxation time: 10.10 sec
+
+2024-10-09 22:34:04,376 - qm - INFO     - Sending program to QOP for compilation
+2024-10-09 22:34:05,805 - qm - INFO     - Executing program
+
+Total relaxation time: 10.10 sec
+
+2024-10-09 22:34:25,457 - qm - INFO     - Sending program to QOP for compilation
+2024-10-09 22:34:26,834 - qm - INFO     - Executing program
+
+Total relaxation time: 10.10 sec
+
+2024-10-09 22:34:46,536 - qm - INFO     - Sending program to QOP for compilation
+2024-10-09 22:34:47,926 - qm - INFO     - Executing program
+
+Total relaxation time: 10.10 sec
+
+2024-10-09 22:35:07,529 - qm - INFO     - Sending program to QOP for compilation
+2024-10-09 22:35:09,001 - qm - INFO     - Executing program
+
+Total relaxation time: 10.10 sec
+
+2024-10-09 22:35:28,561 - qm - INFO     - Sending program to QOP for compilation
+2024-10-09 22:35:30,103 - qm - INFO     - Executing program
+
+Total relaxation time: 10.10 sec
+
+2024-10-09 22:35:49,604 - qm - INFO     - Sending program to QOP for compilation
+2024-10-09 22:35:51,013 - qm - INFO     - Executing program
+
+Total relaxation time: 10.10 sec
+
+2024-10-09 22:36:10,665 - qm - INFO     - Sending program to QOP for compilation
+2024-10-09 22:36:12,077 - qm - INFO     - Executing program
+
+Total relaxation time: 10.10 sec
+
+2024-10-09 22:36:31,709 - qm - INFO     - Sending program to QOP for compilation
+2024-10-09 22:36:33,237 - qm - INFO     - Executing program
+
+Total relaxation time: 10.10 sec
+
+2024-10-09 22:36:52,745 - qm - INFO     - Sending program to QOP for compilation
+2024-10-09 22:36:54,210 - qm - INFO     - Executing program
+
+Total relaxation time: 10.10 sec
+
+2024-10-09 22:37:13,751 - qm - INFO     - Sending program to QOP for compilation
+2024-10-09 22:37:15,171 - qm - INFO     - Executing program
+
+Total relaxation time: 10.10 sec
+
+2024-10-09 22:37:34,858 - qm - INFO     - Sending program to QOP for compilation
+2024-10-09 22:37:36,223 - qm - INFO     - Executing program
+
+Total relaxation time: 10.10 sec
+
+2024-10-09 22:37:56,173 - qm - INFO     - Sending program to QOP for compilation
+2024-10-09 22:37:57,594 - qm - INFO     - Executing program
+
+Total relaxation time: 10.10 sec
+
+2024-10-09 22:38:16,875 - qm - INFO     - Sending program to QOP for compilation
+2024-10-09 22:38:18,383 - qm - INFO     - Executing program
+
+Total relaxation time: 10.10 sec
+
+2024-10-09 22:38:37,998 - qm - INFO     - Sending program to QOP for compilation
+2024-10-09 22:38:39,091 - qm - INFO     - Executing program
+
+Total relaxation time: 10.10 sec
+
+2024-10-09 22:38:58,949 - qm - INFO     - Sending program to QOP for compilation
+2024-10-09 22:39:00,339 - qm - INFO     - Executing program
+
+Total relaxation time: 10.10 sec
+
+2024-10-09 22:39:20,029 - qm - INFO     - Sending program to QOP for compilation
+2024-10-09 22:39:21,406 - qm - INFO     - Executing program
+
+Total relaxation time: 10.10 sec
+
+2024-10-09 22:39:41,063 - qm - INFO     - Sending program to QOP for compilation
+2024-10-09 22:39:42,469 - qm - INFO     - Executing program
+
+Total relaxation time: 10.10 sec
+
+2024-10-09 22:40:02,094 - qm - INFO     - Sending program to QOP for compilation
+2024-10-09 22:40:03,476 - qm - INFO     - Executing program
+
+Total relaxation time: 10.10 sec
+
+2024-10-09 22:40:23,191 - qm - INFO     - Sending program to QOP for compilation
+2024-10-09 22:40:24,603 - qm - INFO     - Executing program
+
+Total relaxation time: 10.10 sec
+
+2024-10-09 22:40:44,184 - qm - INFO     - Sending program to QOP for compilation
+2024-10-09 22:40:45,604 - qm - INFO     - Executing program
+
+Total relaxation time: 10.10 sec
+
+2024-10-09 22:41:05,216 - qm - INFO     - Sending program to QOP for compilation
+2024-10-09 22:41:06,611 - qm - INFO     - Executing program
+
+Total relaxation time: 10.10 sec
+
+2024-10-09 22:41:26,393 - qm - INFO     - Sending program to QOP for compilation
+2024-10-09 22:41:27,735 - qm - INFO     - Executing program
+
+Total relaxation time: 10.10 sec
+
+2024-10-09 22:41:47,308 - qm - INFO     - Sending program to QOP for compilation
+2024-10-09 22:41:48,677 - qm - INFO     - Executing program
+
+Total relaxation time: 10.10 sec
+
+2024-10-09 22:42:08,680 - qm - INFO     - Sending program to QOP for compilation
+2024-10-09 22:42:10,136 - qm - INFO     - Executing program
+
+Total relaxation time: 10.10 sec
+
+2024-10-09 22:42:29,419 - qm - INFO     - Sending program to QOP for compilation
+2024-10-09 22:42:30,807 - qm - INFO     - Executing program
+
+Total relaxation time: 10.10 sec
+
+2024-10-09 22:42:50,772 - qm - INFO     - Sending program to QOP for compilation
+2024-10-09 22:42:52,238 - qm - INFO     - Executing program
+
+Total relaxation time: 10.10 sec
+
+2024-10-09 22:43:11,574 - qm - INFO     - Sending program to QOP for compilation
+2024-10-09 22:43:12,973 - qm - INFO     - Executing program
+
+Total relaxation time: 10.10 sec
+
+2024-10-09 22:43:32,551 - qm - INFO     - Sending program to QOP for compilation
+2024-10-09 22:43:33,645 - qm - INFO     - Executing program
+
+Total relaxation time: 10.10 sec
+
+2024-10-09 22:43:53,621 - qm - INFO     - Sending program to QOP for compilation
+2024-10-09 22:43:55,002 - qm - INFO     - Executing program
+
+Total relaxation time: 10.10 sec
+
+2024-10-09 22:44:14,773 - qm - INFO     - Sending program to QOP for compilation
+2024-10-09 22:44:16,225 - qm - INFO     - Executing program
+
+Total relaxation time: 10.10 sec
+
+2024-10-09 22:44:35,710 - qm - INFO     - Sending program to QOP for compilation
+2024-10-09 22:44:37,193 - qm - INFO     - Executing program
+
+Total relaxation time: 10.10 sec
+
+2024-10-09 22:44:56,752 - qm - INFO     - Sending program to QOP for compilation
+2024-10-09 22:44:58,254 - qm - INFO     - Executing program
+
+Total relaxation time: 10.10 sec
+
+2024-10-09 22:45:17,869 - qm - INFO     - Sending program to QOP for compilation
+2024-10-09 22:45:19,301 - qm - INFO     - Executing program
+
+Total relaxation time: 10.10 sec
+
+2024-10-09 22:45:39,133 - qm - INFO     - Sending program to QOP for compilation
+2024-10-09 22:45:40,252 - qm - INFO     - Executing program
+
+Total relaxation time: 10.10 sec
+
+2024-10-09 22:45:59,914 - qm - INFO     - Sending program to QOP for compilation
+2024-10-09 22:46:01,364 - qm - INFO     - Executing program
+
+Total relaxation time: 10.10 sec
+
+2024-10-09 22:46:21,008 - qm - INFO     - Sending program to QOP for compilation
+2024-10-09 22:46:22,410 - qm - INFO     - Executing program
+
+Total relaxation time: 10.10 sec
+
+2024-10-09 22:46:42,012 - qm - INFO     - Sending program to QOP for compilation
+2024-10-09 22:46:43,449 - qm - INFO     - Executing program
+
+Total relaxation time: 10.10 sec
+
+2024-10-09 22:47:03,072 - qm - INFO     - Sending program to QOP for compilation
+2024-10-09 22:47:04,580 - qm - INFO     - Executing program
+
+Total relaxation time: 10.10 sec
+
+2024-10-09 22:47:24,096 - qm - INFO     - Sending program to QOP for compilation
+2024-10-09 22:47:25,198 - qm - INFO     - Executing program
+
+Total relaxation time: 10.10 sec
+
+2024-10-09 22:47:45,122 - qm - INFO     - Sending program to QOP for compilation
+2024-10-09 22:47:46,226 - qm - INFO     - Executing program
+
+Total relaxation time: 10.10 sec
+
+2024-10-09 22:48:06,188 - qm - INFO     - Sending program to QOP for compilation
+2024-10-09 22:48:07,644 - qm - INFO     - Executing program
+
+Total relaxation time: 10.10 sec
+
+2024-10-09 22:48:27,549 - qm - INFO     - Sending program to QOP for compilation
+2024-10-09 22:48:28,976 - qm - INFO     - Executing program
+
+Total relaxation time: 10.10 sec
+
+2024-10-09 22:48:48,252 - qm - INFO     - Sending program to QOP for compilation
+2024-10-09 22:48:49,624 - qm - INFO     - Executing program
+
+Total relaxation time: 10.10 sec
+
+2024-10-09 22:49:09,692 - qm - INFO     - Sending program to QOP for compilation
+2024-10-09 22:49:11,077 - qm - INFO     - Executing program
+
+Total relaxation time: 10.10 sec
+
+2024-10-09 22:49:30,355 - qm - INFO     - Sending program to QOP for compilation
+2024-10-09 22:49:31,772 - qm - INFO     - Executing program
+
+Total relaxation time: 10.10 sec
+
+2024-10-09 22:49:51,387 - qm - INFO     - Sending program to QOP for compilation
+2024-10-09 22:49:52,833 - qm - INFO     - Executing program
+
+Total relaxation time: 10.10 sec
+
+2024-10-09 22:50:12,492 - qm - INFO     - Sending program to QOP for compilation
+2024-10-09 22:50:13,858 - qm - INFO     - Executing program
+
+Total relaxation time: 10.10 sec
+
+2024-10-09 22:50:33,467 - qm - INFO     - Sending program to QOP for compilation
+2024-10-09 22:50:34,925 - qm - INFO     - Executing program
+
+Total relaxation time: 10.10 sec
+
+2024-10-09 22:50:54,508 - qm - INFO     - Sending program to QOP for compilation
+2024-10-09 22:50:55,958 - qm - INFO     - Executing program
+
+Total relaxation time: 10.10 sec
+
+2024-10-09 22:51:15,562 - qm - INFO     - Sending program to QOP for compilation
+2024-10-09 22:51:16,937 - qm - INFO     - Executing program
+
+Total relaxation time: 10.10 sec
+
+2024-10-09 22:51:36,634 - qm - INFO     - Sending program to QOP for compilation
+2024-10-09 22:51:38,066 - qm - INFO     - Executing program
