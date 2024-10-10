@@ -2,9 +2,13 @@ import numpy as np
 from qibolab.qubits import QubitId
 from scipy.optimize import minimize
 from qibocal.auto.execute import Executor
+from qibocal.cli.report import report
+from qibolab import pulses
+
+AVG_GATE = 1.875 # 1.875 is the average number of gates in a clifford operation
 
 #objective function to minimize
-def objective(scaled_params, e, target, scales):
+def objective(scaled_params, e, target, scale_factors):
 
     #unscales params
     params = unscale_params(scaled_params, scale_factors)
@@ -12,6 +16,11 @@ def objective(scaled_params, e, target, scales):
 
     e.platform.qubits[target].native_gates.RX.amplitude = amplitude
     e.platform.qubits[target].native_gates.RX.frequency = frequency
+    
+    pulse = e.platform.qubits[target].native_gates.RX.pulse(start=0)
+    rel_sigma = pulse.shape.rel_sigma
+    drag_pulse = pulses.Drag(rel_sigma=rel_sigma, beta=beta)
+    e.platform.qubits[target].native_gates.RX.shape = repr(drag_pulse)
 
     rb_output = e.rb_ondevice(
         num_of_sequences=1000,
@@ -28,11 +37,12 @@ def objective(scaled_params, e, target, scales):
     stdevs = np.sqrt(np.diag(np.reshape(cov[target], (3, 3))))
     one_minus_p = 1 - pars[2]
     r_c = one_minus_p * (1 - 1 / 2**1)
-    r_g = r_c / 1.875  # 1.875 is the average number of gates in a clifford operation
-    r_c_std = stdevs[2] * (1 - 1 / 2**1)
-    r_g_std = r_c_std / 1.875
+    r_g = r_c / AVG_GATE
+    #l'errore in teoria viene salvato in automatico dalla procedura di RB  
+    #r_c_std = stdevs[2] * (1 - 1 / 2**1)
+    #r_g_std = r_c_std / AVG_GATE
 
-    return r_g#, r_g_std
+    return r_g
 
 
 def test_rb_optimization(
@@ -44,7 +54,7 @@ def test_rb_optimization(
         bounds
     ):
     
-    res = minimize(objective, init_guess, args=(executor, target, scale), method=method, tol=1e-3, options = {"maxiter" : 100}, bounds = bounds)
+    res = minimize(objective, init_guess, args=(executor, target, scale), method=method, tol=1e-8, options = {"maxiter" : 100}, bounds = bounds)
     
     return res
 
@@ -56,7 +66,6 @@ def unscale_params(scaled_params, scale_factors):
 
 
 #Esecuzione della rountine, magari spostare in un altro script
-
 target = "D1"
 platform = "qw11q"
 method = 'nelder-mead' #forse non la migliore? Non ho idea del landscape
@@ -94,8 +103,13 @@ with Executor.open(
 
     test_rb_optimization(e, target, method, scaled_init_guess, scale_factors, scaled_bounds)
 
+report(e.path, e.history)
 
-"""TO DO: 
+
+"""TO DO:
+    y controllare dove uso scale_factors
+    y capire come gestire l'errore    
+    y passare 1.875 (avg_gate) come costante all'inizio
     y maxiter
     y xatol: normalizzazione + definizione
     * leggere l'initial guess dalla cartella platform precedente + automatizzare riscalamento
@@ -103,7 +117,7 @@ with Executor.open(
     y modificare delta_clifford
     y provare a variare beta in un piccolo intervallo intorno a quello suggerito da drag
     y spostare report ?
-    * vedere quali di questi parametri potrebbe essere interessante variare    
+    y vedere quali di questi parametri potrebbe essere interessante variare
 
 "RX": (D1) {
                     "duration": 40,
