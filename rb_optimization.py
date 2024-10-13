@@ -38,6 +38,7 @@ def objective(scaled_params, e, target, scale_factors):
     r_c = one_minus_p * (1 - 1 / 2**1)
     r_g = r_c / AVG_GATE
 
+    print('terminating objective call')
     return r_g
 
 
@@ -57,7 +58,7 @@ def rb_optimization(
         obj_values.append(obj_val)
 
     res = minimize(objective, init_guess, args=(executor, target, scale), method=method, 
-                   tol=1e-8, options = {"maxiter" : 50}, bounds = bounds, callback=callback)
+                   tol=1e-8, options = {"maxiter" : 5}, bounds = bounds, callback=callback)
     
     return res, obj_values
 
@@ -75,10 +76,11 @@ def unscale_params(scaled_params, scale_factors):
 target = "D1"
 platform = "qw11q"
 method = 'nelder-mead' #forse non la migliore? Non ho idea del landscape
+path = 'code test'
 
 with Executor.open(
     "myexec",
-    path="rb_opt",
+    path=path,
     platform=platform,
     targets=[target],
     update=True,
