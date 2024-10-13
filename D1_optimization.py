@@ -2,6 +2,7 @@ import numpy as np
 import os
 import json
 import time
+import pickle
 from qibocal.auto.execute import Executor
 from qibocal.cli.report import report
 from rb_optimization import rb_optimization, scale_params
@@ -59,12 +60,9 @@ objective_values = np.array([step.objective_value for step in optimization_histo
 os.makedirs(opt_history_path, exist_ok=True)
 np.savez(os.path.join(opt_history_path,'optimization_history.npz'), iterations=iterations, parameters=parameters, objective_values=objective_values)
 
-#save optimization_result as JSON file    
-opt_result_dict = {key: value.tolist() if isinstance(value, np.ndarray) else value
-                       for key, value in opt_results.items()}
 
-with open(os.path.join(opt_history_path,'optimize_result.json'), 'w') as file:
-    json.dump(opt_result_dict, file)
+with open(os.path.join(opt_history_path,'optimization_result.pkl'), 'wb') as f:
+    pickle.dump(opt_results, f)
 
 end_time = time.time()
 elapsed_time = end_time - start_time

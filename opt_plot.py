@@ -12,13 +12,16 @@ RED = "#d1545e"
 DARKBLUE = "#075cb3"
 DARKRED = "#8c1822"
 
+
+
 """UNZIP ROUTINE"""
-def unzip_data_npz(root_dir):
+def unzip_data_npz(root_dir, destination_dir):
     for dirpath, dirnames, filenames in os.walk(root_dir):
         if 'data.npz' in filenames:
             npz_path = os.path.join(dirpath, 'data.npz')
-            data_dir = os.path.join(dirpath, 'data')
-            
+            relative_path = os.path.relpath(dirpath, root_dir)
+            data_dir = os.path.join(destination_dir, relative_path, 'data')
+
             if not os.path.exists(data_dir):
                 try:
                     with np.load(npz_path, allow_pickle=True) as data:
@@ -28,26 +31,28 @@ def unzip_data_npz(root_dir):
                 except Exception as e:
                     print(f"Error unzipping {npz_path}: {str(e)}")
 #NB: here calling current working directory
-root_directory = os.path.join(os.getcwd(), 'rb_opt_3h')
 
+target = 'D1'
+method = 'nelder-mead'
 
-unzip_directory = f'../'
+root_directory = f'optimization_{target}_{method}'
+unzip_directory = f'../rb_opt_unzipped/{target}_{method}/'
 unzip_data_npz(root_directory, unzip_directory)
 
 
 
 
 
-"""CODICE PER PLOT"""
-#accedo ai dati unzippati
-path = f'../rb_opt_3h/data/'
+"""CODICE PER PLOT da ROUTINES"""
+#Access unzipped files
+#NB: da modificare perchè qui sto accedendo a tutti i dati non solo a quelli dello step di iterazione
+
+path = os.path.join(unzip_directory, 'data/')
 
 rb_paths = [item for item in os.listdir(path) if item.startswith('rb_ondevice') 
             and os.path.isdir(os.path.join(path, item))]
 sorted_rb_items = sorted(rb_paths, key=lambda x: int(x.split('-')[1]))
 print(len(sorted_rb_items))
-
-
 
 all_decay_params, all_decay_errs = [], []
 for rbpath in sorted_rb_items:
@@ -76,3 +81,7 @@ ax1.plot(x, pulse_fidelities, '-', color='black', linewidth=0.7)
 ax1.set_xlabel('# optimization steps',  fontsize=12)
 #ax1.set_ylabel(r'$\pi/2$ fidelity',  fontsize=12)
 plt.savefig(f'plot', bbox_inches="tight", dpi=600)
+
+
+
+""" CODICE PER PLOT DA OPTIMIZATION HISTORY """
