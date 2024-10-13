@@ -20,31 +20,34 @@ def unzip_data_npz(root_dir):
             data_dir = os.path.join(dirpath, 'data')
             
             if not os.path.exists(data_dir):
-                #print(f"Unzipping {npz_path}")
                 try:
                     with np.load(npz_path, allow_pickle=True) as data:
                         os.makedirs(data_dir, exist_ok=True)
                         for key, value in data.items():
                             np.save(os.path.join(data_dir, f"{key}.npy"), value)
-                    #print(f"Successfully unzipped {npz_path}")
                 except Exception as e:
                     print(f"Error unzipping {npz_path}: {str(e)}")
-
+#NB: here calling current working directory
 root_directory = os.path.join(os.getcwd(), 'rb_opt_3h')
-unzip_data_npz(root_directory)
+
+
+unzip_directory = f'../'
+unzip_data_npz(root_directory, unzip_directory)
 
 
 
 
 
 """CODICE PER PLOT"""
-
-path = f'/home/elisa/Desktop/Qibo/Qibocal/optimization/rb_opt_3h/data/'
+#accedo ai dati unzippati
+path = f'../rb_opt_3h/data/'
 
 rb_paths = [item for item in os.listdir(path) if item.startswith('rb_ondevice') 
             and os.path.isdir(os.path.join(path, item))]
 sorted_rb_items = sorted(rb_paths, key=lambda x: int(x.split('-')[1]))
 print(len(sorted_rb_items))
+
+
 
 all_decay_params, all_decay_errs = [], []
 for rbpath in sorted_rb_items:

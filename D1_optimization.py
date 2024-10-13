@@ -12,8 +12,8 @@ start_time = time.time()
 target = "D1"
 platform = "qw11q"
 method = 'nelder-mead' 
-executor_path = f'optimization/{target}/{method}'
-opt_history_path = f'../opt_analysis/{target}/{method}'
+executor_path = f'optimization_{target}_{method}'
+opt_history_path = f'../opt_analysis_{target}_{method}'
 
 with Executor.open(
     "myexec",
@@ -56,6 +56,7 @@ iterations = np.array([step.iteration for step in optimization_history])
 parameters = np.array([step.parameters for step in optimization_history])
 objective_values = np.array([step.objective_value for step in optimization_history])
 
+os.makedirs(opt_history_path, exist_ok=True)
 np.savez(os.path.join(opt_history_path,'optimization_history.npz'), iterations=iterations, parameters=parameters, objective_values=objective_values)
 
 #save optimization_result as JSON file    
