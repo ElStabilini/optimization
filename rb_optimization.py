@@ -38,12 +38,6 @@ def objective(scaled_params, e, target, scale_factors):
     r_c = one_minus_p * (1 - 1 / 2**1)
     r_g = r_c / AVG_GATE
 
-    #l'errore in teoria viene salvato in automatico dalla procedura di RB  
-    #cov = rb_output.results.cov
-    #stdevs = np.sqrt(np.diag(np.reshape(cov[target], (3, 3))))
-    #r_c_std = stdevs[2] * (1 - 1 / 2**1)
-    #r_g_std = r_c_std / AVG_GATE
-
     return r_g
 
 
@@ -62,10 +56,8 @@ def rb_optimization(
         obj_val = objective(x, executor, target, scale)
         obj_values.append(obj_val)
 
-    #wrapped_callback = lambda x: callback(x, executor, target, scale, obj_values)
-
     res = minimize(objective, init_guess, args=(executor, target, scale), method=method, 
-                   tol=1e-8, options = {"maxiter" : 100}, bounds = bounds, callback=callback)
+                   tol=1e-8, options = {"maxiter" : 50}, bounds = bounds, callback=callback)
     
     return res, obj_values
 
