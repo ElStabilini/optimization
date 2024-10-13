@@ -1,12 +1,16 @@
 import numpy as np
-import matplotlib.pyplot as plt
-from qibolab.qubits import QubitId
 from scipy.optimize import minimize
 from qibocal.auto.execute import Executor
-from qibocal.cli.report import report
 from qibolab import pulses
+from dataclasses import dataclass
 
 AVG_GATE = 1.875 # 1.875 is the average number of gates in a clifford operation
+
+@dataclass
+class OptimizationStep:
+    iteration: int
+    parameters: np.ndarray
+    objective_value: float
 
 #objective function to minimize
 def objective(scaled_params, e, target, scale_factors):
@@ -51,17 +55,35 @@ def rb_optimization(
         bounds
     ):
     
-    obj_values = []
+    optimization_history = []
+    iteration_count = 0
 
-    def callback(x):
-        obj_val = objective(x, executor, target, scale)
-        obj_values.append(obj_val)
+    def callback(x, f=None):
+        nonlocal iteration_count
+        if f is None:
+            # If the optimization method doesn't provide f, need to calculate it
+            f = objective(x, executor, target, scale)
+        
+        step = OptimizationStep(
+            iteration=iteration_count,
+            parameters=np.copy(x),
+            objective_value=f
+        )
+        optimization_history.append(step)
+        iteration_count += 1
+        print(f"Completed iteration {iteration_count}, objective value: {f}")
 
     res = minimize(objective, init_guess, args=(executor, target, scale), method=method, 
                    tol=1e-8, options = {"maxiter" : 5}, bounds = bounds, callback=callback)
     
-    return res, obj_values
+    return res, optimization_history
 
+#RES description: object of type OptimizeResult, among others returns the 
+# final values for the optimized parameters and optimized value of objective function
+# doesn't store history information, for this reason nedd to be saved and returned separately
+
+
+#OPTIMIZATION_HISTORY description: array of Optimization step object
 
 
 def scale_params(params, scale_factors):
@@ -69,79 +91,3 @@ def scale_params(params, scale_factors):
 
 def unscale_params(scaled_params, scale_factors):
     return scaled_params * scale_factors
-
-
-
-#Esecuzione della rountine, magari spostare in un altro script
-target = "D1"
-platform = "qw11q"
-method = 'nelder-mead' #forse non la migliore? Non ho idea del landscape
-path = 'code test'
-
-with Executor.open(
-    "myexec",
-    path=path,
-    platform=platform,
-    targets=[target],
-    update=True,
-    force=True,
-) as e:
- 
-    e.platform.settings.nshots = 2000
-    drag_output = e.drag_tuning(
-         beta_start = -4,
-         beta_end = 4,
-         beta_step = 0.5
-    )
-
-    #per ora in questo step faccio tutto manualmente ma meglio sistemare diversamente
-
-    beta_best = drag_output.results.betas[target]
-    ampl_RX = 4.1570229140026074e-2
-    freq_RX = 4.958263653e9
-    
-    scale_factors = np.array([1e-2, 1e-9, 1])
-    init_guess = np.array([ampl_RX, freq_RX, beta_best])
-    scaled_init_guess = scale_params(init_guess, scale_factors)
-
-    lower_bounds = np.array([-0.5, freq_RX-4e6, beta_best-0.25])
-    upper_bounds = np.array([0.5, freq_RX+4e6, beta_best+0.25])
-    scaled_bounds = list(zip(scale_params(lower_bounds, scale_factors),
-                         scale_params(upper_bounds, scale_factors)))
-
-    optimization, optimization_history = rb_optimization(e, target, method, scaled_init_guess, scale_factors, scaled_bounds)
-
-report(e.path, e.history)
-
-plt.plot(optimization_history, label="Objective Function Value")
-plt.xlabel("Iteration")
-plt.ylabel("Objective Function Value")
-plt.title("Objective Function Value vs. Iteration")
-plt.legend()
-plt.grid(True)
-plt.show()
-
-
-"""TO DO:
-    y controllare dove uso scale_factors
-    y capire come gestire l'errore    
-    y passare 1.875 (avg_gate) come costante all'inizio
-    y maxiter
-    y xatol: normalizzazione + definizione
-    * leggere l'initial guess dalla cartella platform precedente + automatizzare riscalamento
-    y nshot
-    y modificare delta_clifford
-    y provare a variare beta in un piccolo intervallo intorno a quello suggerito da drag
-    y spostare report ?
-    * sistemare plot con plotly e analisi dati
-    y vedere quali di questi parametri potrebbe essere interessante variare
-
-"RX": (D1) {
-                    "duration": 40,
-                    "amplitude": 0.05,
-                    "shape": "Gaussian(5)",
-                    "frequency": 4900000000,
-                    "relative_start": 0,
-                    "phase": 0,
-                    "type": "qd"
-""" 
