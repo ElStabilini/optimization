@@ -5,6 +5,7 @@ from qibolab import pulses
 from dataclasses import dataclass
 
 AVG_GATE = 1.875 # 1.875 is the average number of gates in a clifford operation
+error_storage = {'error': None}
 
 @dataclass
 class OptimizationStep:
@@ -37,11 +38,17 @@ def objective(scaled_params, e, target, scale_factors):
         apply_inverse=True
     )
 
-    # Calculate infidelity
+    # Calculate infidelity and error
+    stdevs = np.sqrt(np.diag(np.reshape(rb_output.results.cov[target], (3, 3))))
+
     pars = rb_output.results.pars.get(target)
     one_minus_p = 1 - pars[2]
     r_c = one_minus_p * (1 - 1 / 2**1)
     r_g = r_c / AVG_GATE
+    r_c_std = stdevs[2] * (1 - 1 / 2**1)
+    r_g_std = r_c_std / AVG_GATE
+    
+    error_storage['error'] = r_g_std
 
     print('terminating objective call')
     return r_g
@@ -68,14 +75,15 @@ def rb_optimization(
         step = OptimizationStep(
             iteration=iteration_count,
             parameters=np.copy(x),
-            objective_value=f
+            objective_value=f,
+            objective_value_error = error_storage['error']
         )
         optimization_history.append(step)
         iteration_count += 1
         print(f"Completed iteration {iteration_count}, objective value: {f}")
 
     res = minimize(objective, init_guess, args=(executor, target, scale), method=method, 
-                   tol=1e-8, options = {"maxiter" : 5}, bounds = bounds, callback=callback)
+                   tol=1e-10, options = {"maxiter" : 5}, bounds = bounds, callback=callback)
     
     return res, optimization_history
 
