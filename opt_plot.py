@@ -22,7 +22,8 @@ def unzip_data_npz(root_dir, destination_dir):
             relative_path = os.path.relpath(dirpath, root_dir)
             data_dir = os.path.join(destination_dir, relative_path, 'data')
 
-            if not os.path.exists(data_dir):
+            #avoid overwriting
+            if not os.path.exists(data_dir) or not any(os.scandir(data_dir)):
                 try:
                     with np.load(npz_path, allow_pickle=True) as data:
                         os.makedirs(data_dir, exist_ok=True)
@@ -30,17 +31,15 @@ def unzip_data_npz(root_dir, destination_dir):
                             np.save(os.path.join(data_dir, f"{key}.npy"), value)
                 except Exception as e:
                     print(f"Error unzipping {npz_path}: {str(e)}")
-#NB: here calling current working directory
 
 target = 'D1'
 method = 'nelder-mead'
 
-root_directory = f'optimization_{target}_{method}'
-unzip_directory = f'../rb_opt_unzipped/{target}_{method}/'
+root_directory = f'optimization_test'
+unzip_directory = f'./opt_test_unzipped/{target}_{method}/'
 unzip_data_npz(root_directory, unzip_directory)
 
-
-
+saving_path = f'./opt_analysis_D1/'
 
 
 """CODICE PER PLOT da ROUTINES"""
@@ -53,6 +52,7 @@ rb_paths = [item for item in os.listdir(path) if item.startswith('rb_ondevice')
             and os.path.isdir(os.path.join(path, item))]
 sorted_rb_items = sorted(rb_paths, key=lambda x: int(x.split('-')[1]))
 print(len(sorted_rb_items))
+
 
 all_decay_params, all_decay_errs = [], []
 for rbpath in sorted_rb_items:
@@ -76,12 +76,26 @@ pulse_fidelities_err = all_decay_errs / (1.875 * 2)
 x = np.arange(1, len(pulse_fidelities) + 1)
 
 fig, ax1 = plt.subplots(1, figsize=(WIDTH * 10 , WIDTH * 10 * 6/8))
-ax1.errorbar(x, pulse_fidelities, yerr = pulse_fidelities_err, fmt='o',linestyle='none', markersize=4, color="black", markerfacecolor=RED, ecolor="black", markeredgewidth=0.7, elinewidth=0.7, alpha=1, label=r"qubit 1", capsize=3)
+ax1.errorbar(x, pulse_fidelities, yerr = pulse_fidelities_err, fmt='o',linestyle='none', 
+             markersize=4, color="black", markerfacecolor=RED, ecolor="black", markeredgewidth=0.7, elinewidth=0.7, alpha=1, label=r"qubit 1", capsize=3)
 ax1.plot(x, pulse_fidelities, '-', color='black', linewidth=0.7)
-ax1.set_xlabel('# optimization steps',  fontsize=12)
-#ax1.set_ylabel(r'$\pi/2$ fidelity',  fontsize=12)
-plt.savefig(f'plot', bbox_inches="tight", dpi=600)
+ax1.set_xlabel('# optimization step',  fontsize=12)
+ax1.set_yscale('log')
+plt.savefig(os.path.join(saving_path,'first_plot'), bbox_inches="tight", dpi=600)
 
 
 
 """ CODICE PER PLOT DA OPTIMIZATION HISTORY """
+
+loaded = np.load('optimization_history.npz')
+loaded_iterations = loaded['iterations']
+loaded_parameters = loaded['parameters']
+loaded_objective_values = loaded['objective_values']
+
+fig, ax1 = plt.subplots(1, figsize=(WIDTH * 10 , WIDTH * 10 * 6/8))
+#ax1.errorbar(x, pulse_fidelities, yerr = pulse_fidelities_err, fmt='o',linestyle='none', 
+#             markersize=4, color="black", markerfacecolor=RED, ecolor="black", markeredgewidth=0.7, elinewidth=0.7, alpha=1, label=r"qubit 1", capsize=3)
+ax1.plot(x, pulse_fidelities, '-', color='black', linewidth=0.7)
+ax1.set_xlabel('# optimization step',  fontsize=12)
+ax1.set_yscale('log')
+plt.savefig(os.path.join(saving_path,'first_plot'), bbox_inches="tight", dpi=600)

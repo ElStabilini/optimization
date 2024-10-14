@@ -1,6 +1,5 @@
 import numpy as np
 import os
-import json
 import time
 import pickle
 from qibocal.auto.execute import Executor
@@ -13,8 +12,11 @@ start_time = time.time()
 target = "D1"
 platform = "qw11q"
 method = 'nelder-mead' 
-executor_path = f'optimization_{target}_{method}'
-opt_history_path = f'../opt_analysis_{target}_{method}'
+
+executor_path = f'./optimization_data/{target}_{method}'
+opt_history_path = f'./opt_analysis/{target}_{method}'
+calibration_path = f'/home/elisa/Desktop/Qibo/Qibocal/cal_qw11q/runcard_cal/output_D1'
+    #aggiungere cartella di ramsey o simili
 
 with Executor.open(
     "myexec",

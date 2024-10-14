@@ -11,6 +11,7 @@ class OptimizationStep:
     iteration: int
     parameters: np.ndarray
     objective_value: float
+    objective_value_error = float
 
 #objective function to minimize
 def objective(scaled_params, e, target, scale_factors):
