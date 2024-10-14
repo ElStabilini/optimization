@@ -58,7 +58,7 @@ report(e.path, e.history)
 iterations = np.array([step.iteration for step in optimization_history])
 parameters = np.array([step.parameters for step in optimization_history])
 objective_values = np.array([step.objective_value for step in optimization_history])
-objective_value_error = np.array([step.pbjective_value_error for step in optimization_history])
+objective_value_error = np.array([step.objective_value_error for step in optimization_history])
 
 os.makedirs(opt_history_path, exist_ok=True)
 np.savez(os.path.join(opt_history_path,'optimization_history.npz'), iterations=iterations, parameters=parameters, objective_values=objective_values)
