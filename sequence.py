@@ -21,7 +21,7 @@ with Executor.open(
     
     e.platform.settings.nshots = 1024
 
-    ramsey = e.ramsey(
+    ramsey_output = e.ramsey(
         delay_between_pulses_end = 1000,
         delay_between_pulses_start = 10,
         delay_between_pulses_step = 20,
@@ -29,7 +29,15 @@ with Executor.open(
         relaxation_time = 200000,
     )
 
-    flipping = e.flipping(
+    if ramsey_output.results.chi2[target][0] > 2:
+        raise RuntimeError(
+            f"Ramsey fit has chi2 {ramsey_output.results.chi2[target][0]} greater than 2. Stopping."
+        )
+    
+    else:
+        ramsey_output.update_platform(e.platform)
+
+    flipping_output = e.flipping(
         nflips_max = 20,
         nflips_step = 1 
     )
@@ -39,5 +47,13 @@ with Executor.open(
          beta_end = 4,
          beta_step = 0.5
     )
+
+    if drag_output.results.chi2[target][0] > 2:
+        raise RuntimeError(
+            f"Drag fit has chi2 {drag_output.results.chi2[target][0]} greater than 2. Stopping."
+        )
+    
+    else:
+        drag_output.update_platform(e.platform) #non sono sicura che sia necessario
 
 report(e.path, e.history)
