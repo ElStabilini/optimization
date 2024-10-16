@@ -15,8 +15,6 @@ method = 'BFGS'
 
 executor_path = f'./optimization_data/{target}_{method}'
 opt_history_path = f'./opt_analysis/{target}_{method}'
-calibration_path = f'/home/elisa/Desktop/Qibo/Qibocal/cal_qw11q/runcard_cal/output_D1'
-    #aggiungere cartella di ramsey o simili
 
 with Executor.open(
     "myexec",
@@ -34,12 +32,10 @@ with Executor.open(
          beta_step = 0.5
     )
 
-    #per ora in questo step faccio tutto manualmente ma meglio sistemare diversamente
-    #chiedere se c'è una cartella comune in cui viene salvata la migliore calibrazione
 
     beta_best = drag_output.results.betas[target]
-    ampl_RX = 4.1570229140026074e-2
-    freq_RX = 4.958263653e9
+    ampl_RX = e.platform.qubits[target].native_gates.RX.amplitude #4.1570229140026074e-2
+    freq_RX = e.platform.qubits[target].native_gates.RX.frequence #4.958263653e9
     
     scale_factors = np.array([1e-2, 1e-9, 1])
     init_guess = np.array([ampl_RX, freq_RX, beta_best])
