@@ -1,0 +1,65 @@
+{
+    "title": "D1_nelder-mead_no_scale",
+    "backend": "qibolab",
+    "platform": "qw11q",
+    "start_time": "2024-10-17 19:30:25.027651+00:00",
+    "end_time": "2024-10-17 19:34:52.129021+00:00",
+    "stats": {
+        "drag_tuning-0": {
+            "acquisition": 44.038704346865416,
+            "fit": 0.010426107095554471
+        },
+        "rb_ondevice-0": {
+            "acquisition": 21.697836481034756,
+            "fit": 0.0007615769281983376
+        },
+        "rb_ondevice-1": {
+            "acquisition": 20.684887083014473,
+            "fit": 0.0007878108881413937
+        },
+        "rb_ondevice-2": {
+            "acquisition": 22.399353893939406,
+            "fit": 0.0008607681374996901
+        },
+        "rb_ondevice-3": {
+            "acquisition": 21.988777342019603,
+            "fit": 0.0007708130870014429
+        },
+        "rb_ondevice-4": {
+            "acquisition": 21.63889803085476,
+            "fit": 0.0014375930186361074
+        },
+        "rb_ondevice-5": {
+            "acquisition": 21.97610292187892,
+            "fit": 0.0008775440510362387
+        },
+        "rb_ondevice-6": {
+            "acquisition": 21.486856242176145,
+            "fit": 0.0008893131744116545
+        },
+        "rb_ondevice-7": {
+            "acquisition": 21.767133416142315,
+            "fit": 0.0008476758375763893
+        },
+        "rb_ondevice-8": {
+            "acquisition": 21.684659695951268,
+            "fit": 0.0008520579431205988
+        },
+        "rb_ondevice-9": {
+            "acquisition": 20.921232796972618,
+            "fit": 0.0008791279979050159
+        }
+    },
+    "author": null,
+    "tag": null,
+    "targets": null,
+    "versions": {
+        "qibo": "0.2.12",
+        "numpy": "1.26.4",
+        "qibolab": "0.1.9",
+        "qibocal": "0.0.12"
+    },
+    "date": "2024-10-17",
+    "start-time": "19:30:25",
+    "end-time": "19:34:52"
+}

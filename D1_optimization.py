@@ -4,7 +4,8 @@ import time
 import pickle
 from qibocal.auto.execute import Executor
 from qibocal.cli.report import report
-from rb_optimization import rb_optimization, scale_params, unscale_params
+from rb_optimization import rb_optimization
+from scipy.optimize import Bounds
 
 
 start_time = time.time()
@@ -13,8 +14,8 @@ target = "D1"
 platform = "qw11q"
 method = 'nelder-mead' 
 
-executor_path = f'./optimization_data_unscale/{target}_{method}'
-opt_history_path = f'./opt_analysis_unscale/{target}_{method}'
+executor_path = f'./optimization_data/{target}_{method}'
+opt_history_path = f'./opt_analysis/{target}_{method}'
 
 with Executor.open(
     "myexec",
@@ -34,19 +35,16 @@ with Executor.open(
 
 
     beta_best = drag_output.results.betas[target]
-    ampl_RX = 4.1570229140026074e-2 #e.platform.qubits[target].native_gates.RX.amplitude
+    ampl_RX = e.platform.qubits[target].native_gates.RX.amplitude #4.1570229140026074e-2 #
     freq_RX = 4.958263653e9 #e.platform.qubits[target].native_gates.RX.frequence
     
-    scale_factors = np.array([1e-2, 1e-9, 1])
     init_guess = np.array([ampl_RX, freq_RX, beta_best])
-    scaled_init_guess = scale_params(init_guess, scale_factors)
 
     lower_bounds = np.array([-0.5, freq_RX-4e6, beta_best-0.25])
     upper_bounds = np.array([0.5, freq_RX+4e6, beta_best+0.25])
-    scaled_bounds = list(zip(scale_params(lower_bounds, scale_factors),
-                         scale_params(upper_bounds, scale_factors)))
+    bounds = Bounds(lower_bounds, upper_bounds)
 
-    opt_results, optimization_history = rb_optimization(e, target, method, scaled_init_guess, scale_factors, scaled_bounds)
+    opt_results, optimization_history = rb_optimization(e, target, method, init_guess, bounds)
 
 report(e.path, e.history)
 
@@ -57,10 +55,13 @@ objective_values = np.array([step.objective_value for step in optimization_histo
 objective_value_error = np.array([step.objective_value_error for step in optimization_history])
 
 #np.savez(os.path.join(opt_history_path,'optimization_history.npz'), iterations=iterations, parameters=parameters, objective_values=objective_values)
-unscaled_parameters = np.array([unscale_params(step.parameters, scale_factors) for step in optimization_history])
 
 os.makedirs(opt_history_path, exist_ok=True)
-np.savez(os.path.join(opt_history_path,'optimization_history.npz'), iterations=iterations, parameters=unscaled_parameters, objective_values=objective_values)
+np.savez(os.path.join(opt_history_path,'optimization_history.npz'), 
+         iterations=iterations, 
+         parameters=parameters, 
+         objective_values=objective_values, 
+         objective_value_errors=objective_value_error)
 
 with open(os.path.join(opt_history_path,'optimization_result.pkl'), 'wb') as f:
     pickle.dump(opt_results, f)
