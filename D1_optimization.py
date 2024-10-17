@@ -13,8 +13,8 @@ target = "D1"
 platform = "qw11q"
 method = 'nelder-mead' 
 
-executor_path = f'./optimization_data/{target}_{method}'
-opt_history_path = f'./opt_analysis/{target}_{method}'
+executor_path = f'./optimization_data_unscale/{target}_{method}'
+opt_history_path = f'./opt_analysis_unscale/{target}_{method}'
 
 with Executor.open(
     "myexec",
