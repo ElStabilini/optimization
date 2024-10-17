@@ -4,7 +4,7 @@ import time
 import pickle
 from qibocal.auto.execute import Executor
 from qibocal.cli.report import report
-from rb_optimization import rb_optimization, scale_params
+from rb_optimization import rb_optimization, scale_params, unscale_params
 
 
 start_time = time.time()
@@ -56,9 +56,11 @@ parameters = np.array([step.parameters for step in optimization_history])
 objective_values = np.array([step.objective_value for step in optimization_history])
 objective_value_error = np.array([step.objective_value_error for step in optimization_history])
 
-os.makedirs(opt_history_path, exist_ok=True)
-np.savez(os.path.join(opt_history_path,'optimization_history.npz'), iterations=iterations, parameters=parameters, objective_values=objective_values)
+#np.savez(os.path.join(opt_history_path,'optimization_history.npz'), iterations=iterations, parameters=parameters, objective_values=objective_values)
+unscaled_parameters = np.array([unscale_params(step.parameters, scale_factors) for step in optimization_history])
 
+os.makedirs(opt_history_path, exist_ok=True)
+np.savez(os.path.join(opt_history_path,'optimization_history.npz'), iterations=iterations, parameters=unscaled_parameters, objective_values=objective_values)
 
 with open(os.path.join(opt_history_path,'optimization_result.pkl'), 'wb') as f:
     pickle.dump(opt_results, f)

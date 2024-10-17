@@ -59,7 +59,7 @@ def rb_optimization(
         target : str,
         method : str,
         init_guess : list[float],
-        scale,
+        scale_factors,
         bounds
     ):
     
@@ -70,7 +70,7 @@ def rb_optimization(
         nonlocal iteration_count
         if f is None:
             # If the optimization method doesn't provide f, need to calculate it
-            f = objective(x, executor, target, scale)
+            f = objective(x, executor, target, scale_factors)
         
         step = OptimizationStep(
             iteration=iteration_count,
@@ -82,7 +82,7 @@ def rb_optimization(
         iteration_count += 1
         print(f"Completed iteration {iteration_count}, objective value: {f}")
 
-    res = minimize(objective, init_guess, args=(executor, target, scale), method=method, 
+    res = minimize(objective, init_guess, args=(executor, target, scale_factors), method=method, 
                    tol=1e-13, options = {"maxiter" : 50, "maxfev": 50}, bounds = bounds, callback=callback)
     
     return res, optimization_history
