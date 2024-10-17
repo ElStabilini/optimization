@@ -1,0 +1,41 @@
+{
+    "title": "D1_nelder-mead",
+    "backend": "qibolab",
+    "platform": "qw11q",
+    "start_time": "2024-10-17 15:46:42.365566+00:00",
+    "end_time": "2024-10-17 15:48:58.556698+00:00",
+    "stats": {
+        "drag_tuning-0": {
+            "acquisition": 45.85829573916271,
+            "fit": 0.00870446301996708
+        },
+        "rb_ondevice-0": {
+            "acquisition": 20.834642090834677,
+            "fit": 0.0007839268073439598
+        },
+        "rb_ondevice-1": {
+            "acquisition": 20.96835890901275,
+            "fit": 0.0007186480797827244
+        },
+        "rb_ondevice-2": {
+            "acquisition": 21.09063496813178,
+            "fit": 0.0008007099386304617
+        },
+        "rb_ondevice-3": {
+            "acquisition": 20.935716413892806,
+            "fit": 0.0007543989922851324
+        }
+    },
+    "author": null,
+    "tag": null,
+    "targets": null,
+    "versions": {
+        "qibo": "0.2.12",
+        "numpy": "1.26.4",
+        "qibolab": "0.1.9",
+        "qibocal": "0.0.12"
+    },
+    "date": "2024-10-17",
+    "start-time": "15:46:42",
+    "end-time": "15:48:58"
+}

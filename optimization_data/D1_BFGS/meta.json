@@ -1,0 +1,25 @@
+{
+    "title": "D1_BFGS",
+    "backend": "qibolab",
+    "platform": "qw11q",
+    "start_time": "2024-10-17 15:27:50.274565+00:00",
+    "end_time": "2024-10-17 15:28:38.118698+00:00",
+    "stats": {
+        "drag_tuning-0": {
+            "acquisition": 42.02591705089435,
+            "fit": 0.009493398945778608
+        }
+    },
+    "author": null,
+    "tag": null,
+    "targets": null,
+    "versions": {
+        "qibo": "0.2.12",
+        "numpy": "1.26.4",
+        "qibolab": "0.1.9",
+        "qibocal": "0.0.12"
+    },
+    "date": "2024-10-17",
+    "start-time": "15:27:50",
+    "end-time": "15:28:38"
+}

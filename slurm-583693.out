@@ -1,0 +1,76 @@
+2024-10-17 15:46:41,835 - qm - INFO     - Starting session: c2427d62-2d6f-4b42-bcea-c491ed737ae0
+2024-10-17 15:46:44,546 - qm - INFO     - Octave "octave2" Health check passed, current temperature 60
+2024-10-17 15:46:45,402 - qm - INFO     - Octave "octave3" Health check passed, current temperature 57
+2024-10-17 15:46:46,140 - qm - INFO     - Octave "octave4" Health check passed, current temperature 58
+2024-10-17 15:46:47,154 - qm - INFO     - Octave "octave5" Health check passed, current temperature 59
+2024-10-17 15:46:48,293 - qm - INFO     - Octave "octave6" Health check passed, current temperature 58
+2024-10-17 15:46:48,293 - qm - INFO     - Performing health check
+2024-10-17 15:46:48,315 - qm - WARNING  - Health check warning: Inter-OPX connectivity issues in OPX: con1. Missing ports are: 12, 11, 10, 9. See QM-App for more info.
+2024-10-17 15:46:48,315 - qm - WARNING  - Health check warning: Inter-OPX connectivity issues in OPX: con2. Missing ports are: 12, 11, 10, 9. See QM-App for more info.
+2024-10-17 15:46:48,315 - qm - WARNING  - Health check warning: Inter-OPX connectivity issues in OPX: con3. Missing ports are: 12, 11, 10, 9. See QM-App for more info.
+2024-10-17 15:46:48,315 - qm - WARNING  - Health check warning: Inter-OPX connectivity issues in OPX: con4. Missing ports are: 12, 11, 10, 9. See QM-App for more info.
+2024-10-17 15:46:48,315 - qm - WARNING  - Health check warning: Inter-OPX connectivity issues in OPX: con5. Missing ports are: 12, 11, 10, 9. See QM-App for more info.
+2024-10-17 15:46:48,315 - qm - WARNING  - Health check warning: Inter-OPX connectivity issues in OPX: con6. Missing ports are: 12, 11, 10, 9. See QM-App for more info.
+2024-10-17 15:46:48,315 - qm - WARNING  - Health check warning: Inter-OPX connectivity issues in OPX: con7. Missing ports are: 12, 11, 10, 9. See QM-App for more info.
+2024-10-17 15:46:48,315 - qm - WARNING  - Health check warning: Inter-OPX connectivity issues in OPX: con8. Missing ports are: 12, 11, 10, 9. See QM-App for more info.
+2024-10-17 15:46:48,315 - qm - WARNING  - Health check warning: Inter-OPX connectivity issues in OPX: con9. Missing ports are: 12, 11, 10, 9. See QM-App for more info.
+2024-10-17 15:46:48,315 - qm - INFO     - Health check passed
+Connected to: Rohde&Schwarz SGS100A (serial:1416.0505k02/114167, firmware:4.2.76.0-4.30.046.295) in 0.19s
+Connected to: Rohde&Schwarz SGS100A (serial:1416.0505k02/114164, firmware:4.2.76.0-4.30.046.295) in 0.14s
+2024-10-17 15:46:51,144 - qm - INFO     - Sending program to QOP for compilation
+2024-10-17 15:46:51,364 - qm - INFO     - Executing program
+2024-10-17 15:46:54,256 - qm - INFO     - Sending program to QOP for compilation
+2024-10-17 15:46:54,472 - qm - INFO     - Executing program
+2024-10-17 15:46:58,073 - qm - INFO     - Sending program to QOP for compilation
+2024-10-17 15:46:58,218 - qm - INFO     - Executing program
+2024-10-17 15:47:01,086 - qm - INFO     - Sending program to QOP for compilation
+2024-10-17 15:47:01,292 - qm - INFO     - Executing program
+2024-10-17 15:47:03,443 - qm - INFO     - Sending program to QOP for compilation
+2024-10-17 15:47:03,649 - qm - INFO     - Executing program
+2024-10-17 15:47:06,373 - qm - INFO     - Sending program to QOP for compilation
+2024-10-17 15:47:06,530 - qm - INFO     - Executing program
+2024-10-17 15:47:08,692 - qm - INFO     - Sending program to QOP for compilation
+2024-10-17 15:47:08,901 - qm - INFO     - Executing program
+2024-10-17 15:47:11,673 - qm - INFO     - Sending program to QOP for compilation
+2024-10-17 15:47:11,827 - qm - INFO     - Executing program
+2024-10-17 15:47:15,103 - qm - INFO     - Sending program to QOP for compilation
+2024-10-17 15:47:15,249 - qm - INFO     - Executing program
+2024-10-17 15:47:17,695 - qm - INFO     - Sending program to QOP for compilation
+2024-10-17 15:47:17,845 - qm - INFO     - Executing program
+2024-10-17 15:47:20,387 - qm - INFO     - Sending program to QOP for compilation
+2024-10-17 15:47:20,604 - qm - INFO     - Executing program
+2024-10-17 15:47:23,406 - qm - INFO     - Sending program to QOP for compilation
+2024-10-17 15:47:23,627 - qm - INFO     - Executing program
+2024-10-17 15:47:26,247 - qm - INFO     - Sending program to QOP for compilation
+2024-10-17 15:47:26,446 - qm - INFO     - Executing program
+2024-10-17 15:47:28,690 - qm - INFO     - Sending program to QOP for compilation
+2024-10-17 15:47:28,842 - qm - INFO     - Executing program
+2024-10-17 15:47:31,568 - qm - INFO     - Sending program to QOP for compilation
+2024-10-17 15:47:31,786 - qm - INFO     - Executing program
+2024-10-17 15:47:33,912 - qm - INFO     - Sending program to QOP for compilation
+2024-10-17 15:47:34,125 - qm - INFO     - Executing program
+
+Total relaxation time: 10.10 sec
+
+2024-10-17 15:47:39,005 - qm - INFO     - Sending program to QOP for compilation
+2024-10-17 15:47:40,499 - qm - INFO     - Executing program
+terminating objective call
+
+Total relaxation time: 10.10 sec
+
+2024-10-17 15:48:00,024 - qm - INFO     - Sending program to QOP for compilation
+2024-10-17 15:48:01,488 - qm - INFO     - Executing program
+terminating objective call
+
+Total relaxation time: 10.10 sec
+
+2024-10-17 15:48:21,084 - qm - INFO     - Sending program to QOP for compilation
+2024-10-17 15:48:22,543 - qm - INFO     - Executing program
+terminating objective call
+
+Total relaxation time: 10.10 sec
+
+2024-10-17 15:48:42,176 - qm - INFO     - Sending program to QOP for compilation
+2024-10-17 15:48:43,559 - qm - INFO     - Executing program
+terminating objective call
+Elapsed time: 137.77327728271484 seconds
