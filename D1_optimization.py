@@ -34,8 +34,8 @@ with Executor.open(
 
 
     beta_best = drag_output.results.betas[target]
-    ampl_RX = e.platform.qubits[target].native_gates.RX.amplitude #4.1570229140026074e-2
-    freq_RX = e.platform.qubits[target].native_gates.RX.frequence #4.958263653e9
+    ampl_RX = 4.1570229140026074e-2 #e.platform.qubits[target].native_gates.RX.amplitude
+    freq_RX = 4.958263653e9 #e.platform.qubits[target].native_gates.RX.frequence
     
     scale_factors = np.array([1e-2, 1e-9, 1])
     init_guess = np.array([ampl_RX, freq_RX, beta_best])
