@@ -11,7 +11,7 @@ start_time = time.time()
 
 target = "D1"
 platform = "qw11q"
-method = 'BFGS' 
+method = 'nelder-mead' 
 
 executor_path = f'./optimization_data/{target}_{method}'
 opt_history_path = f'./opt_analysis/{target}_{method}'
