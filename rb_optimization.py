@@ -15,10 +15,8 @@ class OptimizationStep:
     objective_value_error: float
 
 #objective function to minimize
-def objective(scaled_params, e, target, scale_factors):
+def objective(params, e, target):
 
-    #unscales params
-    params = unscale_params(scaled_params, scale_factors)
     amplitude, frequency, beta = params
 
     e.platform.qubits[target].native_gates.RX.amplitude = amplitude
@@ -59,7 +57,6 @@ def rb_optimization(
         target : str,
         method : str,
         init_guess : list[float],
-        scale_factors,
         bounds
     ):
     
@@ -70,7 +67,7 @@ def rb_optimization(
         nonlocal iteration_count
         if f is None:
             # If the optimization method doesn't provide f, need to calculate it
-            f = objective(x, executor, target, scale_factors)
+            f = objective(x, executor, target)
         
         step = OptimizationStep(
             iteration=iteration_count,
@@ -82,8 +79,8 @@ def rb_optimization(
         iteration_count += 1
         print(f"Completed iteration {iteration_count}, objective value: {f}")
 
-    res = minimize(objective, init_guess, args=(executor, target, scale_factors), method=method, 
-                   tol=1e-13, options = {"maxiter" : 1, "maxfev": 50}, bounds = bounds, callback=callback)
+    res = minimize(objective, init_guess, args=(executor, target), method=method, 
+                   tol=1e-13, options = {"maxiter" : 3, "maxfev": 50}, bounds = bounds, callback=callback)
     
     return res, optimization_history
 
@@ -93,10 +90,3 @@ def rb_optimization(
 
 
 #OPTIMIZATION_HISTORY description: array of Optimization step object
-
-
-def scale_params(params, scale_factors):
-    return params / scale_factors
-
-def unscale_params(scaled_params, scale_factors):
-    return scaled_params * scale_factors
