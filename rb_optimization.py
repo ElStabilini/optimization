@@ -80,7 +80,7 @@ def rb_optimization(
         print(f"Completed iteration {iteration_count}, objective value: {f}")
 
     res = minimize(objective, init_guess, args=(executor, target), method=method, 
-                   tol=1e-13, options = {"maxiter" : 3, "maxfev": 50}, bounds = bounds, callback=callback)
+                   tol=1e-13, options = {"maxiter" : 30}, bounds = bounds, callback=callback)
     
     return res, optimization_history
 
