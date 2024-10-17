@@ -1,9 +1,0 @@
-id: drag_tuning
-operation: drag_tuning
-parameters:
-  beta_end: 4
-  beta_start: -4
-  beta_step: 0.5
-targets:
-- D1
-update: true

@@ -1,0 +1,55 @@
+2024-10-17 19:24:06,425 - qm - INFO     - Starting session: 31240c0b-0ac4-4e9b-975b-cdc26ae4be05
+2024-10-17 19:24:09,117 - qm - INFO     - Octave "octave2" Health check passed, current temperature 60
+2024-10-17 19:24:10,131 - qm - INFO     - Octave "octave3" Health check passed, current temperature 57
+2024-10-17 19:24:11,147 - qm - INFO     - Octave "octave4" Health check passed, current temperature 58
+2024-10-17 19:24:12,166 - qm - INFO     - Octave "octave5" Health check passed, current temperature 59
+2024-10-17 19:24:13,176 - qm - INFO     - Octave "octave6" Health check passed, current temperature 58
+2024-10-17 19:24:13,176 - qm - INFO     - Performing health check
+2024-10-17 19:24:13,197 - qm - WARNING  - Health check warning: Inter-OPX connectivity issues in OPX: con1. Missing ports are: 12, 11, 10, 9. See QM-App for more info.
+2024-10-17 19:24:13,197 - qm - WARNING  - Health check warning: Inter-OPX connectivity issues in OPX: con2. Missing ports are: 12, 11, 10, 9. See QM-App for more info.
+2024-10-17 19:24:13,197 - qm - WARNING  - Health check warning: Inter-OPX connectivity issues in OPX: con3. Missing ports are: 12, 11, 10, 9. See QM-App for more info.
+2024-10-17 19:24:13,197 - qm - WARNING  - Health check warning: Inter-OPX connectivity issues in OPX: con4. Missing ports are: 12, 11, 10, 9. See QM-App for more info.
+2024-10-17 19:24:13,197 - qm - WARNING  - Health check warning: Inter-OPX connectivity issues in OPX: con5. Missing ports are: 12, 11, 10, 9. See QM-App for more info.
+2024-10-17 19:24:13,197 - qm - WARNING  - Health check warning: Inter-OPX connectivity issues in OPX: con6. Missing ports are: 12, 11, 10, 9. See QM-App for more info.
+2024-10-17 19:24:13,197 - qm - WARNING  - Health check warning: Inter-OPX connectivity issues in OPX: con7. Missing ports are: 12, 11, 10, 9. See QM-App for more info.
+2024-10-17 19:24:13,197 - qm - WARNING  - Health check warning: Inter-OPX connectivity issues in OPX: con8. Missing ports are: 12, 11, 10, 9. See QM-App for more info.
+2024-10-17 19:24:13,197 - qm - WARNING  - Health check warning: Inter-OPX connectivity issues in OPX: con9. Missing ports are: 12, 11, 10, 9. See QM-App for more info.
+2024-10-17 19:24:13,197 - qm - INFO     - Health check passed
+Connected to: Rohde&Schwarz SGS100A (serial:1416.0505k02/114167, firmware:4.2.76.0-4.30.046.295) in 0.18s
+Connected to: Rohde&Schwarz SGS100A (serial:1416.0505k02/114164, firmware:4.2.76.0-4.30.046.295) in 0.15s
+2024-10-17 19:24:15,625 - qm - INFO     - Sending program to QOP for compilation
+2024-10-17 19:24:15,854 - qm - INFO     - Executing program
+2024-10-17 19:24:18,589 - qm - INFO     - Sending program to QOP for compilation
+2024-10-17 19:24:18,738 - qm - INFO     - Executing program
+2024-10-17 19:24:22,065 - qm - INFO     - Sending program to QOP for compilation
+2024-10-17 19:24:22,269 - qm - INFO     - Executing program
+2024-10-17 19:24:24,480 - qm - INFO     - Sending program to QOP for compilation
+2024-10-17 19:24:24,691 - qm - INFO     - Executing program
+2024-10-17 19:24:26,900 - qm - INFO     - Sending program to QOP for compilation
+2024-10-17 19:24:27,116 - qm - INFO     - Executing program
+2024-10-17 19:24:29,895 - qm - INFO     - Sending program to QOP for compilation
+2024-10-17 19:24:30,108 - qm - INFO     - Executing program
+2024-10-17 19:24:32,987 - qm - INFO     - Sending program to QOP for compilation
+2024-10-17 19:24:33,211 - qm - INFO     - Executing program
+2024-10-17 19:24:35,556 - qm - INFO     - Sending program to QOP for compilation
+2024-10-17 19:24:35,865 - qm - INFO     - Executing program
+2024-10-17 19:24:38,156 - qm - INFO     - Sending program to QOP for compilation
+2024-10-17 19:24:38,392 - qm - INFO     - Executing program
+2024-10-17 19:24:40,787 - qm - INFO     - Sending program to QOP for compilation
+2024-10-17 19:24:40,993 - qm - INFO     - Executing program
+2024-10-17 19:24:43,314 - qm - INFO     - Sending program to QOP for compilation
+2024-10-17 19:24:43,539 - qm - INFO     - Executing program
+2024-10-17 19:24:46,347 - qm - INFO     - Sending program to QOP for compilation
+2024-10-17 19:24:46,566 - qm - INFO     - Executing program
+2024-10-17 19:24:49,549 - qm - INFO     - Sending program to QOP for compilation
+2024-10-17 19:24:49,702 - qm - INFO     - Executing program
+2024-10-17 19:24:52,047 - qm - INFO     - Sending program to QOP for compilation
+2024-10-17 19:24:52,265 - qm - INFO     - Executing program
+2024-10-17 19:24:55,063 - qm - INFO     - Sending program to QOP for compilation
+2024-10-17 19:24:55,276 - qm - INFO     - Executing program
+2024-10-17 19:24:58,267 - qm - INFO     - Sending program to QOP for compilation
+2024-10-17 19:24:58,425 - qm - INFO     - Executing program
+Traceback (most recent call last):
+  File "/nfs/users/elisa.stabilini/optimization/D1_optimization.py", line 44, in <module>
+    bounds = list(zip(lower_bounds), (upper_bounds))
+TypeError: list expected at most 1 argument, got 2
