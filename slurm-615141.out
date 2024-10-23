@@ -517,3 +517,378 @@ Total relaxation time: 10.10 sec
 
 2024-10-23 15:45:04,970 - qm - INFO     - Sending program to QOP for compilation
 2024-10-23 15:45:06,339 - qm - INFO     - Executing program
+terminating objective call
+
+Total relaxation time: 10.10 sec
+
+2024-10-23 15:45:25,997 - qm - INFO     - Sending program to QOP for compilation
+2024-10-23 15:45:27,434 - qm - INFO     - Executing program
+terminating objective call
+
+Total relaxation time: 10.10 sec
+
+2024-10-23 15:45:46,977 - qm - INFO     - Sending program to QOP for compilation
+2024-10-23 15:45:48,372 - qm - INFO     - Executing program
+terminating objective call
+
+Total relaxation time: 10.10 sec
+
+2024-10-23 15:46:08,398 - qm - INFO     - Sending program to QOP for compilation
+2024-10-23 15:46:09,797 - qm - INFO     - Executing program
+terminating objective call
+
+Total relaxation time: 10.10 sec
+
+2024-10-23 15:46:29,406 - qm - INFO     - Sending program to QOP for compilation
+2024-10-23 15:46:30,791 - qm - INFO     - Executing program
+terminating objective call
+
+Total relaxation time: 10.10 sec
+
+2024-10-23 15:46:50,181 - qm - INFO     - Sending program to QOP for compilation
+2024-10-23 15:46:51,670 - qm - INFO     - Executing program
+terminating objective call
+
+Total relaxation time: 10.10 sec
+
+2024-10-23 15:47:11,241 - qm - INFO     - Sending program to QOP for compilation
+2024-10-23 15:47:12,663 - qm - INFO     - Executing program
+terminating objective call
+
+Total relaxation time: 10.10 sec
+
+2024-10-23 15:47:32,273 - qm - INFO     - Sending program to QOP for compilation
+2024-10-23 15:47:33,707 - qm - INFO     - Executing program
+terminating objective call
+
+Total relaxation time: 10.10 sec
+
+2024-10-23 15:47:53,314 - qm - INFO     - Sending program to QOP for compilation
+2024-10-23 15:47:54,848 - qm - INFO     - Executing program
+terminating objective call
+Completed iteration 2, objective value: 0.01646396603014324
+
+Total relaxation time: 10.10 sec
+
+2024-10-23 15:48:14,382 - qm - INFO     - Sending program to QOP for compilation
+2024-10-23 15:48:15,801 - qm - INFO     - Executing program
+terminating objective call
+
+Total relaxation time: 10.10 sec
+
+2024-10-23 15:48:35,432 - qm - INFO     - Sending program to QOP for compilation
+2024-10-23 15:48:36,861 - qm - INFO     - Executing program
+terminating objective call
+
+Total relaxation time: 10.10 sec
+
+2024-10-23 15:48:56,596 - qm - INFO     - Sending program to QOP for compilation
+2024-10-23 15:48:58,051 - qm - INFO     - Executing program
+terminating objective call
+
+Total relaxation time: 10.10 sec
+
+2024-10-23 15:49:17,534 - qm - INFO     - Sending program to QOP for compilation
+2024-10-23 15:49:18,951 - qm - INFO     - Executing program
+terminating objective call
+
+Total relaxation time: 10.10 sec
+
+2024-10-23 15:49:38,529 - qm - INFO     - Sending program to QOP for compilation
+2024-10-23 15:49:40,007 - qm - INFO     - Executing program
+terminating objective call
+
+Total relaxation time: 10.10 sec
+
+2024-10-23 15:49:59,955 - qm - INFO     - Sending program to QOP for compilation
+2024-10-23 15:50:01,410 - qm - INFO     - Executing program
+terminating objective call
+
+Total relaxation time: 10.10 sec
+
+2024-10-23 15:50:21,415 - qm - INFO     - Sending program to QOP for compilation
+2024-10-23 15:50:22,821 - qm - INFO     - Executing program
+terminating objective call
+
+Total relaxation time: 10.10 sec
+
+2024-10-23 15:50:42,146 - qm - INFO     - Sending program to QOP for compilation
+2024-10-23 15:50:43,605 - qm - INFO     - Executing program
+terminating objective call
+
+Total relaxation time: 10.10 sec
+
+2024-10-23 15:51:02,798 - qm - INFO     - Sending program to QOP for compilation
+2024-10-23 15:51:04,231 - qm - INFO     - Executing program
+terminating objective call
+
+Total relaxation time: 10.10 sec
+
+2024-10-23 15:51:25,216 - qm - INFO     - Sending program to QOP for compilation
+2024-10-23 15:51:26,677 - qm - INFO     - Executing program
+terminating objective call
+
+Total relaxation time: 10.10 sec
+
+2024-10-23 15:51:46,226 - qm - INFO     - Sending program to QOP for compilation
+2024-10-23 15:51:47,632 - qm - INFO     - Executing program
+terminating objective call
+
+Total relaxation time: 10.10 sec
+
+2024-10-23 15:52:07,351 - qm - INFO     - Sending program to QOP for compilation
+2024-10-23 15:52:08,780 - qm - INFO     - Executing program
+terminating objective call
+
+Total relaxation time: 10.10 sec
+
+2024-10-23 15:52:29,381 - qm - INFO     - Sending program to QOP for compilation
+2024-10-23 15:52:30,783 - qm - INFO     - Executing program
+terminating objective call
+
+Total relaxation time: 10.10 sec
+
+2024-10-23 15:52:50,755 - qm - INFO     - Sending program to QOP for compilation
+2024-10-23 15:52:52,171 - qm - INFO     - Executing program
+terminating objective call
+
+Total relaxation time: 10.10 sec
+
+2024-10-23 15:53:12,725 - qm - INFO     - Sending program to QOP for compilation
+2024-10-23 15:53:14,163 - qm - INFO     - Executing program
+terminating objective call
+
+Total relaxation time: 10.10 sec
+
+2024-10-23 15:53:34,089 - qm - INFO     - Sending program to QOP for compilation
+2024-10-23 15:53:35,508 - qm - INFO     - Executing program
+terminating objective call
+
+Total relaxation time: 10.10 sec
+
+2024-10-23 15:53:54,963 - qm - INFO     - Sending program to QOP for compilation
+2024-10-23 15:53:56,071 - qm - INFO     - Executing program
+terminating objective call
+
+Total relaxation time: 10.10 sec
+
+2024-10-23 15:54:15,671 - qm - INFO     - Sending program to QOP for compilation
+2024-10-23 15:54:17,098 - qm - INFO     - Executing program
+terminating objective call
+
+Total relaxation time: 10.10 sec
+
+2024-10-23 15:54:36,547 - qm - INFO     - Sending program to QOP for compilation
+2024-10-23 15:54:38,002 - qm - INFO     - Executing program
+terminating objective call
+
+Total relaxation time: 10.10 sec
+
+2024-10-23 15:54:57,938 - qm - INFO     - Sending program to QOP for compilation
+2024-10-23 15:54:59,050 - qm - INFO     - Executing program
+terminating objective call
+
+Total relaxation time: 10.10 sec
+
+2024-10-23 15:55:18,987 - qm - INFO     - Sending program to QOP for compilation
+2024-10-23 15:55:20,461 - qm - INFO     - Executing program
+terminating objective call
+
+Total relaxation time: 10.10 sec
+
+2024-10-23 15:55:40,131 - qm - INFO     - Sending program to QOP for compilation
+2024-10-23 15:55:41,577 - qm - INFO     - Executing program
+terminating objective call
+
+Total relaxation time: 10.10 sec
+
+2024-10-23 15:56:01,126 - qm - INFO     - Sending program to QOP for compilation
+2024-10-23 15:56:02,227 - qm - INFO     - Executing program
+terminating objective call
+
+Total relaxation time: 10.10 sec
+
+2024-10-23 15:56:22,201 - qm - INFO     - Sending program to QOP for compilation
+2024-10-23 15:56:23,602 - qm - INFO     - Executing program
+terminating objective call
+
+Total relaxation time: 10.10 sec
+
+2024-10-23 15:56:43,344 - qm - INFO     - Sending program to QOP for compilation
+2024-10-23 15:56:44,743 - qm - INFO     - Executing program
+terminating objective call
+
+Total relaxation time: 10.10 sec
+
+2024-10-23 15:57:04,365 - qm - INFO     - Sending program to QOP for compilation
+2024-10-23 15:57:05,744 - qm - INFO     - Executing program
+terminating objective call
+
+Total relaxation time: 10.10 sec
+
+2024-10-23 15:57:25,434 - qm - INFO     - Sending program to QOP for compilation
+2024-10-23 15:57:26,898 - qm - INFO     - Executing program
+terminating objective call
+
+Total relaxation time: 10.10 sec
+
+2024-10-23 15:57:46,495 - qm - INFO     - Sending program to QOP for compilation
+2024-10-23 15:57:48,000 - qm - INFO     - Executing program
+terminating objective call
+
+Total relaxation time: 10.10 sec
+
+2024-10-23 15:58:07,577 - qm - INFO     - Sending program to QOP for compilation
+2024-10-23 15:58:09,015 - qm - INFO     - Executing program
+terminating objective call
+Completed iteration 3, objective value: 0.015829298074083613
+
+Total relaxation time: 10.10 sec
+
+2024-10-23 15:58:28,309 - qm - INFO     - Sending program to QOP for compilation
+2024-10-23 15:58:29,484 - qm - INFO     - Executing program
+terminating objective call
+
+Total relaxation time: 10.10 sec
+
+2024-10-23 15:58:49,390 - qm - INFO     - Sending program to QOP for compilation
+2024-10-23 15:58:50,799 - qm - INFO     - Executing program
+terminating objective call
+
+Total relaxation time: 10.10 sec
+
+2024-10-23 15:59:10,354 - qm - INFO     - Sending program to QOP for compilation
+2024-10-23 15:59:11,734 - qm - INFO     - Executing program
+terminating objective call
+
+Total relaxation time: 10.10 sec
+
+2024-10-23 15:59:31,490 - qm - INFO     - Sending program to QOP for compilation
+2024-10-23 15:59:32,975 - qm - INFO     - Executing program
+terminating objective call
+
+Total relaxation time: 10.10 sec
+
+2024-10-23 15:59:52,433 - qm - INFO     - Sending program to QOP for compilation
+2024-10-23 15:59:53,824 - qm - INFO     - Executing program
+terminating objective call
+
+Total relaxation time: 10.10 sec
+
+2024-10-23 16:00:13,501 - qm - INFO     - Sending program to QOP for compilation
+2024-10-23 16:00:14,931 - qm - INFO     - Executing program
+terminating objective call
+
+Total relaxation time: 10.10 sec
+
+2024-10-23 16:00:34,933 - qm - INFO     - Sending program to QOP for compilation
+2024-10-23 16:00:36,279 - qm - INFO     - Executing program
+terminating objective call
+
+Total relaxation time: 10.10 sec
+
+2024-10-23 16:00:55,646 - qm - INFO     - Sending program to QOP for compilation
+2024-10-23 16:00:57,094 - qm - INFO     - Executing program
+terminating objective call
+
+Total relaxation time: 10.10 sec
+
+2024-10-23 16:01:16,697 - qm - INFO     - Sending program to QOP for compilation
+2024-10-23 16:01:18,044 - qm - INFO     - Executing program
+terminating objective call
+
+Total relaxation time: 10.10 sec
+
+2024-10-23 16:01:37,720 - qm - INFO     - Sending program to QOP for compilation
+2024-10-23 16:01:39,138 - qm - INFO     - Executing program
+terminating objective call
+
+Total relaxation time: 10.10 sec
+
+2024-10-23 16:01:58,805 - qm - INFO     - Sending program to QOP for compilation
+2024-10-23 16:02:00,278 - qm - INFO     - Executing program
+terminating objective call
+
+Total relaxation time: 10.10 sec
+
+2024-10-23 16:02:19,841 - qm - INFO     - Sending program to QOP for compilation
+2024-10-23 16:02:21,275 - qm - INFO     - Executing program
+terminating objective call
+
+Total relaxation time: 10.10 sec
+
+2024-10-23 16:02:40,863 - qm - INFO     - Sending program to QOP for compilation
+2024-10-23 16:02:42,311 - qm - INFO     - Executing program
+terminating objective call
+
+Total relaxation time: 10.10 sec
+
+2024-10-23 16:03:01,918 - qm - INFO     - Sending program to QOP for compilation
+2024-10-23 16:03:03,338 - qm - INFO     - Executing program
+terminating objective call
+
+Total relaxation time: 10.10 sec
+
+2024-10-23 16:03:23,338 - qm - INFO     - Sending program to QOP for compilation
+2024-10-23 16:03:24,763 - qm - INFO     - Executing program
+terminating objective call
+
+Total relaxation time: 10.10 sec
+
+2024-10-23 16:03:44,010 - qm - INFO     - Sending program to QOP for compilation
+2024-10-23 16:03:45,462 - qm - INFO     - Executing program
+terminating objective call
+
+Total relaxation time: 10.10 sec
+
+2024-10-23 16:04:05,019 - qm - INFO     - Sending program to QOP for compilation
+2024-10-23 16:04:06,374 - qm - INFO     - Executing program
+terminating objective call
+
+Total relaxation time: 10.10 sec
+
+2024-10-23 16:04:26,158 - qm - INFO     - Sending program to QOP for compilation
+2024-10-23 16:04:27,597 - qm - INFO     - Executing program
+terminating objective call
+
+Total relaxation time: 10.10 sec
+
+2024-10-23 16:04:47,135 - qm - INFO     - Sending program to QOP for compilation
+2024-10-23 16:04:48,679 - qm - INFO     - Executing program
+terminating objective call
+
+Total relaxation time: 10.10 sec
+
+2024-10-23 16:05:08,130 - qm - INFO     - Sending program to QOP for compilation
+2024-10-23 16:05:09,503 - qm - INFO     - Executing program
+terminating objective call
+
+Total relaxation time: 10.10 sec
+
+2024-10-23 16:05:29,207 - qm - INFO     - Sending program to QOP for compilation
+2024-10-23 16:05:30,574 - qm - INFO     - Executing program
+terminating objective call
+
+Total relaxation time: 10.10 sec
+
+2024-10-23 16:05:50,247 - qm - INFO     - Sending program to QOP for compilation
+2024-10-23 16:05:51,668 - qm - INFO     - Executing program
+terminating objective call
+
+Total relaxation time: 10.10 sec
+
+2024-10-23 16:06:11,341 - qm - INFO     - Sending program to QOP for compilation
+2024-10-23 16:06:12,734 - qm - INFO     - Executing program
+terminating objective call
+
+Total relaxation time: 10.10 sec
+
+2024-10-23 16:06:32,647 - qm - INFO     - Sending program to QOP for compilation
+2024-10-23 16:06:34,073 - qm - INFO     - Executing program
+terminating objective call
+
+Total relaxation time: 10.10 sec
+
+2024-10-23 16:06:53,392 - qm - INFO     - Sending program to QOP for compilation
+2024-10-23 16:06:54,841 - qm - INFO     - Executing program
+slurmstepd-fahid: error: *** JOB 615141 ON fahid CANCELLED AT 2024-10-23T16:07:09 ***
