@@ -1,0 +1,41 @@
+{
+    "title": "D1_BFGS_post_ft",
+    "backend": "qibolab",
+    "platform": "qw11q",
+    "start_time": "2024-10-23 14:54:45.675104+00:00",
+    "end_time": "2024-10-23 14:57:16.758805+00:00",
+    "stats": {
+        "drag_tuning-0": {
+            "acquisition": 54.70744245219976,
+            "fit": 0.013942324789240956
+        },
+        "rb_ondevice-0": {
+            "acquisition": 21.147740253945813,
+            "fit": 0.000854116166010499
+        },
+        "rb_ondevice-1": {
+            "acquisition": 21.70654246909544,
+            "fit": 0.00081993592903018
+        },
+        "rb_ondevice-2": {
+            "acquisition": 21.39769334695302,
+            "fit": 0.00079390499740839
+        },
+        "rb_ondevice-3": {
+            "acquisition": 21.501443321816623,
+            "fit": 0.0008148560300469398
+        }
+    },
+    "author": null,
+    "tag": null,
+    "targets": null,
+    "versions": {
+        "qibo": "0.2.12",
+        "numpy": "1.26.4",
+        "qibolab": "0.1.9",
+        "qibocal": "0.0.12"
+    },
+    "date": "2024-10-23",
+    "start-time": "14:54:45",
+    "end-time": "14:57:16"
+}
