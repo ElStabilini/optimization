@@ -14,8 +14,8 @@ target = "D1"
 platform = "qw11q"
 method = 'nelder-mead' 
 
-executor_path = f'./optimization_data/{target}_{method}_post_ft'
-opt_history_path = f'./opt_analysis/{target}_{method}_post_ft'
+executor_path = f'./optimization_data/{target}_{method}_post_ft_true'
+opt_history_path = f'./opt_analysis/{target}_{method}_post_ft_true'
 
 with Executor.open(
     "myexec",
@@ -40,8 +40,8 @@ with Executor.open(
     
     init_guess = np.array([ampl_RX, freq_RX, beta_best])
 
-    lower_bounds = np.array([-0.5, freq_RX-4e6, beta_best-0.25]) #check 
-    upper_bounds = np.array([0.5, freq_RX+4e6, beta_best+0.25])  #check 
+    lower_bounds = np.array([-0.5, freq_RX-4e6, beta_best-0.25])  
+    upper_bounds = np.array([0.5, freq_RX+4e6, beta_best+0.25])   
     bounds = Bounds(lower_bounds, upper_bounds)
 
     opt_results, optimization_history = rb_optimization(e, target, method, init_guess, bounds)
