@@ -1,0 +1,150 @@
+2024-10-23 11:52:54,993 - qm - INFO     - Starting session: 4dd4eeb7-e795-4ad4-8ef8-33f56332ea88
+2024-10-23 11:52:58,045 - qm - INFO     - Octave "octave2" Health check passed, current temperature 60
+2024-10-23 11:52:59,441 - qm - INFO     - Octave "octave3" Health check passed, current temperature 57
+2024-10-23 11:53:00,378 - qm - INFO     - Octave "octave4" Health check passed, current temperature 58
+2024-10-23 11:53:01,113 - qm - INFO     - Octave "octave5" Health check passed, current temperature 59
+2024-10-23 11:53:02,130 - qm - INFO     - Octave "octave6" Health check passed, current temperature 58
+2024-10-23 11:53:02,130 - qm - INFO     - Performing health check
+2024-10-23 11:53:02,148 - qm - WARNING  - Health check warning: Inter-OPX connectivity issues in OPX: con1. Missing ports are: 12, 11, 10, 9. See QM-App for more info.
+2024-10-23 11:53:02,148 - qm - WARNING  - Health check warning: Inter-OPX connectivity issues in OPX: con2. Missing ports are: 12, 11, 10, 9. See QM-App for more info.
+2024-10-23 11:53:02,148 - qm - WARNING  - Health check warning: Inter-OPX connectivity issues in OPX: con3. Missing ports are: 12, 11, 10, 9. See QM-App for more info.
+2024-10-23 11:53:02,148 - qm - WARNING  - Health check warning: Inter-OPX connectivity issues in OPX: con4. Missing ports are: 12, 11, 10, 9. See QM-App for more info.
+2024-10-23 11:53:02,149 - qm - WARNING  - Health check warning: Inter-OPX connectivity issues in OPX: con5. Missing ports are: 12, 11, 10, 9. See QM-App for more info.
+2024-10-23 11:53:02,149 - qm - WARNING  - Health check warning: Inter-OPX connectivity issues in OPX: con6. Missing ports are: 12, 11, 10, 9. See QM-App for more info.
+2024-10-23 11:53:02,149 - qm - WARNING  - Health check warning: Inter-OPX connectivity issues in OPX: con7. Missing ports are: 12, 11, 10, 9. See QM-App for more info.
+2024-10-23 11:53:02,149 - qm - WARNING  - Health check warning: Inter-OPX connectivity issues in OPX: con8. Missing ports are: 12, 11, 10, 9. See QM-App for more info.
+2024-10-23 11:53:02,149 - qm - WARNING  - Health check warning: Inter-OPX connectivity issues in OPX: con9. Missing ports are: 12, 11, 10, 9. See QM-App for more info.
+2024-10-23 11:53:02,149 - qm - INFO     - Health check passed
+Connected to: Rohde&Schwarz SGS100A (serial:1416.0505k02/114167, firmware:4.2.76.0-4.30.046.295) in 0.18s
+Connected to: Rohde&Schwarz SGS100A (serial:1416.0505k02/114164, firmware:4.2.76.0-4.30.046.295) in 0.15s
+2024-10-23 11:53:04,578 - qm - INFO     - Sending program to QOP for compilation
+2024-10-23 11:53:04,788 - qm - INFO     - Executing program
+2024-10-23 11:53:08,059 - qm - INFO     - Sending program to QOP for compilation
+2024-10-23 11:53:08,205 - qm - INFO     - Executing program
+2024-10-23 11:53:11,439 - qm - INFO     - Sending program to QOP for compilation
+2024-10-23 11:53:11,645 - qm - INFO     - Executing program
+2024-10-23 11:53:14,877 - qm - INFO     - Sending program to QOP for compilation
+2024-10-23 11:53:15,091 - qm - INFO     - Executing program
+2024-10-23 11:53:18,313 - qm - INFO     - Sending program to QOP for compilation
+2024-10-23 11:53:18,516 - qm - INFO     - Executing program
+2024-10-23 11:53:21,779 - qm - INFO     - Sending program to QOP for compilation
+2024-10-23 11:53:21,932 - qm - INFO     - Executing program
+2024-10-23 11:53:25,216 - qm - INFO     - Sending program to QOP for compilation
+2024-10-23 11:53:25,422 - qm - INFO     - Executing program
+2024-10-23 11:53:28,655 - qm - INFO     - Sending program to QOP for compilation
+2024-10-23 11:53:28,869 - qm - INFO     - Executing program
+2024-10-23 11:53:32,096 - qm - INFO     - Sending program to QOP for compilation
+2024-10-23 11:53:32,309 - qm - INFO     - Executing program
+2024-10-23 11:53:35,544 - qm - INFO     - Sending program to QOP for compilation
+2024-10-23 11:53:35,754 - qm - INFO     - Executing program
+2024-10-23 11:53:38,988 - qm - INFO     - Sending program to QOP for compilation
+2024-10-23 11:53:39,134 - qm - INFO     - Executing program
+2024-10-23 11:53:41,297 - qm - INFO     - Sending program to QOP for compilation
+2024-10-23 11:53:41,453 - qm - INFO     - Executing program
+2024-10-23 11:53:44,171 - qm - INFO     - Sending program to QOP for compilation
+2024-10-23 11:53:44,325 - qm - INFO     - Executing program
+2024-10-23 11:53:46,590 - qm - INFO     - Sending program to QOP for compilation
+2024-10-23 11:53:46,806 - qm - INFO     - Executing program
+2024-10-23 11:53:49,447 - qm - INFO     - Sending program to QOP for compilation
+2024-10-23 11:53:49,663 - qm - INFO     - Executing program
+2024-10-23 11:53:51,878 - qm - INFO     - Sending program to QOP for compilation
+2024-10-23 11:53:52,095 - qm - INFO     - Executing program
+
+Total relaxation time: 10.10 sec
+
+2024-10-23 11:53:57,494 - qm - INFO     - Sending program to QOP for compilation
+2024-10-23 11:53:59,021 - qm - INFO     - Executing program
+terminating objective call
+
+Total relaxation time: 10.10 sec
+
+2024-10-23 11:54:18,588 - qm - INFO     - Sending program to QOP for compilation
+2024-10-23 11:54:20,010 - qm - INFO     - Executing program
+terminating objective call
+
+Total relaxation time: 10.10 sec
+
+2024-10-23 11:54:39,960 - qm - INFO     - Sending program to QOP for compilation
+2024-10-23 11:54:41,338 - qm - INFO     - Executing program
+terminating objective call
+
+Total relaxation time: 10.10 sec
+
+2024-10-23 11:55:00,676 - qm - INFO     - Sending program to QOP for compilation
+2024-10-23 11:55:02,110 - qm - INFO     - Executing program
+terminating objective call
+
+Total relaxation time: 10.10 sec
+
+2024-10-23 11:55:21,753 - qm - INFO     - Sending program to QOP for compilation
+2024-10-23 11:55:23,171 - qm - INFO     - Executing program
+terminating objective call
+
+Total relaxation time: 10.10 sec
+
+2024-10-23 11:55:42,785 - qm - INFO     - Sending program to QOP for compilation
+2024-10-23 11:55:43,877 - qm - INFO     - Executing program
+terminating objective call
+
+Total relaxation time: 10.10 sec
+
+2024-10-23 11:56:03,916 - qm - INFO     - Sending program to QOP for compilation
+2024-10-23 11:56:05,288 - qm - INFO     - Executing program
+terminating objective call
+Completed iteration 1, objective value: 0.005059861536845004
+
+Total relaxation time: 10.10 sec
+
+2024-10-23 11:56:24,856 - qm - INFO     - Sending program to QOP for compilation
+2024-10-23 11:56:26,240 - qm - INFO     - Executing program
+terminating objective call
+
+Total relaxation time: 10.10 sec
+
+2024-10-23 11:56:45,916 - qm - INFO     - Sending program to QOP for compilation
+2024-10-23 11:56:47,379 - qm - INFO     - Executing program
+terminating objective call
+
+Total relaxation time: 10.10 sec
+
+2024-10-23 11:57:07,036 - qm - INFO     - Sending program to QOP for compilation
+2024-10-23 11:57:08,460 - qm - INFO     - Executing program
+terminating objective call
+Completed iteration 2, objective value: 0.0033631564672939856
+
+Total relaxation time: 10.10 sec
+
+2024-10-23 11:57:28,024 - qm - INFO     - Sending program to QOP for compilation
+2024-10-23 11:57:29,502 - qm - INFO     - Executing program
+terminating objective call
+
+Total relaxation time: 10.10 sec
+
+2024-10-23 11:57:49,035 - qm - INFO     - Sending program to QOP for compilation
+2024-10-23 11:57:50,230 - qm - INFO     - Executing program
+terminating objective call
+
+Total relaxation time: 10.10 sec
+
+2024-10-23 11:58:10,073 - qm - INFO     - Sending program to QOP for compilation
+2024-10-23 11:58:11,513 - qm - INFO     - Executing program
+terminating objective call
+Completed iteration 3, objective value: 0.0024982294742316685
+
+Total relaxation time: 10.10 sec
+
+2024-10-23 11:58:31,128 - qm - INFO     - Sending program to QOP for compilation
+2024-10-23 11:58:32,525 - qm - INFO     - Executing program
+terminating objective call
+
+Total relaxation time: 10.10 sec
+
+2024-10-23 11:58:52,193 - qm - INFO     - Sending program to QOP for compilation
+2024-10-23 11:58:53,661 - qm - INFO     - Executing program
+/nfs/users/elisa.stabilini/qibocal/src/qibocal/protocols/qua/utils.py:29: RuntimeWarning:
+
+invalid value encountered in power
+
+terminating objective call
+Completed iteration 4, objective value: 0.0024276059307379565
+Elapsed time: 377.05782985687256 seconds
