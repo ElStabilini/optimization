@@ -15,11 +15,11 @@ with Executor.open(
     path = path,
     platform = platform,
     targets = [target],
-    update = True,
+    update = False #True, 
     force = True,
 ) as e:
     
-    e.platform.settings.nshots = 1024
+    e.platform.settings.nshots = 1024    
 
     ramsey_output = e.ramsey(
         delay_between_pulses_end = 1000,
@@ -37,11 +37,6 @@ with Executor.open(
     else:
         ramsey_output.update_platform(e.platform)
 
-    flipping_output = e.flipping(
-        nflips_max = 20,
-        nflips_step = 1 
-    )
-
     drag_output = e.drag_tuning(
          beta_start = -4,
          beta_end = 4,
@@ -55,5 +50,14 @@ with Executor.open(
     
     else:
         drag_output.update_platform(e.platform) #non sono sicura che sia necessario
+
+
+    flipping_output = e.flipping(
+        nflips_max = 20,
+        nflips_step = 1 #valutare nel caso di flip iterativi
+    )
+
+
+    #fare flipping iterativi allungando la frequenza (fino a 200-300 flip)
 
 report(e.path, e.history)

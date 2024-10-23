@@ -35,8 +35,8 @@ with Executor.open(
 
 
     beta_best = drag_output.results.betas[target]
-    ampl_RX = 4.1570229140026074e-2 #e.platform.qubits[target].native_gates.RX.amplitude #
-    freq_RX = 4.958263653e9 #e.platform.qubits[target].native_gates.RX.frequence
+    ampl_RX = e.platform.qubits[target].native_gates.RX.amplitude
+    freq_RX = e.platform.qubits[target].native_gates.RX.frequency
     
     init_guess = np.array([ampl_RX, freq_RX, beta_best])
 
@@ -53,8 +53,6 @@ iterations = np.array([step.iteration for step in optimization_history])
 parameters = np.array([step.parameters for step in optimization_history])
 objective_values = np.array([step.objective_value for step in optimization_history])
 objective_value_error = np.array([step.objective_value_error for step in optimization_history])
-
-#np.savez(os.path.join(opt_history_path,'optimization_history.npz'), iterations=iterations, parameters=parameters, objective_values=objective_values)
 
 os.makedirs(opt_history_path, exist_ok=True)
 np.savez(os.path.join(opt_history_path,'optimization_history.npz'), 
