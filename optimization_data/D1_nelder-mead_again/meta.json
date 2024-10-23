@@ -1,13 +1,13 @@
 {
-    "title": "D1_BFGS",
+    "title": "D1_nelder-mead_again",
     "backend": "qibolab",
     "platform": "qw11q",
-    "start_time": "2024-10-17 21:13:00.608499+00:00",
-    "end_time": "2024-10-17 21:13:56.470992+00:00",
+    "start_time": "2024-10-17 21:26:22.688090+00:00",
+    "end_time": "2024-10-17 21:27:23.999072+00:00",
     "stats": {
         "drag_tuning-0": {
-            "acquisition": 48.7604175650049,
-            "fit": 0.005692078033462167
+            "acquisition": 54.521437522023916,
+            "fit": 0.005467074923217297
         }
     },
     "author": null,
@@ -20,6 +20,6 @@
         "qibocal": "0.0.12"
     },
     "date": "2024-10-17",
-    "start-time": "21:13:00",
-    "end-time": "21:13:56"
+    "start-time": "21:26:22",
+    "end-time": "21:27:23"
 }
