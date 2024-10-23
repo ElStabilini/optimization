@@ -1,0 +1,61 @@
+2024-10-23 20:08:40,038 - qm - INFO     - Starting session: 4e5e8b47-9811-4004-990f-ce6e9ee01840
+2024-10-23 20:08:43,432 - qm - INFO     - Octave "octave2" Health check passed, current temperature 60
+2024-10-23 20:08:44,165 - qm - INFO     - Octave "octave3" Health check passed, current temperature 57
+2024-10-23 20:08:44,937 - qm - INFO     - Octave "octave4" Health check passed, current temperature 58
+2024-10-23 20:08:45,669 - qm - INFO     - Octave "octave5" Health check passed, current temperature 59
+2024-10-23 20:08:46,679 - qm - INFO     - Octave "octave6" Health check passed, current temperature 58
+2024-10-23 20:08:46,679 - qm - INFO     - Performing health check
+2024-10-23 20:08:46,699 - qm - WARNING  - Health check warning: Inter-OPX connectivity issues in OPX: con1. Missing ports are: 12, 11, 10, 9. See QM-App for more info.
+2024-10-23 20:08:46,699 - qm - WARNING  - Health check warning: Inter-OPX connectivity issues in OPX: con2. Missing ports are: 12, 11, 10, 9. See QM-App for more info.
+2024-10-23 20:08:46,699 - qm - WARNING  - Health check warning: Inter-OPX connectivity issues in OPX: con3. Missing ports are: 12, 11, 10, 9. See QM-App for more info.
+2024-10-23 20:08:46,699 - qm - WARNING  - Health check warning: Inter-OPX connectivity issues in OPX: con4. Missing ports are: 12, 11, 10, 9. See QM-App for more info.
+2024-10-23 20:08:46,699 - qm - WARNING  - Health check warning: Inter-OPX connectivity issues in OPX: con5. Missing ports are: 12, 11, 10, 9. See QM-App for more info.
+2024-10-23 20:08:46,699 - qm - WARNING  - Health check warning: Inter-OPX connectivity issues in OPX: con6. Missing ports are: 12, 11, 10, 9. See QM-App for more info.
+2024-10-23 20:08:46,699 - qm - WARNING  - Health check warning: Inter-OPX connectivity issues in OPX: con7. Missing ports are: 12, 11, 10, 9. See QM-App for more info.
+2024-10-23 20:08:46,699 - qm - WARNING  - Health check warning: Inter-OPX connectivity issues in OPX: con8. Missing ports are: 12, 11, 10, 9. See QM-App for more info.
+2024-10-23 20:08:46,699 - qm - WARNING  - Health check warning: Inter-OPX connectivity issues in OPX: con9. Missing ports are: 12, 11, 10, 9. See QM-App for more info.
+2024-10-23 20:08:46,699 - qm - INFO     - Health check passed
+Connected to: Rohde&Schwarz SGS100A (serial:1416.0505k02/114167, firmware:4.2.76.0-4.30.046.295) in 0.18s
+Connected to: Rohde&Schwarz SGS100A (serial:1416.0505k02/114164, firmware:4.2.76.0-4.30.046.295) in 0.14s
+2024-10-23 20:08:49,264 - qm - INFO     - Sending program to QOP for compilation
+2024-10-23 20:08:49,417 - qm - INFO     - Executing program
+2024-10-23 20:08:51,859 - qm - INFO     - Sending program to QOP for compilation
+2024-10-23 20:08:52,068 - qm - INFO     - Executing program
+2024-10-23 20:08:54,475 - qm - INFO     - Sending program to QOP for compilation
+2024-10-23 20:08:54,687 - qm - INFO     - Executing program
+2024-10-23 20:08:56,945 - qm - INFO     - Sending program to QOP for compilation
+2024-10-23 20:08:57,097 - qm - INFO     - Executing program
+2024-10-23 20:08:59,429 - qm - INFO     - Sending program to QOP for compilation
+2024-10-23 20:08:59,636 - qm - INFO     - Executing program
+2024-10-23 20:09:02,115 - qm - INFO     - Sending program to QOP for compilation
+2024-10-23 20:09:02,267 - qm - INFO     - Executing program
+2024-10-23 20:09:04,592 - qm - INFO     - Sending program to QOP for compilation
+2024-10-23 20:09:04,752 - qm - INFO     - Executing program
+2024-10-23 20:09:07,618 - qm - INFO     - Sending program to QOP for compilation
+2024-10-23 20:09:07,838 - qm - INFO     - Executing program
+2024-10-23 20:09:11,078 - qm - INFO     - Sending program to QOP for compilation
+2024-10-23 20:09:11,291 - qm - INFO     - Executing program
+2024-10-23 20:09:13,391 - qm - INFO     - Sending program to QOP for compilation
+2024-10-23 20:09:13,537 - qm - INFO     - Executing program
+2024-10-23 20:09:16,367 - qm - INFO     - Sending program to QOP for compilation
+2024-10-23 20:09:16,595 - qm - INFO     - Executing program
+2024-10-23 20:09:19,801 - qm - INFO     - Sending program to QOP for compilation
+2024-10-23 20:09:20,009 - qm - INFO     - Executing program
+2024-10-23 20:09:22,144 - qm - INFO     - Sending program to QOP for compilation
+2024-10-23 20:09:22,365 - qm - INFO     - Executing program
+2024-10-23 20:09:25,511 - qm - INFO     - Sending program to QOP for compilation
+2024-10-23 20:09:25,724 - qm - INFO     - Executing program
+2024-10-23 20:09:28,957 - qm - INFO     - Sending program to QOP for compilation
+2024-10-23 20:09:29,115 - qm - INFO     - Executing program
+2024-10-23 20:09:32,408 - qm - INFO     - Sending program to QOP for compilation
+2024-10-23 20:09:32,623 - qm - INFO     - Executing program
+/nfs/users/elisa.stabilini/optimization/rb_optimization.py:82: RuntimeWarning: Method basinhopping cannot handle bounds.
+  res = minimize(objective, init_guess, args=(executor, target), method=method,
+Traceback (most recent call last):
+  File "/nfs/users/elisa.stabilini/optimization/D1_optimization.py", line 47, in <module>
+    opt_results, optimization_history = rb_optimization(e, target, method, init_guess, bounds)
+  File "/nfs/users/elisa.stabilini/optimization/rb_optimization.py", line 82, in rb_optimization
+    res = minimize(objective, init_guess, args=(executor, target), method=method,
+  File "/nfs/users/elisa.stabilini/calibration/lib/python3.10/site-packages/scipy/optimize/_minimize.py", line 762, in minimize
+    raise ValueError('Unknown solver %s' % method)
+ValueError: Unknown solver basinhopping

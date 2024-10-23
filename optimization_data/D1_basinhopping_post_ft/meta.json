@@ -1,0 +1,25 @@
+{
+    "title": "D1_basinhopping_post_ft",
+    "backend": "qibolab",
+    "platform": "qw11q",
+    "start_time": "2024-10-23 20:08:40.559585+00:00",
+    "end_time": "2024-10-23 20:09:33.170586+00:00",
+    "stats": {
+        "drag_tuning-0": {
+            "acquisition": 45.987367796944454,
+            "fit": 0.012807931052520871
+        }
+    },
+    "author": null,
+    "tag": null,
+    "targets": null,
+    "versions": {
+        "qibo": "0.2.12",
+        "numpy": "1.26.4",
+        "qibolab": "0.1.9",
+        "qibocal": "0.0.12"
+    },
+    "date": "2024-10-23",
+    "start-time": "20:08:40",
+    "end-time": "20:09:33"
+}
