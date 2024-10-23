@@ -80,9 +80,12 @@ def rb_optimization(
         print(f"Completed iteration {iteration_count}, objective value: {f}")
 
     res = minimize(objective, init_guess, args=(executor, target), method=method, 
-                   tol=1e-13, options = {"maxiter" : 30}, bounds = bounds, callback=callback)
+                   tol=1e-13, options = {"maxiter" : 5}, bounds = bounds, callback=callback)
     
     return res, optimization_history
+
+
+
 
 #RES description: object of type OptimizeResult, among others returns the 
 # final values for the optimized parameters and optimized value of objective function

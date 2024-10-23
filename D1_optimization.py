@@ -14,8 +14,8 @@ target = "D1"
 platform = "qw11q"
 method = 'nelder-mead' 
 
-executor_path = f'./optimization_data/{target}_{method}_again'
-opt_history_path = f'./opt_analysis/{target}_{method}_again'
+executor_path = f'./optimization_data/{target}_{method}_post_ft'
+opt_history_path = f'./opt_analysis/{target}_{method}_post_ft'
 
 with Executor.open(
     "myexec",
@@ -40,8 +40,8 @@ with Executor.open(
     
     init_guess = np.array([ampl_RX, freq_RX, beta_best])
 
-    lower_bounds = np.array([-0.5, freq_RX-4e6, beta_best-0.25])
-    upper_bounds = np.array([0.5, freq_RX+4e6, beta_best+0.25])
+    lower_bounds = np.array([-0.5, freq_RX-4e6, beta_best-0.25]) #check 
+    upper_bounds = np.array([0.5, freq_RX+4e6, beta_best+0.25])  #check 
     bounds = Bounds(lower_bounds, upper_bounds)
 
     opt_results, optimization_history = rb_optimization(e, target, method, init_guess, bounds)
@@ -51,6 +51,7 @@ report(e.path, e.history)
 #save optimization_history as .npz
 iterations = np.array([step.iteration for step in optimization_history])
 parameters = np.array([step.parameters for step in optimization_history])
+#capire come salvare parameters errors
 objective_values = np.array([step.objective_value for step in optimization_history])
 objective_value_error = np.array([step.objective_value_error for step in optimization_history])
 
@@ -67,26 +68,3 @@ with open(os.path.join(opt_history_path,'optimization_result.pkl'), 'wb') as f:
 end_time = time.time()
 elapsed_time = end_time - start_time
 print(f"Elapsed time: {elapsed_time} seconds")
-
-"""TO DO:
-    y controllare dove uso scale_factors
-    y capire come gestire l'errore    
-    y passare 1.875 (avg_gate) come costante all'inizio
-    y maxiter
-    y xatol: normalizzazione + definizione
-    * leggere l'initial guess dalla cartella platform precedente + automatizzare riscalamento
-    y nshot
-    y modificare delta_clifford
-    y provare a variare beta in un piccolo intervallo intorno a quello suggerito da drag
-    y spostare report ?
-    y vedere quali di questi parametri potrebbe essere interessante variare
-
-"RX": (D1) {
-                    "duration": 40,
-                    "amplitude": 0.05,
-                    "shape": "Gaussian(5)",
-                    "frequency": 4900000000,
-                    "relative_start": 0,
-                    "phase": 0,
-                    "type": "qd"
-""" 
