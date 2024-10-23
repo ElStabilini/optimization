@@ -499,3 +499,21 @@ Total relaxation time: 10.10 sec
 
 2024-10-23 15:44:01,863 - qm - INFO     - Sending program to QOP for compilation
 2024-10-23 15:44:03,290 - qm - INFO     - Executing program
+terminating objective call
+
+Total relaxation time: 10.10 sec
+
+2024-10-23 15:44:22,875 - qm - INFO     - Sending program to QOP for compilation
+2024-10-23 15:44:24,476 - qm - INFO     - Executing program
+terminating objective call
+
+Total relaxation time: 10.10 sec
+
+2024-10-23 15:44:43,882 - qm - INFO     - Sending program to QOP for compilation
+2024-10-23 15:44:44,969 - qm - INFO     - Executing program
+terminating objective call
+
+Total relaxation time: 10.10 sec
+
+2024-10-23 15:45:04,970 - qm - INFO     - Sending program to QOP for compilation
+2024-10-23 15:45:06,339 - qm - INFO     - Executing program
