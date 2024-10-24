@@ -76,7 +76,7 @@ def rb_optimization(
 
     #per ora tengo sigma definita internamente ma potrebbe essere utile averla
     # tra i parametri da inizializzare in futuro (così in teoria posso regolare anche il tipo di tuning che sto facendo)
-    sigma = 0.5  # Standard deviation for initial search
+    sigma = 0.25  # Standard deviation for initial search
     lower_bounds, upper_bounds = zip(*bounds)
 
     # Create a CMA-ES optimizer instance
