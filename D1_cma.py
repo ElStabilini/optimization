@@ -12,10 +12,9 @@ start_time = time.time()
 
 target = "D1"
 platform = "qw11q"
-method = 'Powell' 
 
-executor_path = f'./optimization_data/{target}_{method}_post_ft'
-opt_history_path = f'./opt_analysis/{target}_{method}_post_ft'
+executor_path = f'./optimization_data/{target}_cma_test'
+opt_history_path = f'./opt_analysis/{target}_cma_test'
 
 with Executor.open(
     "myexec",
@@ -44,7 +43,7 @@ with Executor.open(
     upper_bounds = np.array([0.5, freq_RX+4e6, beta_best+0.25])   
     bounds = zip(lower_bounds, upper_bounds)
 
-    opt_results, optimization_history = rb_optimization(e, target, method, init_guess, bounds)
+    opt_results, optimization_history = rb_optimization(e, target, init_guess, bounds)
 
 report(e.path, e.history)
 
