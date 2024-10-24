@@ -12,10 +12,10 @@ start_time = time.time()
 
 target = "D1"
 platform = "qw11q"
-method = 'Powell' 
+method = 'SLSQP' 
 
-executor_path = f'./optimization_data/{target}_{method}_post_ft'
-opt_history_path = f'./opt_analysis/{target}_{method}_post_ft'
+executor_path = f'./optimization_data/{target}_{method}_post_ft_true'
+opt_history_path = f'./opt_analysis/{target}_{method}_post_ft_true'
 
 with Executor.open(
     "myexec",
