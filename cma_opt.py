@@ -49,12 +49,21 @@ def objective(params, e, target):
     print('terminating objective call')
     return r_g
 
-def rb_optimization(executor: Executor, target: str, init_guess: list[float], bounds):
+def rb_optimization(
+        executor: Executor, 
+        target: str, 
+        init_guess: list[float], 
+        bounds):
+    
     optimization_history = []
     iteration_count = 0
 
     def record_history(x, f):
         nonlocal iteration_count
+        if f is None:
+            # If the optimization method doesn't provide f, need to calculate it
+            f = objective(x, executor, target)
+
         step = OptimizationStep(
             iteration=iteration_count,
             parameters=np.copy(x),
@@ -65,14 +74,15 @@ def rb_optimization(executor: Executor, target: str, init_guess: list[float], bo
         iteration_count += 1
         print(f"Completed iteration {iteration_count}, objective value: {f}")
 
-    # Set up initial guess and standard deviation
-    sigma = 0.3  # Standard deviation for initial search
+    #per ora tengo sigma definita internamente ma potrebbe essere utile averla
+    # tra i parametri da inizializzare in futuro (così in teoria posso regolare anche il tipo di tuning che sto facendo)
+    sigma = 0.5  # Standard deviation for initial search
     lower_bounds, upper_bounds = zip(*bounds)
 
     # Create a CMA-ES optimizer instance
     es = cma.CMAEvolutionStrategy(init_guess, sigma, {'bounds': [lower_bounds, upper_bounds], 'maxiter': 3})
 
-    # Optimization loop
+    # Optimization loop (testing this instead of es.optimize)
     while not es.stop():
         solutions = es.ask()
         # Evaluate the objective function for each solution
@@ -83,7 +93,9 @@ def rb_optimization(executor: Executor, target: str, init_guess: list[float], bo
         best_idx = np.argmin(function_values)
         record_history(solutions[best_idx], function_values[best_idx])
 
-    # Retrieve the final result
+    # Retrieve the final result - not strictly necessary but useful 
+    # to keep track of the history similarly to scipy optimize
+
     res = {
         'x': es.result.xbest,  # Best solution found
         'fun': es.result.fbest,  # Objective value at the best solution
