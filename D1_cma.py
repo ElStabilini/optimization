@@ -4,18 +4,17 @@ import time
 import pickle
 from qibocal.auto.execute import Executor
 from qibocal.cli.report import report
-from rb_optimization import rb_optimization
-from scipy.optimize import Bounds
+from cma_opt import rb_optimization
+#from scipy.optimize import Bounds
 
 
 start_time = time.time()
 
 target = "D1"
 platform = "qw11q"
-method = 'SLSQP' 
 
-executor_path = f'./optimization_data/{target}_{method}_post_ft_true'
-opt_history_path = f'./opt_analysis/{target}_{method}_post_ft_true'
+executor_path = f'./optimization_data/{target}_cma_test'
+opt_history_path = f'./opt_analysis/{target}_cma_test'
 
 with Executor.open(
     "myexec",
@@ -42,9 +41,9 @@ with Executor.open(
 
     lower_bounds = np.array([-0.5, freq_RX-4e6, beta_best-0.25])  
     upper_bounds = np.array([0.5, freq_RX+4e6, beta_best+0.25])   
-    bounds = Bounds(lower_bounds, upper_bounds)
+    bounds = zip(lower_bounds, upper_bounds)
 
-    opt_results, optimization_history = rb_optimization(e, target, method, init_guess, bounds)
+    opt_results, optimization_history = rb_optimization(e, target, init_guess, bounds)
 
 report(e.path, e.history)
 
