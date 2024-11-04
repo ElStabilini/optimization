@@ -9,15 +9,18 @@ package-mode = false
 [tool.poetry.dependencies]
 python = ">=3.10,<3.12"
 cma = "^3.4.0"
-matplotlib = {version = "^3.9.2", optional = true}
+matplotlib = "^3.9.2"
 numpy = "^1.26.4"
 optuna = "^4.0.0"
 scipy = "^1.14.1"
 plotly = "^5.24.1"
-seaborn = { version = "^0.12.2", optional = true }
+seaborn = "^0.12.2"
+qibo = "0.2.6"
 qibocal = {git = "https://github.com/qiboteam/qibocal.git", branch = "qua"} 
-qibolab = "^0.1.9"
+qibolab = {git = "https://github.com/qiboteam/qibolab.git", branch = "0.1"} 
 qm-qua = "^1.1.6"
+mpld3 = "^0.5.10"
+qualang-tools = "0.15.2"
 
 [tool.poetry.group.dev.dependencies]
 ipykernel = "^6.29.5"
