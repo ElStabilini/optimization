@@ -16,3 +16,5 @@ _inserire schema dell'albero con descrizione_
 * D1_cma.py :
 
 ## Installation
+
+Do not install using poetry, doesn't work yet
