@@ -13,8 +13,8 @@ start_time = time.time()
 target = "D1"
 platform = "qw11q"
 
-executor_path = f'./optimization_data/{target}_cma_test'
-opt_history_path = f'./opt_analysis/{target}_cma_test'
+executor_path = f'../{target}_cma_test'
+opt_history_path = f'../{target}_cma_test'
 
 with Executor.open(
     "myexec",
