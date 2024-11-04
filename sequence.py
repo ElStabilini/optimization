@@ -3,7 +3,7 @@ from qibocal.auto.execute import Executor
 from qibolab import pulses
 from qibocal.cli.report import report
 
-
+AVG_GATE = 1.875
 #ramsey, flipping, drag, randomized benchmarking
 
 target = "D1"
@@ -43,7 +43,22 @@ with Executor.open(
         nflips_step = 1 #valutare nel caso di flip iterativi
     )
 
-    #inserire RB
+    rb_output = e.rb_ondevice(
+        num_of_sequences=1000,
+        max_circuit_depth=1000,
+        delta_clifford=10,
+        n_avg=1,
+        save_sequences=True,
+        apply_inverse=True
+    )
+
+    # Calculate infidelity 
+    pars = rb_output.results.pars.get(target)
+    one_minus_p = 1 - pars[2]
+    r_c = one_minus_p * (1 - 1 / 2**1)
+    r_g = r_c / AVG_GATE
+
+    
     #fare flipping iterativi allungando la frequenza (fino a 200-300 flip) <--
 
 report(e.path, e.history)
