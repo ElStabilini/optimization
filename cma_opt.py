@@ -80,7 +80,7 @@ def rb_optimization(
     lower_bounds, upper_bounds = zip(*bounds)
 
     # Create a CMA-ES optimizer instance
-    es = cma.CMAEvolutionStrategy(init_guess, sigma, {'bounds': [lower_bounds, upper_bounds], 'maxiter': 30})
+    es = cma.CMAEvolutionStrategy(init_guess, sigma, {'bounds': [lower_bounds, upper_bounds], 'maxiter': 3})
 
     # Optimization loop (testing this instead of es.optimize)
     while not es.stop():
