@@ -52,7 +52,6 @@ with Executor.open(
         apply_inverse=True
     )
 
-    # Calculate infidelity 
     pars = rb_output.results.pars.get(target)
     one_minus_p = 1 - pars[2]
     r_c = one_minus_p * (1 - 1 / 2**1)
