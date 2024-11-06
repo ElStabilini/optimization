@@ -18,9 +18,12 @@ seaborn = "^0.12.2"
 qibo = "0.2.6"
 qibocal = {git = "https://github.com/qiboteam/qibocal.git", branch = "qua"} 
 qibolab = {git = "https://github.com/qiboteam/qibolab.git", branch = "0.1"} 
-qm-qua = "^1.1.6"
+qm-qua = "1.1.6"
 mpld3 = "^0.5.10"
 qualang-tools = "0.15.2"
+qcodes = "^0.37.0"
+pyvisa-py = "0.5.3"
+qcodes-contrib-drivers = "^0.18.0"
 
 [tool.poetry.group.dev.dependencies]
 ipykernel = "^6.29.5"
