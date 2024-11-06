@@ -16,6 +16,7 @@ platform = "qw11q"
 executor_path = f'../optimization_data/{target}_{formatted_time}'
 study_name = f'{formatted_time}'
 study_path = f'../optuna_data/{target}_{study_name}'
+os.makedirs(os.path.dirname(study_path), exist_ok=True)
 
 with Executor.open(
     "myexec",
