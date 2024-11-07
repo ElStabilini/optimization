@@ -9,7 +9,7 @@ AVG_GATE = 1.875
 
 target = "D1"
 platform = "qw11q"
-path = "../optimization_data/sequence" 
+path = Path().parent / "optimization_data" / "sequence" 
 
 with Executor.open(
     "myexec",
