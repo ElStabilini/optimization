@@ -2,6 +2,7 @@ import numpy as np
 from qibocal.auto.execute import Executor
 from qibolab import pulses
 from qibocal.cli.report import report
+from pathlib import Path
 
 AVG_GATE = 1.875
 #ramsey, flipping, drag, randomized benchmarking
