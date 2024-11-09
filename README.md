@@ -1,10 +1,10 @@
 # README in progress
 
 ## Branches
-* main: 
-* opt_post-fine-tuning: contains data and post processing related to optimization post 1 execution of fine-tuning routines
-* sequence_opt:
-* optuna: Code and data post-processing using `optuna`
+* **main**: reference branch
+* **opt_post-fine-tuning**: Contains code and data post processing related to RB fidelity optimization performed using `scipy.optimize.minimize` and `PyCMA` methods
+* **sequence_opt**: Code for optimization of the RB fidelity iteratively running 
+* **optuna**: Code and data post-processing for RB fidelity optimization using `optuna`
 
 ## Folders
 _inserire schema dell'albero con descrizione_
