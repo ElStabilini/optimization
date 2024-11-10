@@ -16,7 +16,7 @@ method = 'Nelder-Mead'
 now = datetime.datetime.now()
 formatted_time = now.strftime("%Y%m%d_%H%M%S") 
 
-executor_path = f'./optimization_data/{target}_init_simplex_{formatted_time}'
+executor_path = f'../optimization_data/{target}_init_simplex_{formatted_time}'
 opt_history_path = f'./opt_analysis/{target}_init_simplex_{formatted_time}'
 
 with Executor.open(
