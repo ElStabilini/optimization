@@ -1,7 +1,7 @@
 {
     "nqubits": 16,
     "settings": {
-        "nshots": 1024,
+        "nshots": 2000,
         "relaxation_time": 100000
     },
     "qubits": [
@@ -631,7 +631,7 @@
             "D1": {
                 "RX": {
                     "duration": 40,
-                    "amplitude": 0.04094181511910975,
+                    "amplitude": 0.04110444506484847,
                     "shape": "Drag(5, 0)",
                     "frequency": 4958222671,
                     "relative_start": 0,

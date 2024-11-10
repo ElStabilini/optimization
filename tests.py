@@ -22,11 +22,14 @@ with Executor.open(
 ) as e:
  
     #Frequency fine tuning using ramsey
-    e.platform.settings.nshots = 1024
-    flipping_output = e.flipping(
-        nflips_max = 20,
-        nflips_step = 1,
+    e.platform.settings.nshots = 2000
+    drag_output = e.drag_tuning(
+         beta_start = -1,
+         beta_end = 1,
+         beta_step = 0.1
     )
 
-    print(flipping_output.results)
-    print(type(flipping_output.results))
+    print(drag_output.results)
+
+report(e.path, e.history)
+
