@@ -62,7 +62,8 @@ with Executor.open(
     upper_bounds = np.array([0.5, freq_RX+4e6])   
     bounds = Bounds(lower_bounds, upper_bounds)
 
-    opt_results, optimization_history = rb_optimization(e, target, method, init_simplex, bounds)
+    opt_results, optimization_history = rb_optimization(e, target, method, init_guess, 
+                                                        init_simplex, bounds)
 
 report(e.path, e.history)
 
