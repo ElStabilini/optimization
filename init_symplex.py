@@ -2,6 +2,7 @@ import numpy as np
 import os
 import time
 import pickle
+import datetime
 from qibocal.auto.execute import Executor
 from qibocal.cli.report import report
 from rb_optimization import rb_optimization
@@ -11,10 +12,12 @@ start_time = time.time()
 
 target = "D1"
 platform = "qw11q"
-method = 'Nelder-Mead' 
+method = 'Nelder-Mead'
+now = datetime.datetime.now()
+formatted_time = now.strftime("%Y%m%d_%H%M%S") 
 
-executor_path = f'./optimization_data/{target}_{method}_post_ft_true'
-opt_history_path = f'./opt_analysis/{target}_{method}_post_ft_true'
+executor_path = f'./optimization_data/{target}_init_simplex_'
+opt_history_path = f'./opt_analysis/{target}_init_simplex_'
 
 with Executor.open(
     "myexec",
@@ -77,5 +80,10 @@ np.savez(os.path.join(opt_history_path,'optimization_history.npz'),
          objective_values=objective_values, 
          objective_value_errors=objective_value_error)
 
+result_data = {
+    'optimization_result': opt_results,
+    'elapsed_time': elapsed_time
+}
+
 with open(os.path.join(opt_history_path,'optimization_result.pkl'), 'wb') as f:
-    pickle.dump(opt_results, f)
+    pickle.dump(result_data, f)
