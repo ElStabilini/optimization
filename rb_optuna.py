@@ -63,7 +63,7 @@ def rb_optimization(
                                 storage=storage, load_if_exists=False)
     #simulate initial guess (as I do in scipy optimization)
     study.enqueue_trial(init_guess)
-    study.optimize(wrapped_objective, n_trials=30, show_progress_bar=False)
+    study.optimize(wrapped_objective, n_trials=100, show_progress_bar=False)
     
     return study
 
