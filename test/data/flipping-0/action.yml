@@ -1,0 +1,8 @@
+id: flipping
+operation: flipping
+parameters:
+  nflips_max: 20
+  nflips_step: 1
+targets:
+- D1
+update: true

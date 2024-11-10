@@ -23,13 +23,10 @@ with Executor.open(
  
     #Frequency fine tuning using ramsey
     e.platform.settings.nshots = 1024
-    ramsey_output = e.ramsey(
-        delay_between_pulses_end = 1000,
-        delay_between_pulses_start = 10,
-        delay_between_pulses_step = 20,
-        detuning = 3_000_000,
-        relaxation_time = 200000,
+    flipping_output = e.flipping(
+        nflips_max = 20,
+        nflips_step = 1,
     )
 
-    print(ramsey_output.results)
-    print(type(ramsey_output.results))
+    print(flipping_output.results)
+    print(type(flipping_output.results))
