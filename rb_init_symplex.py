@@ -56,7 +56,7 @@ def rb_optimization(
         executor : Executor,
         target : str,
         method : str,
-        init_guess : list[float],
+        initial_symplex : list[float],
         bounds
     ):
     
@@ -79,8 +79,9 @@ def rb_optimization(
         iteration_count += 1
         print(f"Completed iteration {iteration_count}, objective value: {f}")
 
-    res = minimize(objective, init_guess, args=(executor, target), method=method, 
-                   tol=1e-13, options = {"maxiter" : 30}, bounds = bounds, callback=callback) #per nelder mead controllare simplesso iniziale
+    res = minimize(objective, args=(executor, target), method=method, 
+                   tol=1e-4, options = {"maxiter" : 40}, bounds = bounds, 
+                   initial_symplex = initial_symplex, callback=callback) #per nelder mead controllare simplesso iniziale
     
     return res, optimization_history
 
