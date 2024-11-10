@@ -48,8 +48,8 @@ with Executor.open(
     ampl_RX = flipping_output.results.amplitude[target][0]
     sigma_ampl = 1.5*flipping_output.results.amplitude[target][1]
 
-    #I want to change from initial guess to initial symplex
-    init_symplex = np.array(
+    #I want to change from initial guess to initial simplex
+    init_simplex = np.array(
         [ampl_RX+sigma_ampl, freq_RX+sigma_freq],
         [ampl_RX, freq_RX-sigma_freq],
         [ampl_RX-sigma_ampl, freq_RX])
@@ -57,7 +57,7 @@ with Executor.open(
     upper_bounds = np.array([0.5, freq_RX+4e6])   
     bounds = Bounds(lower_bounds, upper_bounds)
 
-    opt_results, optimization_history = rb_optimization(e, target, method, init_symplex, bounds)
+    opt_results, optimization_history = rb_optimization(e, target, method, init_simplex, bounds)
 
 report(e.path, e.history)
 
