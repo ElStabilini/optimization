@@ -51,6 +51,8 @@ with Executor.open(
     ampl_RX = flipping_output.results.amplitude[target][0]
     sigma_ampl = 1.5*flipping_output.results.amplitude[target][1]
 
+    init_guess = np.array([ampl_RX, freq_RX])
+
     init_simplex = np.array([
         [ampl_RX+sigma_ampl, freq_RX+sigma_freq],
         [ampl_RX, freq_RX-sigma_freq],

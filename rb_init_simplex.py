@@ -51,6 +51,7 @@ def rb_optimization(
         executor : Executor,
         target : str,
         method : str,
+        init_guess : list[float],
         initial_simplex : list[list[float]],
         bounds
     ):
@@ -74,7 +75,7 @@ def rb_optimization(
         iteration_count += 1
         print(f"Completed iteration {iteration_count}, objective value: {f}")
 
-    res = minimize(objective, args=(executor, target), method=method, 
+    res = minimize(objective, init_guess, args=(executor, target), method=method, 
                    tol=1e-4, options = {"maxiter" : 40, "initial_simplex": initial_simplex}, 
                    bounds = bounds, callback=callback) 
     
