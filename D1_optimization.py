@@ -12,7 +12,7 @@ start_time = time.time()
 
 target = "D1"
 platform = "qw11q"
-method = 'SLSQP' 
+method = 'Nelder-Mead' 
 
 executor_path = f'./optimization_data/{target}_{method}_post_ft_true'
 opt_history_path = f'./opt_analysis/{target}_{method}_post_ft_true'
@@ -26,6 +26,19 @@ with Executor.open(
     force=True,
 ) as e:
  
+    #Frequency fine tuning using ramsey
+    e.platform.settings.nshots = 1024
+    ramsey_output = e.ramsey(
+        delay_between_pulses_end = 1000,
+        delay_between_pulses_start = 10,
+        delay_between_pulses_step = 20,
+        detuning = 3_000_000,
+        relaxation_time = 200000,
+    )
+
+    #Amplitude fine tuning using flipping
+
+    #Beta parameter fine tuning
     e.platform.settings.nshots = 2000
     drag_output = e.drag_tuning(
          beta_start = -4,
@@ -33,12 +46,19 @@ with Executor.open(
          beta_step = 0.5
     )
 
-
     beta_best = drag_output.results.betas[target]
+    sigma_beta = 
+
+
     ampl_RX = e.platform.qubits[target].native_gates.RX.amplitude
     freq_RX = e.platform.qubits[target].native_gates.RX.frequency
+
     
     init_guess = np.array([ampl_RX, freq_RX, beta_best])
+
+    #fare 1 routine di flipping con aggiornamento della platform + estrazione dell'errore
+    #fare 1 ramsey con aggiornamento della platform + estrazione dell'errore
+    #
 
     lower_bounds = np.array([-0.5, freq_RX-4e6, beta_best-0.25])  
     upper_bounds = np.array([0.5, freq_RX+4e6, beta_best+0.25])   
