@@ -4,8 +4,9 @@ from qibocal.auto.execute import Executor
 from qibolab import pulses
 from dataclasses import dataclass
 
-AVG_GATE = 1.875 # 1.875 is the average number of gates in a clifford operation
-error_storage = {'error': None}
+AVG_GATE = 1.875  # 1.875 is the average number of gates in a clifford operation
+error_storage = {"error": None}
+
 
 @dataclass
 class OptimizationStep:
@@ -14,14 +15,15 @@ class OptimizationStep:
     objective_value: float
     objective_value_error: float
 
-#objective function to minimize
+
+# objective function to minimize
 def objective(params, e, target):
 
     amplitude, frequency, beta = params
 
     e.platform.qubits[target].native_gates.RX.amplitude = amplitude
     e.platform.qubits[target].native_gates.RX.frequency = frequency
-    
+
     pulse = e.platform.qubits[target].native_gates.RX.pulse(start=0)
     rel_sigma = pulse.shape.rel_sigma
     drag_pulse = pulses.Drag(rel_sigma=rel_sigma, beta=beta)
@@ -33,7 +35,7 @@ def objective(params, e, target):
         delta_clifford=10,
         n_avg=1,
         save_sequences=True,
-        apply_inverse=True
+        apply_inverse=True,
     )
 
     # Calculate infidelity and error
@@ -45,21 +47,17 @@ def objective(params, e, target):
     r_g = r_c / AVG_GATE
     r_c_std = stdevs[2] * (1 - 1 / 2**1)
     r_g_std = r_c_std / AVG_GATE
-    
-    error_storage['error'] = r_g_std
 
-    print('terminating objective call')
+    error_storage["error"] = r_g_std
+
+    print("terminating objective call")
     return r_g
 
 
 def rb_optimization(
-        executor : Executor,
-        target : str,
-        method : str,
-        init_guess : list[float],
-        bounds
-    ):
-    
+    executor: Executor, target: str, method: str, init_guess: list[float], bounds
+):
+
     optimization_history = []
     iteration_count = 0
 
@@ -68,28 +66,34 @@ def rb_optimization(
         if f is None:
             # If the optimization method doesn't provide f, need to calculate it
             f = objective(x, executor, target)
-        
+
         step = OptimizationStep(
             iteration=iteration_count,
             parameters=np.copy(x),
             objective_value=f,
-            objective_value_error = error_storage['error']
+            objective_value_error=error_storage["error"],
         )
         optimization_history.append(step)
         iteration_count += 1
         print(f"Completed iteration {iteration_count}, objective value: {f}")
 
-    res = minimize(objective, init_guess, args=(executor, target), method=method, 
-                   tol=1e-13, options = {"maxiter" : 30}, bounds = bounds, callback=callback) #per nelder mead controllare simplesso iniziale
-    
+    res = minimize(
+        objective,
+        init_guess,
+        args=(executor, target),
+        method=method,
+        tol=1e-13,
+        options={"maxiter": 30},
+        bounds=bounds,
+        callback=callback,
+    )  # per nelder mead controllare simplesso iniziale
+
     return res, optimization_history
 
 
-
-
-#RES description: object of type OptimizeResult, among others returns the 
+# RES description: object of type OptimizeResult, among others returns the
 # final values for the optimized parameters and optimized value of objective function
 # doesn't store history information, for this reason nedd to be saved and returned separately
 
 
-#OPTIMIZATION_HISTORY description: array of Optimization step object
+# OPTIMIZATION_HISTORY description: array of Optimization step object
