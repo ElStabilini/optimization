@@ -12,10 +12,10 @@ start_time = time.time()
 
 target = "D1"
 platform = "qw11q"
-method = 'Nelder-Mead' 
+method = "Nelder-Mead"
 
-executor_path = f'./optimization_data/{target}_{method}_post_ft_true'
-opt_history_path = f'./opt_analysis/{target}_{method}_post_ft_true'
+executor_path = f"./optimization_data/{target}_{method}_post_ft_true"
+opt_history_path = f"./opt_analysis/{target}_{method}_post_ft_true"
 
 with Executor.open(
     "myexec",
@@ -25,64 +25,45 @@ with Executor.open(
     update=True,
     force=True,
 ) as e:
- 
-    #Frequency fine tuning using ramsey
-    e.platform.settings.nshots = 1024
-    ramsey_output = e.ramsey(
-        delay_between_pulses_end = 1000,
-        delay_between_pulses_start = 10,
-        delay_between_pulses_step = 20,
-        detuning = 3_000_000,
-        relaxation_time = 200000,
-    )
 
-    #Amplitude fine tuning using flipping
-
-    #Beta parameter fine tuning
     e.platform.settings.nshots = 2000
-    drag_output = e.drag_tuning(
-         beta_start = -4,
-         beta_end = 4,
-         beta_step = 0.5
-    )
+    drag_output = e.drag_tuning(beta_start=-4, beta_end=4, beta_step=0.5)
 
     beta_best = drag_output.results.betas[target]
-    sigma_beta = 
-
-
     ampl_RX = e.platform.qubits[target].native_gates.RX.amplitude
     freq_RX = e.platform.qubits[target].native_gates.RX.frequency
 
-    
     init_guess = np.array([ampl_RX, freq_RX, beta_best])
 
-    #fare 1 routine di flipping con aggiornamento della platform + estrazione dell'errore
-    #fare 1 ramsey con aggiornamento della platform + estrazione dell'errore
-    #
-
-    lower_bounds = np.array([-0.5, freq_RX-4e6, beta_best-0.25])  
-    upper_bounds = np.array([0.5, freq_RX+4e6, beta_best+0.25])   
+    lower_bounds = np.array([-0.5, freq_RX - 4e6, beta_best - 0.25])
+    upper_bounds = np.array([0.5, freq_RX + 4e6, beta_best + 0.25])
     bounds = Bounds(lower_bounds, upper_bounds)
 
-    opt_results, optimization_history = rb_optimization(e, target, method, init_guess, bounds)
+    opt_results, optimization_history = rb_optimization(
+        e, target, method, init_guess, bounds
+    )
 
 report(e.path, e.history)
 
-#save optimization_history as .npz
+# save optimization_history as .npz
 iterations = np.array([step.iteration for step in optimization_history])
 parameters = np.array([step.parameters for step in optimization_history])
-#capire come salvare parameters errors
+# capire come salvare parameters errors
 objective_values = np.array([step.objective_value for step in optimization_history])
-objective_value_error = np.array([step.objective_value_error for step in optimization_history])
+objective_value_error = np.array(
+    [step.objective_value_error for step in optimization_history]
+)
 
 os.makedirs(opt_history_path, exist_ok=True)
-np.savez(os.path.join(opt_history_path,'optimization_history.npz'), 
-         iterations=iterations, 
-         parameters=parameters, 
-         objective_values=objective_values, 
-         objective_value_errors=objective_value_error)
+np.savez(
+    os.path.join(opt_history_path, "optimization_history.npz"),
+    iterations=iterations,
+    parameters=parameters,
+    objective_values=objective_values,
+    objective_value_errors=objective_value_error,
+)
 
-with open(os.path.join(opt_history_path,'optimization_result.pkl'), 'wb') as f:
+with open(os.path.join(opt_history_path, "optimization_result.pkl"), "wb") as f:
     pickle.dump(opt_results, f)
 
 end_time = time.time()
