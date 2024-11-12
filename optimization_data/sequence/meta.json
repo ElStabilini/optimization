@@ -1,0 +1,25 @@
+{
+    "title": "sequence",
+    "backend": "qibolab",
+    "platform": "qw11q",
+    "start_time": "2024-11-11 14:50:51.874656+00:00",
+    "end_time": "2024-11-11 14:51:11.840202+00:00",
+    "stats": {
+        "ramsey-0": {
+            "acquisition": 12.878478331957012,
+            "fit": 0.011156519874930382
+        }
+    },
+    "author": null,
+    "tag": null,
+    "targets": null,
+    "versions": {
+        "qibo": "0.2.12",
+        "numpy": "1.26.4",
+        "qibolab": "0.1.9",
+        "qibocal": "0.1.1"
+    },
+    "date": "2024-11-11",
+    "start-time": "14:50:51",
+    "end-time": "14:51:11"
+}

@@ -59,25 +59,26 @@ def main():
             else:
                 ramsey_output.update_platform(e.platform)
 
-        for i in range(10):
-            if i == 0:
-                flipping_output = e.flipping(
-                    nflips_max=20,
-                    nflips_step=1,
-                )
-            else:
-                flipping_output = e.flipping(
-                    nflips_max=20,
-                    delta_amplitude=3e-4,  # avarage correction for first flipping tests
-                    nflips_step=1,
-                )
-            if flipping_output.results.chi2[target][0] > 2:
-                raise RuntimeError(
-                    f"Ramsey fit has chi2 {ramsey_output.results.chi2[target][0]} greater than 2. Stopping."
-                )
-            else:
-                flipping_output.update_platform(e.platform)
-                err = flipping_output.results.amplitude[target][1]
+    for i in range(10):
+        print(i)
+        if i == 0:
+            flipping_output = e.flipping(
+                nflips_max=20,
+                nflips_step=1,
+            )
+        else:
+            flipping_output = e.flipping(
+                nflips_max=20,
+                delta_amplitude=3e-4,  # avarage correction for first flipping tests
+                nflips_step=1,
+            )
+        if flipping_output.results.chi2[target][0] > 2:
+            raise RuntimeError(
+                f"Ramsey fit has chi2 {ramsey_output.results.chi2[target][0]} greater than 2. Stopping."
+            )
+        else:
+            flipping_output.update_platform(e.platform)
+            err = flipping_output.results.amplitude[target][1]
 
     report(e.path, e.history)
 
