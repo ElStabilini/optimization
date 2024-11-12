@@ -59,7 +59,6 @@ def main():
             else:
                 ramsey_output.update_platform(e.platform)
 
-<<<<<<< HEAD
     for i in range(10):
         print(i)
         if i == 0:
