@@ -20,8 +20,8 @@ def main():
     target = args.target
     platform_update = args.platform_update
 
-    executor_path = Path().parent / "optimization_data" / f"{target}_cma_test"
-    opt_history_path = Path() / "opt_analysis" / f"{target}_cma_test"
+    executor_path = Path.cwd().parent / "optimization_data" / f"{target}_cma_test"
+    opt_history_path = Path.cwd().parent / "opt_analysis" / f"{target}_cma_test"
 
     start_time = time.time()
 
