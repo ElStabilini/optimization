@@ -23,8 +23,8 @@ def main():
     platform_update = args.platform_update
     method = args.method
 
-    executor_path = Path().parent / "optimization_data" / f"{target}_{method}_post_ft_true"
-    opt_history_path = Path() / "opt_analysis" / f"{target}_{method}_post_ft_true"
+    executor_path = Path.cwd().parent / "optimization_data" / f"{target}_{method}_post_ft_true"
+    opt_history_path = Path.cwd().parent / "opt_analysis" / f"{target}_{method}_post_ft_true"
 
     start_time = time.time()
 
