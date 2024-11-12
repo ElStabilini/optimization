@@ -4,4 +4,4 @@
 #SBATCH --job-name=rb_opt_cma         # Job name
 
 #run the script
-python D1_cma.py
+python init_simplex.py
