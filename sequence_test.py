@@ -82,5 +82,5 @@ def main():
     report(e.path, e.history)
 
 
-if __name__ == "__main()__":
+if __name__ == "__main__":
     main()
