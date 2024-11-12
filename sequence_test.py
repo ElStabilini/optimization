@@ -38,6 +38,7 @@ with Executor.open(
         ramsey_output.update_platform(e.platform)
 
     for i in range(10):
+        print(i)
         if i == 0:
             flipping_output = e.flipping(
                 nflips_max=20,
