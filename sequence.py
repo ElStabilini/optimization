@@ -1,4 +1,5 @@
 import numpy as np
+import argparse
 import datetime
 from qibocal.auto.execute import Executor
 from qibocal.cli.report import report
@@ -30,7 +31,7 @@ def main():
     now = datetime.datetime.now()
     formatted_time = now.strftime("%Y%m%d_%H%M%S")
 
-    path = Path().parent / "optimization_data" / "sequence" / f"{formatted_time}"
+    path = Path.cwd().parent / "optimization_data" / "sequence" / f"{formatted_time}"
 
     with Executor.open(
         "myexec",

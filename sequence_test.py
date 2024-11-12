@@ -30,7 +30,7 @@ def main():
     now = datetime.datetime.now()
     formatted_time = now.strftime("%Y%m%d_%H%M%S")
 
-    path = Path().parent / "optimization_data" / "sequence" / f"{formatted_time}"
+    path = Path.cwd().parent / "optimization_data" / "sequence" / f"{formatted_time}"
 
     with Executor.open(
         "myexec",
