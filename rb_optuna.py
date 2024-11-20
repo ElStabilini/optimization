@@ -12,15 +12,9 @@ def objective(trial, e, target, bounds):
 
     amplitude = trial.suggest_float("amplitude", bounds[0][0], bounds[0][1])
     frequency = trial.suggest_float("frequency", bounds[1][0], bounds[1][1])
-    beta = trial.suggest_float("beta", bounds[2][0], bounds[2][1])
 
     e.platform.qubits[target].native_gates.RX.amplitude = amplitude
     e.platform.qubits[target].native_gates.RX.frequency = frequency
-
-    pulse = e.platform.qubits[target].native_gates.RX.pulse(start=0)
-    rel_sigma = pulse.shape.rel_sigma
-    drag_pulse = pulses.Drag(rel_sigma=rel_sigma, beta=beta)
-    e.platform.qubits[target].native_gates.RX.shape = repr(drag_pulse)
 
     rb_output = e.rb_ondevice(
         num_of_sequences=1000,
