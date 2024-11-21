@@ -28,18 +28,15 @@ with Executor.open(
 ) as e:
 
     e.platform.settings.nshots = 2000
-    drag_output = e.drag_tuning(beta_start=-4, beta_end=4, beta_step=0.5)
 
     ampl_RX = e.platform.qubits[target].native_gates.RX.amplitude
     freq_RX = e.platform.qubits[target].native_gates.RX.frequency
-    beta_best = drag_output.results.betas[target]
 
-    init_guess = {"amplitude": ampl_RX, "frequency": freq_RX, "beta": beta_best}
+    init_guess = {"amplitude": ampl_RX, "frequency": freq_RX}
 
     bounds = [
         [-0.5, 0.5],
         [freq_RX - 4e6, freq_RX + 4e6],
-        [beta_best - 0.25, beta_best + 0.25],
     ]
 
     opt_result = rb_optimization(
