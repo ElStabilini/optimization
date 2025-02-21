@@ -5,6 +5,7 @@ import pickle
 from argparse import ArgumentParser, Namespace
 from pathlib import Path
 from qibocal.auto.execute import Executor
+from qibocal import update
 from qibocal.cli.report import report
 from qibolab import pulses
 from cma_opt import rb_optimization
@@ -28,29 +29,14 @@ def parse() -> Namespace:
 
 def update_platform(
     args: Namespace,
-    params: list,
+    params: list[float],
 ):
     platform = args.platform
     target = args.target
-    platform_update = args.platform_update
-    executor_path = Path.cwd().parent / "optimization_data" / f"{target}_cma_test"
-
-    e = Executor(
-        "myexec",
-        path=executor_path,
-        platform=platform,
-        targets=[target],
-        update=platform_update,
-        force=True,
-    )
-    e.connect()
-    e.platform.qubits[target].native_gates.RX.amplitude = params[0]  # amplitude
-    e.platform.qubits[target].native_gates.RX.frequency = params[1]  # frequency
-    pulse = e.platform.qubits[target].native_gates.RX.pulse(start=0)
-    rel_sigma = pulse.shape.rel_sigma
-    pulses.Drag(rel_sigma=rel_sigma, beta=params[2])
-    e.disconnect()
-    e.save()
+    amplitude, frequency, beta = params
+    update.drive_amplitude(amplitude, platform, target)
+    update.drive_frequency(frequency, platform, target)
+    update.drag_pulse_beta(beta, platform, target)
 
 
 def execute(args: Namespace):
