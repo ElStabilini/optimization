@@ -10,7 +10,7 @@ start_time = time.time()
 now = datetime.datetime.now()
 formatted_time = now.strftime("%Y%m%d_%H%M%S")
 
-target = "D1"
+target = "D2"
 platform = "qw11q"
 
 executor_path = f"../optimization_data/{target}_{formatted_time}"
