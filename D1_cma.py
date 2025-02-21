@@ -123,7 +123,7 @@ def execute(args: Namespace):
 
     try:
         idx = np.flatnonzero(sorted_fidelities + sorted_errors > 1)[0]
-        update_platform(platform, sorted_parameters[idx])
+        update_platform(Namespace, sorted_parameters[idx])
     except IndexError:
         pass
 
