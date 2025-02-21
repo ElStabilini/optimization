@@ -24,6 +24,12 @@ def objective(params, e, target):
     e.platform.qubits[target].native_gates.RX.amplitude = amplitude
     e.platform.qubits[target].native_gates.RX.frequency = frequency
 
+    # needed to optimize also beta parameter for DRAG pulse
+    # pulse = e.platform.qubits[target].native_gates.RX.pulse(start=0)
+    # rel_sigma = pulse.shape.rel_sigma
+    # drag_pulse = pulses.Drag(rel_sigma=rel_sigma, beta=beta)
+    # e.platform.qubits[target].native_gates.RX.shape = repr(drag_pulse)
+
     rb_output = e.rb_ondevice(
         num_of_sequences=1000,
         max_circuit_depth=1000,
