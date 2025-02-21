@@ -19,15 +19,16 @@ class OptimizationStep:
 # objective function to minimize
 def objective(params, e, target):
 
-    amplitude, frequency, beta = params
+    amplitude, frequency = params
 
     e.platform.qubits[target].native_gates.RX.amplitude = amplitude
     e.platform.qubits[target].native_gates.RX.frequency = frequency
 
-    pulse = e.platform.qubits[target].native_gates.RX.pulse(start=0)
-    rel_sigma = pulse.shape.rel_sigma
-    drag_pulse = pulses.Drag(rel_sigma=rel_sigma, beta=beta)
-    e.platform.qubits[target].native_gates.RX.shape = repr(drag_pulse)
+    # needed to optimize also beta parameter for DRAG pulse
+    # pulse = e.platform.qubits[target].native_gates.RX.pulse(start=0)
+    # rel_sigma = pulse.shape.rel_sigma
+    # drag_pulse = pulses.Drag(rel_sigma=rel_sigma, beta=beta)
+    # e.platform.qubits[target].native_gates.RX.shape = repr(drag_pulse)
 
     rb_output = e.rb_ondevice(
         num_of_sequences=1000,
@@ -55,7 +56,12 @@ def objective(params, e, target):
 
 
 def rb_optimization(
-    executor: Executor, target: str, method: str, init_guess: list[float], bounds
+    executor: Executor,
+    target: str,
+    method: str,
+    init_guess: list[float],
+    initial_simplex: list[list[float]],
+    bounds,
 ):
 
     optimization_history = []
@@ -82,11 +88,11 @@ def rb_optimization(
         init_guess,
         args=(executor, target),
         method=method,
-        tol=1e-13,
-        options={"maxiter": 30},
+        tol=1e-4,
+        options={"maxiter": 40, "initial_simplex": initial_simplex},
         bounds=bounds,
         callback=callback,
-    )  # per nelder mead controllare simplesso iniziale
+    )
 
     return res, optimization_history
 
