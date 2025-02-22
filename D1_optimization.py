@@ -10,11 +10,18 @@ from scipy.optimize import Bounds
 from pathlib import Path
 from qibolab import pulses
 
+
 def main():
     parser = argparse.ArgumentParser(description="Fine tuning calibration using cma")
-    parser.add_argument("--platform", type=str, required=True, help="Platform identifier")
-    parser.add_argument("--target", type=str, required=True, help="Target qubit to be calibrated") 
-    parser.add_argument("--no_platform_update", action="store_false", help="Enable platform update")
+    parser.add_argument(
+        "--platform", type=str, required=True, help="Platform identifier"
+    )
+    parser.add_argument(
+        "--target", type=str, required=True, help="Target qubit to be calibrated"
+    )
+    parser.add_argument(
+        "--no_platform_update", action="store_false", help="Enable platform update"
+    )
     parser.add_argument("--method", type=str, required=True, help="Optimization method")
 
     args = parser.parse_args()
@@ -23,8 +30,12 @@ def main():
     platform_update = args.platform_update
     method = args.method
 
-    executor_path = Path.cwd().parent / "optimization_data" / f"{target}_{method}_post_ft_true"
-    opt_history_path = Path.cwd().parent / "opt_analysis" / f"{target}_{method}_post_ft_true"
+    executor_path = (
+        Path.cwd().parent / "optimization_data" / f"{target}_{method}_post_ft_true"
+    )
+    opt_history_path = (
+        Path.cwd().parent / "opt_analysis" / f"{target}_{method}_post_ft_true"
+    )
 
     start_time = time.time()
 
@@ -80,19 +91,20 @@ def main():
 
     with open(os.path.join(opt_history_path, "optimization_result.pkl"), "wb") as f:
         pickle.dump(data_stored, f)
-    
-    #Update platform to best parameters result
+
+    # Update platform to best parameters result
     fidelities = 1 - objective_values
     sorted_indices_desc = np.argsort(fidelities)[::-1]
 
     sorted_fidelities = fidelities[sorted_indices_desc]
-    sorted_errors = objective_value_error[sorted_indices_desc] 
+    sorted_errors = objective_value_error[sorted_indices_desc]
     sorted_iterations = iterations[sorted_indices_desc]
     sorted_parameters = parameters[sorted_indices_desc]
 
     for fidelity, error, iteration, params in zip(
-        sorted_fidelities, sorted_errors, sorted_iterations, sorted_parameters):
-        
+        sorted_fidelities, sorted_errors, sorted_iterations, sorted_parameters
+    ):
+
         if fidelity + error < 1:
 
             e = Executor(
@@ -105,15 +117,16 @@ def main():
             )
 
             e.connect()
-            e.platform.qubits[target].native_gates.RX.amplitude = params[0]#amplitude
-            e.platform.qubits[target].native_gates.RX.frequency = params[1]#frequency
-            pulse = e.platform.qubits[target].native_gates.RX.pulse(start=0)    
+            e.platform.qubits[target].native_gates.RX.amplitude = params[0]  # amplitude
+            e.platform.qubits[target].native_gates.RX.frequency = params[1]  # frequency
+            pulse = e.platform.qubits[target].native_gates.RX.pulse(start=0)
             rel_sigma = pulse.shape.rel_sigma
-            pulses.Drag(rel_sigma=rel_sigma, beta=params[2])#beta
+            pulses.Drag(rel_sigma=rel_sigma, beta=params[2])  # beta
             e.disconnect()
             e.save()
-            
+
             break
+
 
 if __name__ == "__main__":
     main()
