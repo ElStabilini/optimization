@@ -10,7 +10,7 @@ start_time = time.time()
 now = datetime.datetime.now()
 formatted_time = now.strftime("%Y%m%d_%H%M%S")
 
-target = "D1"
+target = "D2"
 platform = "qw11q"
 
 executor_path = f"../optimization_data/{target}_{formatted_time}"
@@ -30,13 +30,12 @@ with Executor.open(
     e.platform.settings.nshots = 2000
     ampl_RX = e.platform.qubits[target].native_gates.RX.amplitude
     freq_RX = e.platform.qubits[target].native_gates.RX.frequency
+    # eventually add drag parameter
 
     init_guess = {"amplitude": ampl_RX, "frequency": freq_RX}
 
-    bounds = [
-        [-0.5, 0.5],
-        [freq_RX - 4e6, freq_RX + 4e6]
-    ]
+    bounds = [[-0.5, 0.5], [freq_RX - 4e6, freq_RX + 4e6]]
+    # eventually add bounds for drag parameter
 
     opt_result = rb_optimization(
         e,
