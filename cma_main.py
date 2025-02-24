@@ -7,8 +7,7 @@ from pathlib import Path
 from qibocal.auto.execute import Executor
 from qibocal import update
 from qibocal.cli.report import report
-from qibolab import pulses
-from cma_opt import rb_optimization
+from cma_utils import rb_optimization
 
 NSHOTS = 2000
 

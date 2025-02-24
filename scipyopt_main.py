@@ -2,17 +2,20 @@ import numpy as np
 import os
 import time
 import pickle
-import argparse
-from qibocal.auto.execute import Executor
-from qibocal.cli.report import report
-from rb_optimization import rb_optimization
-from scipy.optimize import Bounds
+from argparse import ArgumentParser, Namespace
 from pathlib import Path
-from qibolab import pulses
+from qibocal.auto.execute import Executor
+from qibocal import update
+from qibocal.cli.report import report
+from rb_init_simplex import rb_optimization
+from scipy.optimize import Bounds
 
 
-def main():
-    parser = argparse.ArgumentParser(description="Fine tuning calibration using cma")
+NSHOTS = 2000
+
+
+def parse() -> Namespace:
+    parser = ArgumentParser(description="Fine tuning calibration using cma algorithm")
     parser.add_argument(
         "--platform", type=str, required=True, help="Platform identifier"
     )
@@ -20,11 +23,26 @@ def main():
         "--target", type=str, required=True, help="Target qubit to be calibrated"
     )
     parser.add_argument(
-        "--no_platform_update", action="store_false", help="Enable platform update"
+        "--platform_update", action="store_true", help="Enable platform update"
     )
     parser.add_argument("--method", type=str, required=True, help="Optimization method")
+    return parser.parse_args()
 
-    args = parser.parse_args()
+
+def update_platform(
+    args: Namespace,
+    params: list[float],
+):
+    platform = args.platform
+    target = args.target
+    amplitude, frequency, beta = params
+    update.drive_amplitude(amplitude, platform, target)
+    update.drive_frequency(frequency, platform, target)
+    update.drag_pulse_beta(beta, platform, target)
+
+
+def execute(args: Namespace):
+
     platform = args.platform
     target = args.target
     platform_update = args.platform_update
@@ -48,7 +66,8 @@ def main():
         force=True,
     ) as e:
 
-        e.platform.settings.nshots = 2000
+        # check for missing init_symplex
+        e.platform.settings.nshots = NSHOTS
         drag_output = e.drag_tuning(beta_start=-4, beta_end=4, beta_step=0.5)
 
         beta_best = drag_output.results.betas[target]
@@ -62,11 +81,14 @@ def main():
         bounds = Bounds(lower_bounds, upper_bounds)
 
         opt_results, optimization_history = rb_optimization(
-            e, target, method, init_guess, bounds
+            e,
+            target,
+            method,
+            init_guess,
+            bounds,
         )
 
     report(e.path, e.history)
-
     end_time = time.time()
     elapsed_time = end_time - start_time
 
@@ -98,34 +120,17 @@ def main():
 
     sorted_fidelities = fidelities[sorted_indices_desc]
     sorted_errors = objective_value_error[sorted_indices_desc]
-    sorted_iterations = iterations[sorted_indices_desc]
     sorted_parameters = parameters[sorted_indices_desc]
 
-    for fidelity, error, iteration, params in zip(
-        sorted_fidelities, sorted_errors, sorted_iterations, sorted_parameters
-    ):
+    try:
+        idx = np.flatnonzero(sorted_fidelities + sorted_errors > 1)[0]
+        update_platform(Namespace, sorted_parameters[idx])
+    except IndexError:
+        pass
 
-        if fidelity + error < 1:
 
-            e = Executor(
-                "myexec",
-                path=executor_path,
-                platform=platform,
-                targets=[target],
-                update=platform_update,
-                force=True,
-            )
-
-            e.connect()
-            e.platform.qubits[target].native_gates.RX.amplitude = params[0]  # amplitude
-            e.platform.qubits[target].native_gates.RX.frequency = params[1]  # frequency
-            pulse = e.platform.qubits[target].native_gates.RX.pulse(start=0)
-            rel_sigma = pulse.shape.rel_sigma
-            pulses.Drag(rel_sigma=rel_sigma, beta=params[2])  # beta
-            e.disconnect()
-            e.save()
-
-            break
+def main():
+    execute(parse())
 
 
 if __name__ == "__main__":
