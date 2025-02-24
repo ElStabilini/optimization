@@ -7,7 +7,7 @@ from pathlib import Path
 from qibocal.auto.execute import Executor
 from qibocal import update
 from qibocal.cli.report import report
-from rb_init_simplex import rb_optimization
+from scipyopt_utils import rb_optimization
 from scipy.optimize import Bounds
 
 
