@@ -118,6 +118,9 @@ def execute(args: Namespace):
         ampl_high = 0.5
         freq_low = freq_RX - 4e6
         freq_high = freq_RX + 4e6
+        lower_bounds = np.array([ampl_low, freq_low])
+        upper_bounds = np.array([ampl_high, freq_high])
+        # TODO: add option for DRAG parameter optimization
 
         if method == "optuna":
             study_name = f"{formatted_time}"
@@ -128,13 +131,25 @@ def execute(args: Namespace):
             init_guess = {"amplitude": ampl_RX, "frequency": freq_RX}
             bounds = [[ampl_low, ampl_high], [freq_low, freq_high]]
 
-            opt_result = rb_optimization_optuna(
+            opt_results = rb_optimization_optuna(
                 e,
                 target,
                 init_guess,
                 bounds,
                 study_name,
                 storage=f"sqlite:///{study_path}.db",
+            )
+
+        if method == "cma":
+            bounds = zip(lower_bounds, upper_bounds)
+            opt_results, optimization_history = rb_optimization_cma(
+                e, target, init_guess, bounds
+            )
+
+        else:
+            bounds = Bounds(lower_bounds, upper_bounds)
+            opt_results, optimization_history = rb_optimization_scipy(
+                e, target, method, init_guess, bounds
             )
 
     report(e.path, e.history)
