@@ -4,7 +4,11 @@ from qibolab import pulses
 from dataclasses import dataclass
 import optuna
 
+DELTA = 20
+MAX_DEPTH = 1000
 AVG_GATE = 1.875  # 1.875 is the average number of gates in a clifford operation
+SEQUENCES = 1000
+INIT_STD = 0.25
 
 
 # objective function to minimize
@@ -16,10 +20,16 @@ def objective(trial, e, target, bounds):
     e.platform.qubits[target].native_gates.RX.amplitude = amplitude
     e.platform.qubits[target].native_gates.RX.frequency = frequency
 
+    # eventually add for DRAG pulse optimization
+    # pulse = e.platform.qubits[target].native_gates.RX.pulse(start=0)
+    # rel_sigma = pulse.shape.rel_sigma
+    # drag_pulse = pulses.Drag(rel_sigma=rel_sigma, beta=beta)
+    # e.platform.qubits[target].native_gates.RX.shape = repr(drag_pulse)
+
     rb_output = e.rb_ondevice(
-        num_of_sequences=1000,
-        max_circuit_depth=1000,
-        delta_clifford=10,
+        num_of_sequences=SEQUENCES,
+        max_circuit_depth=MAX_DEPTH,
+        delta_clifford=DELTA,
         n_avg=1,
         save_sequences=True,
         apply_inverse=True,
