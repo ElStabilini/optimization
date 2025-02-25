@@ -43,16 +43,16 @@ def execute(args: Namespace):
     target = args.target
     platform_update = args.platform_update
 
+    start_time = time.time()
+    now = datetime.datetime.now()
+    formatted_time = now.strftime("%Y%m%d_%H%M%S")
+
     executor_path = (
         Path.cwd().parent / "optimization_data" / f"{target}_{formatted_time}"
     )
     study_name = f"{formatted_time}"
     study_path = Path.cwd().parent / "optuna_data" / f"{target}_{study_name}"
     os.makedirs(os.path.dirname(study_path), exist_ok=True)
-
-    start_time = time.time()
-    now = datetime.datetime.now()
-    formatted_time = now.strftime("%Y%m%d_%H%M%S")
 
     with Executor.open(
         "myexec",
