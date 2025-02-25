@@ -2,8 +2,10 @@ import numpy as np
 import os
 import time
 import datetime
-from scipyopt_utils import rb_optimization_scipy
-from optunaopt_utils import rb_optimization_optuna
+import pickle
+
+from scipyopt_utils import rb_optimization_scipy, OptimizationStep
+from optunaopt_utils import rb_optimization_optuna, log_optimization
 from cma_utils import rb_optimization_cma
 from argparse import ArgumentParser, Namespace
 from pathlib import Path
@@ -70,6 +72,57 @@ def update_platform(
 
     if args.drag is not None:
         update.drag_pulse_beta(beta, platform, target)
+
+
+def history_to_lists(optimization_history: list[OptimizationStep]):
+
+    iterations = np.array([step.iteration for step in optimization_history])
+    parameters = np.array([step.parameters for step in optimization_history])
+    objective_values = np.array([step.objective_value for step in optimization_history])
+    objective_value_error = np.array(
+        [step.objective_value_error for step in optimization_history]
+    )
+
+    return iterations, parameters, objective_values, objective_value_error
+
+
+def update(
+    objective_values: list[float],
+    objective_value_error: list[float],
+    parameters: list[np.ndarray],
+):
+
+    fidelities = 1 - objective_values
+    sorted_indices_desc = np.argsort(fidelities)[::-1]
+
+    sorted_fidelities = fidelities[sorted_indices_desc]
+    sorted_errors = objective_value_error[sorted_indices_desc]
+    sorted_parameters = parameters[sorted_indices_desc]
+
+    try:
+        idx = np.flatnonzero(sorted_fidelities + sorted_errors > 1)[0]
+        update_platform(Namespace, sorted_parameters[idx])
+    except IndexError:
+        pass
+
+
+# save optimization_history as .npz
+def save_optimization_history(
+    iterations: list[int],
+    parameters: list[np.ndarray],
+    objective_values: list[float],
+    objective_value_error: list[float],
+    path: str,
+):
+
+    Path(path).mkdir(parents=True, exist_ok=True)
+    np.savez(
+        Path(path) / "optimization_history.npz",
+        iterations=iterations,
+        parameters=parameters,
+        objective_values=objective_values,
+        objective_value_errors=objective_value_error,
+    )
 
 
 def execute(args: Namespace):
@@ -156,6 +209,33 @@ def execute(args: Namespace):
 
     end_time = time.time()
     elapsed_time = end_time - start_time
+
+    if method == "optuna":
+        log_optimization(
+            study_name,
+            elapsed_time,
+            Path.cwd().parent / "optuna_data" / "time_log.txt",
+        )
+
+    else:
+        data_stored = {"opt_results": opt_results, "elapsed_time": elapsed_time}
+
+        with open(os.path.join(opt_history_path, "optimization_result.pkl"), "wb") as f:
+            pickle.dump(data_stored, f)
+
+        iterations, parameters, objective_values, objective_value_error = (
+            history_to_lists(optimization_history)
+        )
+
+        save_optimization_history(
+            iterations,
+            parameters,
+            objective_values,
+            objective_value_error,
+            opt_history_path,
+        )
+
+        update(objective_values, objective_value_error, parameters)
 
 
 def main():
