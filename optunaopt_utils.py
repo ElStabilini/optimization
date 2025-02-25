@@ -12,7 +12,13 @@ INIT_STD = 0.25
 
 
 # objective function to minimize
-def objective(trial, e, target, bounds):
+def objective(
+    trial,
+    e: Executor,
+    target: str,
+    bounds,
+    # drag: bool
+):
 
     amplitude = trial.suggest_float("amplitude", bounds[0][0], bounds[0][1])
     frequency = trial.suggest_float("frequency", bounds[1][0], bounds[1][1])
@@ -20,11 +26,11 @@ def objective(trial, e, target, bounds):
     e.platform.qubits[target].native_gates.RX.amplitude = amplitude
     e.platform.qubits[target].native_gates.RX.frequency = frequency
 
-    # eventually add for DRAG pulse optimization
-    # pulse = e.platform.qubits[target].native_gates.RX.pulse(start=0)
-    # rel_sigma = pulse.shape.rel_sigma
-    # drag_pulse = pulses.Drag(rel_sigma=rel_sigma, beta=beta)
-    # e.platform.qubits[target].native_gates.RX.shape = repr(drag_pulse)
+    # if drag:
+    #    pulse = e.platform.qubits[target].native_gates.RX.pulse(start=0)
+    #    rel_sigma = pulse.shape.rel_sigma
+    #    drag_pulse = pulses.Drag(rel_sigma=rel_sigma, beta=beta)
+    #    e.platform.qubits[target].native_gates.RX.shape = repr(drag_pulse)
 
     rb_output = e.rb_ondevice(
         num_of_sequences=SEQUENCES,
@@ -51,7 +57,7 @@ def objective(trial, e, target, bounds):
     return r_g
 
 
-def rb_optimization(
+def rb_optimization_optuna(
     executor: Executor,
     target: str,
     init_guess: dict,

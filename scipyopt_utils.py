@@ -60,7 +60,7 @@ def objective(params, e, target):
     return r_g
 
 
-def rb_optimization(
+def rb_optimization_scipy(
     executor: Executor,
     target: str,
     method: str,

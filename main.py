@@ -2,13 +2,17 @@ import numpy as np
 import os
 import time
 import datetime
-import utils
+from scipyopt_utils import rb_optimization_scipy
+from optunaopt_utils import rb_optimization_optuna
+from cma_utils import rb_optimization_cma
 from argparse import ArgumentParser, Namespace
 from pathlib import Path
 from qibocal.auto.execute import Executor
 from qibocal import update
 from qibocal.cli.report import report
-from optunaopt_utils import rb_optimization, log_optimization
+from scipy.optimize import Bounds
+
+# from optunaopt_utils import rb_optimization, log_optimization
 
 NSHOTS = 2000
 "number of measurements"
@@ -74,7 +78,6 @@ def execute(args: Namespace):
     target = args.target
     platform_update = args.platform_update
     method = args.method
-    drag = args.drag
 
     start_time = time.time()
     now = datetime.datetime.now()
@@ -98,9 +101,43 @@ def execute(args: Namespace):
 
         e.platform.settings.nshots = NSHOTS
 
+        # define values for initial conditions (will have a ddiferent format depending on optimization method)
         if args.drag is not None:
+            drag = True
             drag_output = e.drag_tuning(beta_start=-4, beta_end=4, beta_step=0.5)
+            beta_best = drag_output.results.betas[target]
+            beta_low = beta_best - 0.25
+            beta_high = beta_best + 0.25
             # TODO: add control to guarantee DRAG routine worked correctly
+
+        ampl_RX = e.platform.qubits[target].native_gates.RX.amplitude
+        freq_RX = e.platform.qubits[target].native_gates.RX.frequency
+
+        # define values for bounds (will have different format depending on optimization method)
+        ampl_low = -0.5
+        ampl_high = 0.5
+        freq_low = freq_RX - 4e6
+        freq_high = freq_RX + 4e6
+
+        if method == "optuna":
+            study_name = f"{formatted_time}"
+            study_path = (
+                Path.cwd().parent / "optuna_data" / f"{target}_{formatted_time}"
+            )
+            os.makedirs(os.path.dirname(study_path), exist_ok=True)
+            init_guess = {"amplitude": ampl_RX, "frequency": freq_RX}
+            bounds = [[ampl_low, ampl_high], [freq_low, freq_high]]
+
+            opt_result = rb_optimization_optuna(
+                e,
+                target,
+                init_guess,
+                bounds,
+                study_name,
+                storage=f"sqlite:///{study_path}.db",
+            )
+
+    report(e.path, e.history)
 
     end_time = time.time()
     elapsed_time = end_time - start_time

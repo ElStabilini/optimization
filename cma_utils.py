@@ -57,7 +57,9 @@ def objective(params, e, target):
     return r_g
 
 
-def rb_optimization(executor: Executor, target: str, init_guess: list[float], bounds):
+def rb_optimization_cma(
+    executor: Executor, target: str, init_guess: list[float], bounds
+):
 
     optimization_history = []
     iteration_count = 0

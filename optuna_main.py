@@ -7,7 +7,7 @@ from pathlib import Path
 from qibocal.auto.execute import Executor
 from qibocal import update
 from qibocal.cli.report import report
-from optunaopt_utils import rb_optimization, log_optimization
+from optunaopt_utils import rb_optimization_optuna, log_optimization
 
 NSHOTS = 2000
 
@@ -63,7 +63,7 @@ def execute(args: Namespace):
         force=True,
     ) as e:
 
-        e.platform.settings.nshots = 2000
+        e.platform.settings.nshots = NSHOTS
         ampl_RX = e.platform.qubits[target].native_gates.RX.amplitude
         freq_RX = e.platform.qubits[target].native_gates.RX.frequency
         # eventually add drag parameter
@@ -73,7 +73,7 @@ def execute(args: Namespace):
         bounds = [[-0.5, 0.5], [freq_RX - 4e6, freq_RX + 4e6]]
         # eventually add bounds for drag parameter
 
-        opt_result = rb_optimization(
+        opt_result = rb_optimization_optuna(
             e,
             target,
             init_guess,
