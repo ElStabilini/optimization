@@ -34,7 +34,7 @@ def objective(params, e, target):
     e.platform.qubits[target].native_gates.RX.shape = repr(drag_pulse)
 
     rb_output = e.rb_ondevice(
-        num_of_sequences=1000,
+        num_of_sequences=SEQUENCES,
         max_circuit_depth=MAX_DEPTH,
         delta_clifford=DELTA,
         n_avg=1,
