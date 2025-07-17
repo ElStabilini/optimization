@@ -4,7 +4,12 @@ from qibocal.auto.execute import Executor
 from qibolab import pulses
 from dataclasses import dataclass
 
+DELTA = 10
+MAX_DEPTH = 1000
 AVG_GATE = 1.875  # 1.875 is the average number of gates in a clifford operation
+SEQUENCES = 1000
+INIT_STD = 0.25
+
 error_storage = {"error": None}
 
 
@@ -31,9 +36,9 @@ def objective(params, e, target):
     # e.platform.qubits[target].native_gates.RX.shape = repr(drag_pulse)
 
     rb_output = e.rb_ondevice(
-        num_of_sequences=1000,
-        max_circuit_depth=1000,
-        delta_clifford=10,
+        num_of_sequences=SEQUENCES,
+        max_circuit_depth=MAX_DEPTH,
+        delta_clifford=DELTA,
         n_avg=1,
         save_sequences=True,
         apply_inverse=True,

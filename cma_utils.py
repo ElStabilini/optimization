@@ -4,7 +4,12 @@ from qibocal.auto.execute import Executor
 from qibolab import pulses
 from dataclasses import dataclass
 
+DELTA = 10
+MAX_DEPTH = 1000
 AVG_GATE = 1.875  # 1.875 is the average number of gates in a Clifford operation
+SEQUENCES = 1000
+INIT_STD = 0.25
+
 error_storage = {"error": None}
 
 
@@ -29,9 +34,9 @@ def objective(params, e, target):
     e.platform.qubits[target].native_gates.RX.shape = repr(drag_pulse)
 
     rb_output = e.rb_ondevice(
-        num_of_sequences=1000,
-        max_circuit_depth=1000,
-        delta_clifford=10,
+        num_of_sequences=SEQUENCES,
+        max_circuit_depth=MAX_DEPTH,
+        delta_clifford=DELTA,
         n_avg=1,
         save_sequences=True,
         apply_inverse=True,
@@ -73,9 +78,7 @@ def rb_optimization(executor: Executor, target: str, init_guess: list[float], bo
         iteration_count += 1
         print(f"Completed iteration {iteration_count}, objective value: {f}")
 
-    # per ora tengo sigma definita internamente ma potrebbe essere utile averla
-    # tra i parametri da inizializzare in futuro (così in teoria posso regolare anche il tipo di tuning che sto facendo)
-    sigma = 0.25  # Standard deviation for initial search
+    sigma = INIT_STD  # Standard deviation for initial search
     lower_bounds, upper_bounds = zip(*bounds)
 
     # Create a CMA-ES optimizer instance
@@ -86,6 +89,7 @@ def rb_optimization(executor: Executor, target: str, init_guess: list[float], bo
     # Optimization loop (testing this instead of es.optimize)
     while not es.stop():
         solutions = es.ask()
+
         # Evaluate the objective function for each solution
         function_values = [objective(sol, executor, target) for sol in solutions]
         es.tell(solutions, function_values)
@@ -94,9 +98,7 @@ def rb_optimization(executor: Executor, target: str, init_guess: list[float], bo
         best_idx = np.argmin(function_values)
         record_history(solutions[best_idx], function_values[best_idx])
 
-    # Retrieve the final result - not strictly necessary but useful
-    # to keep track of the history similarly to scipy optimize
-
+    # Retrieve the final result - not strictly necessary but useful to keep track of the history similarly to scipy optimize
     res = {
         "x": es.result.xbest,  # Best solution found
         "fun": es.result.fbest,  # Objective value at the best solution
