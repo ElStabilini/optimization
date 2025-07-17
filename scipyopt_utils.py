@@ -1,17 +1,17 @@
 import numpy as np
-from scipy.optimize import minimize
+from scipy.optimize import minimize, Bounds
 from qibocal.auto.execute import Executor
 from qibolab import pulses
 from dataclasses import dataclass
 
+# Constants
 DELTA = 10
 MAX_DEPTH = 1000
-AVG_GATE = 1.875  # 1.875 is the average number of gates in a clifford operation
+AVG_GATE = 1.875
 SEQUENCES = 1000
 INIT_STD = 0.25
 
 error_storage = {"error": None}
-
 
 @dataclass
 class OptimizationStep:
@@ -20,20 +20,17 @@ class OptimizationStep:
     objective_value: float
     objective_value_error: float
 
-
-# objective function to minimize
-def objective(params, e, target):
-
-    amplitude, frequency = params
+def objective(params, e: Executor, target: str):
+    amplitude, frequency, beta = params
 
     e.platform.qubits[target].native_gates.RX.amplitude = amplitude
     e.platform.qubits[target].native_gates.RX.frequency = frequency
 
-    # needed to optimize also beta parameter for DRAG pulse
-    # pulse = e.platform.qubits[target].native_gates.RX.pulse(start=0)
-    # rel_sigma = pulse.shape.rel_sigma
-    # drag_pulse = pulses.Drag(rel_sigma=rel_sigma, beta=beta)
-    # e.platform.qubits[target].native_gates.RX.shape = repr(drag_pulse)
+    # Apply DRAG pulse
+    pulse = e.platform.qubits[target].native_gates.RX.pulse(start=0)
+    rel_sigma = pulse.shape.rel_sigma
+    drag_pulse = pulses.Drag(rel_sigma=rel_sigma, beta=beta)
+    e.platform.qubits[target].native_gates.RX.shape = repr(drag_pulse)
 
     rb_output = e.rb_ondevice(
         num_of_sequences=SEQUENCES,
@@ -44,10 +41,9 @@ def objective(params, e, target):
         apply_inverse=True,
     )
 
-    # Calculate infidelity and error
     stdevs = np.sqrt(np.diag(np.reshape(rb_output.results.cov[target], (3, 3))))
-
     pars = rb_output.results.pars.get(target)
+
     one_minus_p = 1 - pars[2]
     r_c = one_minus_p * (1 - 1 / 2**1)
     r_g = r_c / AVG_GATE
@@ -55,27 +51,23 @@ def objective(params, e, target):
     r_g_std = r_c_std / AVG_GATE
 
     error_storage["error"] = r_g_std
-
     print("terminating objective call")
     return r_g
-
 
 def rb_optimization(
     executor: Executor,
     target: str,
     method: str,
     init_guess: list[float],
-    initial_simplex: list[list[float]],
-    bounds,
+    bounds: Bounds,
+    initial_simplex: list[list[float]] = None,
 ):
-
     optimization_history = []
     iteration_count = 0
 
     def callback(x, f=None):
         nonlocal iteration_count
         if f is None:
-            # If the optimization method doesn't provide f, need to calculate it
             f = objective(x, executor, target)
 
         step = OptimizationStep(
@@ -85,8 +77,13 @@ def rb_optimization(
             objective_value_error=error_storage["error"],
         )
         optimization_history.append(step)
-        iteration_count += 1
         print(f"Completed iteration {iteration_count}, objective value: {f}")
+        iteration_count += 1
+
+    # Construct simplex if not provided
+    if initial_simplex is None:
+        identity = np.eye(len(init_guess))
+        initial_simplex = [init_guess] + [init_guess + 0.01 * row for row in identity]
 
     res = minimize(
         objective,
@@ -100,11 +97,3 @@ def rb_optimization(
     )
 
     return res, optimization_history
-
-
-# RES description: object of type OptimizeResult, among others returns the
-# final values for the optimized parameters and optimized value of objective function
-# doesn't store history information, for this reason nedd to be saved and returned separately
-
-
-# OPTIMIZATION_HISTORY description: array of Optimization step object
