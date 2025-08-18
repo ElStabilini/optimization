@@ -57,13 +57,17 @@ def objective(params, e: Executor, target: str):
 def rb_optimization(
     executor: Executor,
     target: str,
-    method: str,
+    scipy_method: str,
     init_guess: list[float],
     bounds: Bounds,
     initial_simplex: list[list[float]] = None,
+    options: dict = None,
 ):
     optimization_history = []
     iteration_count = 0
+
+    if options is None:
+        options = {}
 
     def callback(x, f=None):
         nonlocal iteration_count
@@ -89,9 +93,9 @@ def rb_optimization(
         objective,
         init_guess,
         args=(executor, target),
-        method=method,
+        method=scipy_method,
         tol=1e-4,
-        options={"maxiter": 40, "initial_simplex": initial_simplex},
+        options=options,
         bounds=bounds,
         callback=callback,
     )

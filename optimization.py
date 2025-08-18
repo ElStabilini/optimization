@@ -17,6 +17,26 @@ from scipyopt_utils import rb_optimization as scipy_rb_optimization
 
 NSHOTS = 2000
 
+def parse_scipy_options(option_list):
+    if option_list is None:
+        return {}
+    options = {}
+    for opt in option_list:
+        if "=" not in opt:
+            raise ValueError(f"Invalid option format: {opt}, must be KEY=VALUE")
+        key, value = opt.split("=", 1)
+        
+        # attempt to cast to int or float if possible
+        try:
+            if "." in value or "e" in value.lower():
+                value = float(value)
+            else:
+                value = int(value)
+        except ValueError:
+            pass
+        options[key] = value
+    return options
+
 def parse() -> Namespace:
     parser = ArgumentParser(description="Fine tuning calibration with optimization backends")
     parser.add_argument("--platform", type=str, required=True, help="Platform identifier")
@@ -24,7 +44,19 @@ def parse() -> Namespace:
     parser.add_argument("--platform_update", action="store_true", help="Enable platform update")
     parser.add_argument("--method", type=str, required=True, choices=["cma", "optuna", "scipy"],
                         help="Optimization method to use")
-    return parser.parse_args()
+    parser.add_argument("--scipy_method", type=str, choices=["Nelder-Mead", "Powell", "CG", "BFGS", "Newton-CG", "L-BFGS-B", "TNC", "COBYLA", "SLSQP", "trust-constr", "dogleg", "trust-ncg", "trust-exact", "trust-krylov"],
+        help="SciPy optimization method (only required if --method=scipy).",)
+    parser.add_argument("--scipy_options", nargs="+", metavar="KEY=VALUE", help="Extra options for scipy.optimize.minimize, e.g. --scipy_options maxiter=100 fatol=1e-6",)
+
+    args = parser.parse_args()
+
+    if args.method == "scipy" and args.scipy_method is None:
+        parser.error("--scipy_method must be specified when --method=scipy")
+
+    if args.method != "scipy" and args.scipy_method is not None:
+        parser.error("--scipy_method can only be used with --method=scipy")
+    
+    return args
 
 def update_platform(args: Namespace, params: list[float]):
     amplitude, frequency, beta = params
@@ -55,6 +87,8 @@ def execute(args: Namespace):
 
     target = args.target
     method = args.method
+    scipy_method = args.scipy_method
+    scipy_options = parse_scipy_options(args.scipy_options)
     platform_update = args.platform_update
 
     executor_path = Path.cwd().parent / "optimization_data" / f"{target}_{method}_{formatted_time}"
@@ -95,7 +129,7 @@ def execute(args: Namespace):
         if method == "cma":
             opt_results, optimization_history = cma_rb_optimization(e, target, init_guess, bounds)
         elif method == "scipy":
-            opt_results, optimization_history = scipy_rb_optimization(e, target, method, init_guess, bounds)
+            opt_results, optimization_history = scipy_rb_optimization(e, target, scipy_method, init_guess, bounds)
         elif method == "optuna":
             opt_results = optuna_rb_optimization(
                 e, target, init_guess, bounds,
